@@ -1,0 +1,5361 @@
+CCS PCH C Compiler, Version 5.078, 5967               24-Jan-24 00:12
+
+               Filename:   J:\My Drive\OBC\OBC&MissionBoss Codes\RESET_PIC\V4.3\ResetMain.lst
+
+               ROM used:   8742 bytes (7%)
+                           Largest free fragment is 65520
+               RAM used:   268 (7%) at main() level
+                           283 (8%) worst case
+               Stack used: 4 locations (2 in main + 2 for interrupts)
+               Stack size: 31
+
+*
+00000:  NOP   
+00002:  GOTO   2036
+00008:  MOVWF  04
+0000A:  MOVFF  FD8,05
+0000E:  MOVFF  FE0,06
+00012:  MOVLB  0
+00014:  MOVFF  FE9,0C
+00018:  MOVFF  FEA,07
+0001C:  MOVFF  FE1,08
+00020:  MOVFF  FE2,09
+00024:  MOVFF  FD9,0A
+00028:  MOVFF  FDA,0B
+0002C:  MOVFF  FF3,12
+00030:  MOVFF  FF4,13
+00034:  MOVFF  FFA,14
+00038:  MOVFF  FF5,15
+0003C:  MOVFF  FF6,16
+00040:  MOVFF  FF7,17
+00044:  MOVFF  FF8,18
+00048:  MOVFF  FFB,19
+0004C:  MOVFF  00,0E
+00050:  MOVFF  01,0F
+00054:  MOVFF  02,10
+00058:  MOVFF  03,11
+0005C:  BTFSS  F9D.0
+0005E:  GOTO   0068
+00062:  BTFSC  F9E.0
+00064:  GOTO   05FA
+00068:  BTFSS  F9D.5
+0006A:  GOTO   0074
+0006E:  BTFSC  F9E.5
+00070:  GOTO   01B8
+00074:  BTFSS  F61.5
+00076:  GOTO   0080
+0007A:  BTFSC  FA6.5
+0007C:  GOTO   00FE
+00080:  BTFSS  FA3.5
+00082:  GOTO   008C
+00086:  BTFSC  FA4.5
+00088:  GOTO   015E
+0008C:  MOVFF  0E,00
+00090:  MOVFF  0F,01
+00094:  MOVFF  10,02
+00098:  MOVFF  11,03
+0009C:  MOVFF  0C,FE9
+000A0:  MOVFF  07,FEA
+000A4:  BSF    07.7
+000A6:  MOVFF  08,FE1
+000AA:  MOVFF  09,FE2
+000AE:  MOVFF  0A,FD9
+000B2:  MOVFF  0B,FDA
+000B6:  MOVFF  12,FF3
+000BA:  MOVFF  13,FF4
+000BE:  MOVFF  14,FFA
+000C2:  MOVFF  15,FF5
+000C6:  MOVFF  16,FF6
+000CA:  MOVFF  17,FF7
+000CE:  MOVFF  18,FF8
+000D2:  MOVFF  19,FFB
+000D6:  MOVF   04,W
+000D8:  MOVFF  06,FE0
+000DC:  MOVFF  05,FD8
+000E0:  RETFIE 0
+.................... #include <18F67J94.h> 
+.................... //////////// Standard Header file for the PIC18F67J94 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F67J94 
+*
+001F8:  DATA 73,79
+001FA:  DATA 73,74
+001FC:  DATA 65,6D
+001FE:  DATA 20,72
+00200:  DATA 65,73
+00202:  DATA 65,74
+00204:  DATA 20,62
+00206:  DATA 79,20
+00208:  DATA 63,6F
+0020A:  DATA 6D,6D
+0020C:  DATA 61,6E
+0020E:  DATA 64,20
+00210:  DATA 0A,0D
+00212:  DATA 00,00
+00214:  DATA 57,61
+00216:  DATA 69,74
+00218:  DATA 69,6E
+0021A:  DATA 67,20
+0021C:  DATA 74,6F
+0021E:  DATA 20,74
+00220:  DATA 75,72
+00222:  DATA 6E,20
+00224:  DATA 6F,6E
+00226:  DATA 20,73
+00228:  DATA 79,73
+0022A:  DATA 74,65
+0022C:  DATA 6D,20
+0022E:  DATA 61,67
+00230:  DATA 61,69
+00232:  DATA 6E,20
+00234:  DATA 25,30
+00236:  DATA 32,64
+00238:  DATA 20,53
+0023A:  DATA 65,63
+0023C:  DATA 0A,0D
+0023E:  DATA 00,00
+00240:  DATA 32,34
+00242:  DATA 20,68
+00244:  DATA 6F,75
+00246:  DATA 72,20
+00248:  DATA 73,79
+0024A:  DATA 73,74
+0024C:  DATA 65,6D
+0024E:  DATA 20,72
+00250:  DATA 65,73
+00252:  DATA 65,74
+00254:  DATA 0A,0D
+00256:  DATA 00,00
+00258:  DATA 57,61
+0025A:  DATA 69,74
+0025C:  DATA 69,6E
+0025E:  DATA 67,20
+00260:  DATA 74,6F
+00262:  DATA 20,74
+00264:  DATA 75,72
+00266:  DATA 6E,20
+00268:  DATA 6F,6E
+0026A:  DATA 20,73
+0026C:  DATA 79,73
+0026E:  DATA 74,65
+00270:  DATA 6D,20
+00272:  DATA 61,67
+00274:  DATA 61,69
+00276:  DATA 6E,20
+00278:  DATA 25,75
+0027A:  DATA 20,53
+0027C:  DATA 65,63
+0027E:  DATA 0A,0D
+00280:  DATA 00,00
+00282:  DATA 52,43
+00284:  DATA 56,44
+00286:  DATA 20,43
+00288:  DATA 4D,44
+0028A:  DATA 20,46
+0028C:  DATA 52,4F
+0028E:  DATA 4D,20
+00290:  DATA 4D,41
+00292:  DATA 49,4E
+00294:  DATA 20,50
+00296:  DATA 49,43
+00298:  DATA 20,3E
+0029A:  DATA 3E,20
+0029C:  DATA 00,00
+0029E:  DATA 48,61
+002A0:  DATA 6E,67
+002A2:  DATA 20,75
+002A4:  DATA 70,20
+002A6:  DATA 72,65
+002A8:  DATA 73,65
+002AA:  DATA 74,2C
+002AC:  DATA 20,4D
+002AE:  DATA 61,69
+002B0:  DATA 6E,50
+002B2:  DATA 49,43
+002B4:  DATA 20,69
+002B6:  DATA 73,20
+002B8:  DATA 74,75
+002BA:  DATA 72,6E
+002BC:  DATA 65,64
+002BE:  DATA 20,6F
+002C0:  DATA 66,66
+002C2:  DATA 0A,0D
+002C4:  DATA 00,00
+002C6:  DATA 57,61
+002C8:  DATA 69,74
+002CA:  DATA 69,6E
+002CC:  DATA 67,20
+002CE:  DATA 74,6F
+002D0:  DATA 20,74
+002D2:  DATA 75,72
+002D4:  DATA 6E,20
+002D6:  DATA 6F,6E
+002D8:  DATA 20,4D
+002DA:  DATA 61,69
+002DC:  DATA 6E,20
+002DE:  DATA 50,69
+002E0:  DATA 63,20
+002E2:  DATA 25,30
+002E4:  DATA 32,64
+002E6:  DATA 20,53
+002E8:  DATA 65,63
+002EA:  DATA 0A,0D
+002EC:  DATA 00,00
+002EE:  DATA 4D,61
+002F0:  DATA 69,6E
+002F2:  DATA 50,49
+002F4:  DATA 43,20
+002F6:  DATA 69,73
+002F8:  DATA 20,72
+002FA:  DATA 65,73
+002FC:  DATA 74,61
+002FE:  DATA 72,74
+00300:  DATA 65,64
+00302:  DATA 0A,0D
+00304:  DATA 00,00
+00306:  DATA 39,30
+00308:  DATA 20,73
+0030A:  DATA 65,63
+0030C:  DATA 6F,6E
+0030E:  DATA 64,73
+00310:  DATA 20,63
+00312:  DATA 6F,6D
+00314:  DATA 75,6E
+00316:  DATA 69,63
+00318:  DATA 61,74
+0031A:  DATA 69,6F
+0031C:  DATA 6E,20
+0031E:  DATA 63,6F
+00320:  DATA 6D,6D
+00322:  DATA 61,6E
+00324:  DATA 64,0A
+00326:  DATA 0D,00
+00328:  DATA 52,65
+0032A:  DATA 70,6C
+0032C:  DATA 79,20
+0032E:  DATA 73,65
+00330:  DATA 6E,74
+00332:  DATA 20,74
+00334:  DATA 6F,20
+00336:  DATA 6D,61
+00338:  DATA 69,6E
+0033A:  DATA 20,70
+0033C:  DATA 69,63
+0033E:  DATA 20,3E
+00340:  DATA 3E,20
+00342:  DATA 00,00
+00344:  DATA 52,65
+00346:  DATA 73,65
+00348:  DATA 74,20
+0034A:  DATA 70,69
+0034C:  DATA 63,20
+0034E:  DATA 52,54
+00350:  DATA 43,20
+00352:  DATA 75,70
+00354:  DATA 64,61
+00356:  DATA 74,65
+00358:  DATA 20,63
+0035A:  DATA 6F,6D
+0035C:  DATA 6D,61
+0035E:  DATA 6E,64
+00360:  DATA 20,52
+00362:  DATA 65,63
+00364:  DATA 65,69
+00366:  DATA 76,65
+00368:  DATA 64,0A
+0036A:  DATA 0D,00
+0036C:  DATA 55,70
+0036E:  DATA 64,61
+00370:  DATA 74,65
+00372:  DATA 64,20
+00374:  DATA 4E,65
+00376:  DATA 77,20
+00378:  DATA 54,69
+0037A:  DATA 6D,65
+0037C:  DATA 20,3E
+0037E:  DATA 3E,20
+00380:  DATA 00,00
+00382:  DATA 50,6F
+00384:  DATA 77,65
+00386:  DATA 72,20
+00388:  DATA 6C,69
+0038A:  DATA 6E,65
+0038C:  DATA 20,63
+0038E:  DATA 6F,6E
+00390:  DATA 74,72
+00392:  DATA 6F,6C
+00394:  DATA 20,63
+00396:  DATA 6F,6D
+00398:  DATA 6D,61
+0039A:  DATA 6E,64
+0039C:  DATA 20,52
+0039E:  DATA 65,63
+003A0:  DATA 65,69
+003A2:  DATA 76,65
+003A4:  DATA 64,20
+003A6:  DATA 66,72
+003A8:  DATA 6F,6D
+003AA:  DATA 20,6D
+003AC:  DATA 61,69
+003AE:  DATA 6E,20
+003B0:  DATA 70,69
+003B2:  DATA 63,0A
+003B4:  DATA 0D,00
+003B6:  DATA 52,65
+003B8:  DATA 73,65
+003BA:  DATA 74,20
+003BC:  DATA 73,61
+003BE:  DATA 74,65
+003C0:  DATA 6C,6C
+003C2:  DATA 69,74
+003C4:  DATA 65,20
+003C6:  DATA 63,6F
+003C8:  DATA 6D,6D
+003CA:  DATA 61,6E
+003CC:  DATA 64,20
+003CE:  DATA 52,65
+003D0:  DATA 63,65
+003D2:  DATA 69,76
+003D4:  DATA 65,64
+003D6:  DATA 20,66
+003D8:  DATA 72,6F
+003DA:  DATA 6D,20
+003DC:  DATA 6D,61
+003DE:  DATA 69,6E
+003E0:  DATA 20,50
+003E2:  DATA 49,43
+003E4:  DATA 00,00
+003E6:  DATA 41,6E
+003E8:  DATA 74,65
+003EA:  DATA 6E,6E
+003EC:  DATA 61,20
+003EE:  DATA 64,65
+003F0:  DATA 70,6C
+003F2:  DATA 6F,79
+003F4:  DATA 6D,65
+003F6:  DATA 6E,74
+003F8:  DATA 20,63
+003FA:  DATA 6F,6D
+003FC:  DATA 6D,61
+003FE:  DATA 6E,64
+00400:  DATA 20,72
+00402:  DATA 65,63
+00404:  DATA 65,69
+00406:  DATA 76,65
+00408:  DATA 64,0A
+0040A:  DATA 0D,00
+0040C:  DATA 55,4E
+0040E:  DATA 52,45
+00410:  DATA 47,2D
+00412:  DATA 32,20
+00414:  DATA 6C,69
+00416:  DATA 6E,65
+00418:  DATA 20,69
+0041A:  DATA 73,20
+0041C:  DATA 74,75
+0041E:  DATA 72,6E
+00420:  DATA 65,64
+00422:  DATA 20,4F
+00424:  DATA 4E,20
+00426:  DATA 0A,0D
+00428:  DATA 00,00
+0042A:  DATA 43,6F
+0042C:  DATA 75,6E
+0042E:  DATA 74,69
+00430:  DATA 6E,67
+00432:  DATA 20,64
+00434:  DATA 65,70
+00436:  DATA 6C,6F
+00438:  DATA 79,6D
+0043A:  DATA 65,6E
+0043C:  DATA 74,20
+0043E:  DATA 74,69
+00440:  DATA 6D,65
+00442:  DATA 20,25
+00444:  DATA 30,32
+00446:  DATA 64,20
+00448:  DATA 53,65
+0044A:  DATA 63,20
+0044C:  DATA 0A,0D
+0044E:  DATA 00,00
+00450:  DATA 55,4E
+00452:  DATA 52,45
+00454:  DATA 47,2D
+00456:  DATA 32,20
+00458:  DATA 6C,69
+0045A:  DATA 6E,65
+0045C:  DATA 20,69
+0045E:  DATA 73,20
+00460:  DATA 74,75
+00462:  DATA 72,6E
+00464:  DATA 65,64
+00466:  DATA 20,4F
+00468:  DATA 46,46
+0046A:  DATA 20,0A
+0046C:  DATA 0D,00
+0046E:  DATA 52,43
+00470:  DATA 56,44
+00472:  DATA 20,43
+00474:  DATA 4D,44
+00476:  DATA 20,46
+00478:  DATA 52,4F
+0047A:  DATA 4D,20
+0047C:  DATA 43,4F
+0047E:  DATA 4D,20
+00480:  DATA 50,49
+00482:  DATA 43,20
+00484:  DATA 3E,3E
+00486:  DATA 20,00
+00488:  DATA 57,61
+0048A:  DATA 69,74
+0048C:  DATA 69,6E
+0048E:  DATA 67,20
+00490:  DATA 74,6F
+00492:  DATA 20,74
+00494:  DATA 75,72
+00496:  DATA 6E,20
+00498:  DATA 6F,6E
+0049A:  DATA 20,63
+0049C:  DATA 6F,6D
+0049E:  DATA 20,50
+004A0:  DATA 69,63
+004A2:  DATA 20,25
+004A4:  DATA 30,32
+004A6:  DATA 64,20
+004A8:  DATA 53,65
+004AA:  DATA 63,0A
+004AC:  DATA 0D,00
+004AE:  DATA 39,30
+004B0:  DATA 20,73
+004B2:  DATA 65,63
+004B4:  DATA 6F,6E
+004B6:  DATA 64,73
+004B8:  DATA 20,63
+004BA:  DATA 6F,6D
+004BC:  DATA 75,6E
+004BE:  DATA 69,63
+004C0:  DATA 61,74
+004C2:  DATA 69,6F
+004C4:  DATA 6E,20
+004C6:  DATA 63,6F
+004C8:  DATA 6D,6D
+004CA:  DATA 61,6E
+004CC:  DATA 64,0A
+004CE:  DATA 0D,00
+004D0:  DATA 52,65
+004D2:  DATA 73,65
+004D4:  DATA 74,20
+004D6:  DATA 70,69
+004D8:  DATA 63,20
+004DA:  DATA 52,54
+004DC:  DATA 43,20
+004DE:  DATA 75,70
+004E0:  DATA 64,61
+004E2:  DATA 74,65
+004E4:  DATA 20,63
+004E6:  DATA 6F,6D
+004E8:  DATA 6D,61
+004EA:  DATA 6E,64
+004EC:  DATA 20,52
+004EE:  DATA 65,63
+004F0:  DATA 65,69
+004F2:  DATA 76,65
+004F4:  DATA 64,20
+004F6:  DATA 66,72
+004F8:  DATA 6F,6D
+004FA:  DATA 20,43
+004FC:  DATA 4F,4D
+004FE:  DATA 20,50
+00500:  DATA 49,43
+00502:  DATA 0A,0D
+00504:  DATA 00,00
+00506:  DATA 55,70
+00508:  DATA 64,61
+0050A:  DATA 74,65
+0050C:  DATA 64,20
+0050E:  DATA 4E,65
+00510:  DATA 77,20
+00512:  DATA 54,69
+00514:  DATA 6D,65
+00516:  DATA 20,3E
+00518:  DATA 3E,20
+0051A:  DATA 00,00
+0051C:  DATA 53,45
+0051E:  DATA 4E,44
+00520:  DATA 49,4E
+00522:  DATA 47,5F
+00524:  DATA 54,49
+00526:  DATA 4D,45
+00528:  DATA 5F,54
+0052A:  DATA 4F,5F
+0052C:  DATA 43,4F
+0052E:  DATA 4D,50
+00530:  DATA 49,43
+00532:  DATA 0A,0D
+00534:  DATA 00,00
+00536:  DATA 52,50
+00538:  DATA 20,00
+*
+00614:  DATA 52,65
+00616:  DATA 73,65
+00618:  DATA 74,20
+0061A:  DATA 70,69
+0061C:  DATA 63,20
+0061E:  DATA 69,73
+00620:  DATA 20,62
+00622:  DATA 6F,6F
+00624:  DATA 74,69
+00626:  DATA 6E,67
+00628:  DATA 2E,2E
+0062A:  DATA 2E,2E
+0062C:  DATA 2E,2E
+0062E:  DATA 2E,0A
+00630:  DATA 0D,00
+*
+008CE:  TBLRD*+
+008D0:  MOVF   FF5,F
+008D2:  BZ    08F4
+008D4:  MOVFF  FF6,10D
+008D8:  MOVFF  FF7,10E
+008DC:  MOVFF  FF8,10F
+008E0:  MOVFF  FF5,114
+008E4:  RCALL  088A
+008E6:  MOVFF  10D,FF6
+008EA:  MOVFF  10E,FF7
+008EE:  MOVFF  10F,FF8
+008F2:  BRA    08CE
+008F4:  RETURN 0
+*
+009AA:  MOVLB  1
+009AC:  MOVF   x15,W
+009AE:  CLRF   01
+009B0:  SUBWF  x14,W
+009B2:  BC    09BA
+009B4:  MOVFF  114,00
+009B8:  BRA    09D2
+009BA:  CLRF   00
+009BC:  MOVLW  08
+009BE:  MOVWF  x16
+009C0:  RLCF   x14,F
+009C2:  RLCF   00,F
+009C4:  MOVF   x15,W
+009C6:  SUBWF  00,W
+009C8:  BTFSC  FD8.0
+009CA:  MOVWF  00
+009CC:  RLCF   01,F
+009CE:  DECFSZ x16,F
+009D0:  BRA    09C0
+009D2:  MOVLB  0
+009D4:  RETURN 0
+009D6:  MOVLW  20
+009D8:  MOVLB  1
+009DA:  BTFSS  x0F.4
+009DC:  MOVLW  30
+009DE:  MOVWF  x10
+009E0:  MOVFF  10E,00
+009E4:  BTFSS  00.7
+009E6:  BRA    09F8
+009E8:  COMF   00,F
+009EA:  INCF   00,F
+009EC:  MOVFF  00,10E
+009F0:  MOVLW  2D
+009F2:  MOVWF  x10
+009F4:  BSF    x0F.7
+009F6:  BSF    x0F.0
+009F8:  MOVF   01,W
+009FA:  MOVFF  10E,114
+009FE:  MOVLW  64
+00A00:  MOVWF  x15
+00A02:  MOVLB  0
+00A04:  RCALL  09AA
+00A06:  MOVFF  00,10E
+00A0A:  MOVLW  30
+00A0C:  ADDWF  01,W
+00A0E:  MOVLB  1
+00A10:  MOVWF  x11
+00A12:  MOVFF  10E,114
+00A16:  MOVLW  0A
+00A18:  MOVWF  x15
+00A1A:  MOVLB  0
+00A1C:  RCALL  09AA
+00A1E:  MOVLW  30
+00A20:  ADDWF  00,W
+00A22:  MOVLB  1
+00A24:  MOVWF  x13
+00A26:  MOVLW  30
+00A28:  ADDWF  01,W
+00A2A:  MOVWF  x12
+00A2C:  MOVFF  110,00
+00A30:  MOVLW  30
+00A32:  SUBWF  x11,W
+00A34:  BZ    0A3E
+00A36:  BSF    x0F.1
+00A38:  BTFSC  x0F.7
+00A3A:  BSF    x0F.2
+00A3C:  BRA    0A62
+00A3E:  BTFSC  x0F.2
+00A40:  BRA    0A62
+00A42:  MOVFF  110,111
+00A46:  BTFSC  x0F.1
+00A48:  BRA    0A52
+00A4A:  MOVLW  30
+00A4C:  SUBWF  x12,W
+00A4E:  BZ    0A58
+00A50:  BSF    x0F.0
+00A52:  BTFSC  x0F.7
+00A54:  BSF    x0F.1
+00A56:  BRA    0A62
+00A58:  BTFSS  FD8.2
+00A5A:  BSF    x0F.0
+00A5C:  BTFSC  FD8.2
+00A5E:  MOVFF  111,112
+00A62:  BTFSC  x0F.2
+00A64:  BRA    0A70
+00A66:  BTFSC  x0F.1
+00A68:  BRA    0A78
+00A6A:  BTFSC  x0F.0
+00A6C:  BRA    0A80
+00A6E:  BRA    0A88
+00A70:  MOVFF  110,114
+00A74:  MOVLB  0
+00A76:  RCALL  088A
+00A78:  MOVFF  111,114
+00A7C:  MOVLB  0
+00A7E:  RCALL  088A
+00A80:  MOVFF  112,114
+00A84:  MOVLB  0
+00A86:  RCALL  088A
+00A88:  MOVFF  113,114
+00A8C:  MOVLB  0
+00A8E:  RCALL  088A
+00A90:  RETURN 0
+00A92:  MOVLW  20
+00A94:  MOVLB  1
+00A96:  BTFSS  x0C.4
+00A98:  MOVLW  30
+00A9A:  MOVWF  x0D
+00A9C:  MOVFF  10B,00
+00AA0:  BTFSS  00.7
+00AA2:  BRA    0AB4
+00AA4:  COMF   00,F
+00AA6:  INCF   00,F
+00AA8:  MOVFF  00,10B
+00AAC:  MOVLW  2D
+00AAE:  MOVWF  x0D
+00AB0:  BSF    x0C.7
+00AB2:  BSF    x0C.0
+00AB4:  MOVF   01,W
+00AB6:  MOVFF  10B,114
+00ABA:  MOVLW  64
+00ABC:  MOVWF  x15
+00ABE:  MOVLB  0
+00AC0:  RCALL  09AA
+00AC2:  MOVFF  00,10B
+00AC6:  MOVLW  30
+00AC8:  ADDWF  01,W
+00ACA:  MOVLB  1
+00ACC:  MOVWF  x0E
+00ACE:  MOVFF  10B,114
+00AD2:  MOVLW  0A
+00AD4:  MOVWF  x15
+00AD6:  MOVLB  0
+00AD8:  RCALL  09AA
+00ADA:  MOVLW  30
+00ADC:  ADDWF  00,W
+00ADE:  MOVLB  1
+00AE0:  MOVWF  x10
+00AE2:  MOVLW  30
+00AE4:  ADDWF  01,W
+00AE6:  MOVWF  x0F
+00AE8:  MOVFF  10D,00
+00AEC:  MOVLW  30
+00AEE:  SUBWF  x0E,W
+00AF0:  BZ    0AFA
+00AF2:  BSF    x0C.1
+00AF4:  BTFSC  x0C.7
+00AF6:  BSF    x0C.2
+00AF8:  BRA    0B1E
+00AFA:  MOVFF  10D,10E
+00AFE:  MOVLW  20
+00B00:  MOVWF  x0D
+00B02:  MOVLW  30
+00B04:  SUBWF  x0F,W
+00B06:  BZ    0B10
+00B08:  BSF    x0C.0
+00B0A:  BTFSC  x0C.7
+00B0C:  BSF    x0C.1
+00B0E:  BRA    0B1E
+00B10:  BTFSS  FD8.2
+00B12:  BSF    x0C.0
+00B14:  BNZ   0B1E
+00B16:  MOVFF  10E,10F
+00B1A:  MOVLW  20
+00B1C:  MOVWF  x0E
+00B1E:  BTFSC  x0C.2
+00B20:  BRA    0B2C
+00B22:  BTFSC  x0C.1
+00B24:  BRA    0B34
+00B26:  BTFSC  x0C.0
+00B28:  BRA    0B3C
+00B2A:  BRA    0B44
+00B2C:  MOVFF  10D,114
+00B30:  MOVLB  0
+00B32:  RCALL  088A
+00B34:  MOVFF  10E,114
+00B38:  MOVLB  0
+00B3A:  RCALL  088A
+00B3C:  MOVFF  10F,114
+00B40:  MOVLB  0
+00B42:  RCALL  088A
+00B44:  MOVFF  110,114
+00B48:  MOVLB  0
+00B4A:  RCALL  088A
+00B4C:  RETURN 0
+00B4E:  MOVFF  FEA,112
+00B52:  MOVFF  FE9,111
+00B56:  MOVLB  1
+00B58:  BTFSS  x0B.7
+00B5A:  BRA    0B6C
+00B5C:  BSF    x11.7
+00B5E:  BTFSS  x11.4
+00B60:  INCF   x11,F
+00B62:  COMF   x0A,F
+00B64:  COMF   x0B,F
+00B66:  INCF   x0A,F
+00B68:  BTFSC  FD8.2
+00B6A:  INCF   x0B,F
+00B6C:  SWAPF  x0B,W
+00B6E:  IORLW  F0
+00B70:  MOVWF  x0D
+00B72:  ADDWF  x0D,F
+00B74:  ADDLW  E2
+00B76:  MOVWF  x0E
+00B78:  ADDLW  32
+00B7A:  MOVWF  x10
+00B7C:  MOVF   x0B,W
+00B7E:  ANDLW  0F
+00B80:  ADDWF  x0E,F
+00B82:  ADDWF  x0E,F
+00B84:  ADDWF  x10,F
+00B86:  ADDLW  E9
+00B88:  MOVWF  x0F
+00B8A:  ADDWF  x0F,F
+00B8C:  ADDWF  x0F,F
+00B8E:  SWAPF  x0A,W
+00B90:  ANDLW  0F
+00B92:  ADDWF  x0F,F
+00B94:  ADDWF  x10,F
+00B96:  RLCF   x0F,F
+00B98:  RLCF   x10,F
+00B9A:  COMF   x10,F
+00B9C:  RLCF   x10,F
+00B9E:  MOVF   x0A,W
+00BA0:  ANDLW  0F
+00BA2:  ADDWF  x10,F
+00BA4:  RLCF   x0D,F
+00BA6:  MOVLW  07
+00BA8:  MOVWF  x0C
+00BAA:  MOVLW  0A
+00BAC:  DECF   x0F,F
+00BAE:  ADDWF  x10,F
+00BB0:  BNC   0BAC
+00BB2:  DECF   x0E,F
+00BB4:  ADDWF  x0F,F
+00BB6:  BNC   0BB2
+00BB8:  DECF   x0D,F
+00BBA:  ADDWF  x0E,F
+00BBC:  BNC   0BB8
+00BBE:  DECF   x0C,F
+00BC0:  ADDWF  x0D,F
+00BC2:  BNC   0BBE
+00BC4:  MOVLW  01
+00BC6:  MOVWF  FEA
+00BC8:  MOVLW  0C
+00BCA:  MOVWF  FE9
+00BCC:  MOVLW  07
+00BCE:  ANDWF  x11,W
+00BD0:  BCF    x11.6
+00BD2:  MOVF   FED,F
+00BD4:  ANDWF  x11,W
+00BD6:  BNZ   0BE6
+00BD8:  BTFSC  x11.4
+00BDA:  MOVF   FEE,F
+00BDC:  BTFSC  x11.4
+00BDE:  BRA    0BE6
+00BE0:  MOVLW  20
+00BE2:  MOVWF  00
+00BE4:  BRA    0C26
+00BE6:  ADDWF  FE9,F
+00BE8:  MOVLW  00
+00BEA:  ADDWFC FEA,F
+00BEC:  MOVF   FE9,W
+00BEE:  SUBLW  10
+00BF0:  BNZ   0BF8
+00BF2:  DECFSZ FEA,W
+00BF4:  BRA    0BF8
+00BF6:  BSF    x11.6
+00BF8:  MOVF   FEF,W
+00BFA:  MOVWF  00
+00BFC:  BNZ   0C0E
+00BFE:  BTFSC  x11.6
+00C00:  BRA    0C0E
+00C02:  BTFSC  x11.4
+00C04:  BRA    0C40
+00C06:  BTFSC  x11.3
+00C08:  BRA    0C0E
+00C0A:  MOVLW  20
+00C0C:  BRA    0C24
+00C0E:  BTFSS  x11.7
+00C10:  BRA    0C1E
+00C12:  MOVLW  2D
+00C14:  MOVWF  00
+00C16:  MOVF   FED,W
+00C18:  BCF    x11.6
+00C1A:  BCF    x11.7
+00C1C:  BRA    0C26
+00C1E:  BSF    x11.3
+00C20:  BCF    x11.4
+00C22:  MOVLW  30
+00C24:  ADDWF  00,F
+00C26:  MOVFF  FEA,10B
+00C2A:  MOVFF  FE9,10A
+00C2E:  MOVFF  00,114
+00C32:  MOVLB  0
+00C34:  RCALL  088A
+00C36:  MOVFF  10B,FEA
+00C3A:  MOVFF  10A,FE9
+00C3E:  MOVLB  1
+00C40:  MOVF   FEE,W
+00C42:  BTFSS  x11.6
+00C44:  BRA    0BEC
+00C46:  MOVLB  0
+00C48:  RETURN 0
+*
+00F0E:  TBLRD*+
+00F10:  MOVFF  FF6,10F
+00F14:  MOVFF  FF7,110
+00F18:  MOVFF  FF8,111
+00F1C:  MOVFF  FF5,114
+00F20:  RCALL  088A
+00F22:  MOVFF  10F,FF6
+00F26:  MOVFF  110,FF7
+00F2A:  MOVFF  111,FF8
+00F2E:  MOVLB  1
+00F30:  DECFSZ x0E,F
+00F32:  BRA    0F36
+00F34:  BRA    0F3A
+00F36:  MOVLB  0
+00F38:  BRA    0F0E
+00F3A:  MOVLB  0
+00F3C:  RETURN 0
+00F3E:  MOVF   01,W
+00F40:  MOVFF  10B,114
+00F44:  MOVLW  64
+00F46:  MOVLB  1
+00F48:  MOVWF  x15
+00F4A:  MOVLB  0
+00F4C:  RCALL  09AA
+00F4E:  MOVFF  00,10B
+00F52:  MOVF   01,W
+00F54:  MOVLW  30
+00F56:  BNZ   0F68
+00F58:  MOVLB  1
+00F5A:  BTFSS  x0C.1
+00F5C:  BRA    0F7C
+00F5E:  BTFSC  x0C.3
+00F60:  BRA    0F7C
+00F62:  BTFSC  x0C.4
+00F64:  MOVLW  20
+00F66:  BRA    0F70
+00F68:  MOVLB  1
+00F6A:  BCF    x0C.3
+00F6C:  BCF    x0C.4
+00F6E:  BSF    x0C.0
+00F70:  ADDWF  01,F
+00F72:  MOVFF  01,114
+00F76:  MOVLB  0
+00F78:  RCALL  088A
+00F7A:  MOVLB  1
+00F7C:  MOVFF  10B,114
+00F80:  MOVLW  0A
+00F82:  MOVWF  x15
+00F84:  MOVLB  0
+00F86:  RCALL  09AA
+00F88:  MOVFF  00,10B
+00F8C:  MOVF   01,W
+00F8E:  MOVLW  30
+00F90:  BNZ   0FA2
+00F92:  MOVLB  1
+00F94:  BTFSC  x0C.3
+00F96:  BRA    0FAC
+00F98:  BTFSS  x0C.0
+00F9A:  BRA    0FAC
+00F9C:  BTFSC  x0C.4
+00F9E:  MOVLW  20
+00FA0:  MOVLB  0
+00FA2:  ADDWF  01,F
+00FA4:  MOVFF  01,114
+00FA8:  RCALL  088A
+00FAA:  MOVLB  1
+00FAC:  MOVLW  30
+00FAE:  ADDWF  x0B,F
+00FB0:  MOVFF  10B,114
+00FB4:  MOVLB  0
+00FB6:  RCALL  088A
+00FB8:  RETURN 0
+*
+011A8:  MOVLB  1
+011AA:  BTFSC  x0E.7
+011AC:  BRA    11D2
+011AE:  MOVLW  0F
+011B0:  MOVWF  00
+011B2:  SWAPF  x0D,W
+011B4:  ANDWF  00,F
+011B6:  MOVLW  0A
+011B8:  SUBWF  00,W
+011BA:  BC    11C2
+011BC:  MOVLW  30
+011BE:  ADDWF  00,F
+011C0:  BRA    11C6
+011C2:  MOVF   x0E,W
+011C4:  ADDWF  00,F
+011C6:  MOVFF  00,114
+011CA:  MOVLB  0
+011CC:  CALL   088A
+011D0:  MOVLB  1
+011D2:  MOVLW  0F
+011D4:  ANDWF  x0D,F
+011D6:  MOVLW  0A
+011D8:  SUBWF  x0D,W
+011DA:  BC    11E0
+011DC:  MOVLW  30
+011DE:  BRA    11E4
+011E0:  BCF    x0E.7
+011E2:  MOVF   x0E,W
+011E4:  ADDWF  x0D,F
+011E6:  MOVFF  10D,114
+011EA:  MOVLB  0
+011EC:  CALL   088A
+011F0:  RETURN 0
+*
+01FAE:  CLRF   01
+01FB0:  CLRF   02
+01FB2:  CLRF   00
+01FB4:  CLRF   03
+01FB6:  MOVLB  1
+01FB8:  MOVF   x0D,W
+01FBA:  BNZ   1FC0
+01FBC:  MOVF   x0C,W
+01FBE:  BZ    1FF0
+01FC0:  MOVLW  10
+01FC2:  MOVWF  x0E
+01FC4:  BCF    FD8.0
+01FC6:  RLCF   x0A,F
+01FC8:  RLCF   x0B,F
+01FCA:  RLCF   00,F
+01FCC:  RLCF   03,F
+01FCE:  MOVF   x0D,W
+01FD0:  SUBWF  03,W
+01FD2:  BNZ   1FD8
+01FD4:  MOVF   x0C,W
+01FD6:  SUBWF  00,W
+01FD8:  BNC   1FE8
+01FDA:  MOVF   x0C,W
+01FDC:  SUBWF  00,F
+01FDE:  BTFSS  FD8.0
+01FE0:  DECF   03,F
+01FE2:  MOVF   x0D,W
+01FE4:  SUBWF  03,F
+01FE6:  BSF    FD8.0
+01FE8:  RLCF   01,F
+01FEA:  RLCF   02,F
+01FEC:  DECFSZ x0E,F
+01FEE:  BRA    1FC4
+01FF0:  MOVLB  0
+01FF2:  GOTO   21E0 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #FUSES NOWDT,NOBROWNOUT,SOSC_DIG 
+.................... #device ADC = 12 
+.................... #use delay(crystal = 16MHz, clock = 16MHz) 
+*
+00652:  MOVLW  01
+00654:  MOVWF  FEA
+00656:  MOVLW  0E
+00658:  MOVWF  FE9
+0065A:  MOVF   FEF,W
+0065C:  BZ    067A
+0065E:  MOVLW  05
+00660:  MOVWF  01
+00662:  CLRF   00
+00664:  DECFSZ 00,F
+00666:  BRA    0664
+00668:  DECFSZ 01,F
+0066A:  BRA    0662
+0066C:  MOVLW  2E
+0066E:  MOVWF  00
+00670:  DECFSZ 00,F
+00672:  BRA    0670
+00674:  BRA    0676
+00676:  DECFSZ FEF,F
+00678:  BRA    065E
+0067A:  RETURN 0
+.................... #include <PIC18F67J94_REGISTERS.h> 
+....................  
+.................... #byte TRISG = 0xF98 
+.................... #byte TRISF = 0xF97 
+.................... #byte TRISE = 0xF96 
+.................... #byte TRISD = 0xF95 
+.................... #byte TRISC = 0xF94 
+.................... #byte TRISB = 0xF93 
+.................... #byte TRISA = 0xF92 
+....................  
+.................... #byte LATG = 0xF8F 
+.................... #byte LATF = 0xF8E 
+.................... #byte LATE = 0xF8D 
+.................... #byte LATD = 0xF8C 
+.................... #byte LATC = 0xF8B 
+.................... #byte LATB = 0xF8A 
+.................... #byte LATA = 0xF89 
+....................  
+.................... #bit    TRISE0 = TRISE.0 
+.................... #bit    TRISE1 = TRISE.1 
+.................... #bit    TRISE2 = TRISE.2 
+....................  
+.................... #bit    TRISC4 = TRISC.4 
+....................  
+.................... #bit    TRISB3 = TRISB.3 
+....................  
+.................... #bit    TRISA0 = TRISA.0 
+.................... #bit    TRISA1 = TRISA.1 
+.................... #bit    TRISA2 = TRISA.2 
+.................... #bit    TRISA5 = TRISA.5 
+....................  
+....................  
+....................  
+....................  
+.................... #bit    LATA0 = LATA.0 
+.................... #bit    LATA1 = LATA.1 
+.................... #bit    LATA2 = LATA.2 
+.................... #bit    LATA3 = LATA.3 
+....................  
+.................... #byte PORTG = 0xF86 
+.................... #bit    RG0 = PORTG.0 
+.................... #bit    RG1 = PORTG.1 
+.................... #bit    RG2 = PORTG.2 
+.................... #bit    RG3 = PORTG.3 
+.................... #bit    RG4 = PORTG.4 
+.................... #bit    RG6 = PORTG.6 
+.................... #bit    RG7 = PORTG.7 
+.................... #byte PORTF = 0xF85 
+.................... #bit    RF2 = PORTF.2 
+.................... #bit    RF3 = PORTF.3 
+.................... #bit    RF4 = PORTF.4 
+.................... #bit    RF5 = PORTF.5 
+.................... #bit    RF6 = PORTF.6 
+.................... #bit    RF7 = PORTF.7 
+....................  
+.................... #byte PORTE = 0xF84 
+.................... #bit    RE2 = PORTE.2 
+....................  
+....................  
+.................... #byte PORTD = 0xF83 
+.................... #byte PORTC = 0xF82 
+.................... #bit    RC0 = PORTC.0 
+.................... #bit    RC1 = PORTC.1 
+.................... #bit    RC2 = PORTC.2 
+.................... #bit    RC3 = PORTC.3 
+.................... #bit    RC4 = PORTC.4 
+.................... #bit    RC5 = PORTC.5 
+.................... #bit    RC6 = PORTC.6 
+.................... #bit    RC7 = PORTC.7 
+....................  
+.................... #byte PORTB = 0xF81 
+.................... #bit    RB3 = PORTB.3 
+....................  
+.................... #byte PORTA = 0xF80 
+.................... #bit    RA0 = PORTA.0 
+.................... #bit    RA1 = PORTA.1 
+.................... #bit    RA2 = PORTA.2 
+.................... #bit    RA3 = PORTA.3 
+.................... #bit    RA4 = PORTA.4 
+.................... #bit    RA5 = PORTA.5 
+.................... #bit    RA6 = PORTA.6 
+.................... #bit    RA7 = PORTA.7 
+....................  
+....................  
+.................... //__________________________________RTC___________________________________________ 
+.................... #byte RTCCON1 = 0xF5F 
+.................... #bit    RTCPTR0 = RTCCON1.0 
+.................... #bit    RTCPTR1 = RTCCON1.1 
+.................... #bit    RTCOE = RTCCON1.2 
+.................... #bit    HALFSEC = RTCCON1.3 
+.................... #bit    RTCSYNC = RTCCON1.4 
+.................... #bit    RTCWREN = RTCCON1.5 
+.................... #bit    RTCEN = RTCCON1.7 
+.................... #byte RTCCAL = 0xF5E 
+.................... #byte RTCVALH = 0xF5D 
+.................... #bit    WAITE0 = RTCVALH.0 
+.................... #bit    WAITE1 = RTCVALH.1 
+.................... #bit    WAITM0 = RTCVALH.2 
+.................... #bit    WAITM1 = RTCVALH.3 
+.................... #bit    WAITM2 = RTCVALH.4 
+.................... #bit    WAITM3 = RTCVALH.5 
+.................... #bit    WAITB0 = RTCVALH.6 
+.................... #bit    WAITB1 = RTCVALH.7 
+.................... //#byte RTCVALH = 0xF5D 
+.................... #byte RTCVALL = 0xF5C 
+.................... #byte ALRMCFG = 0xF5B 
+.................... #bit    ALRMPTR0 = ALRMCFG.0 
+.................... #bit    ALRMPTR1 = ALRMCFG.1 
+.................... #bit    AMASK0 = ALRMCFG.2 
+.................... #bit    AMASK1 = ALRMCFG.3 
+.................... #bit    AMASK2 = ALRMCFG.4 
+.................... #bit    AMASK3 = ALRMCFG.5 
+.................... #bit    CHIME = ALRMCFG.6 
+.................... #bit    ALRMEN = ALRMCFG.7 
+.................... #byte ALRMRPT = 0xF5A 
+.................... #byte ALRMVALH = 0xF59 
+.................... #byte ALRMVALL = 0xF58 
+.................... #byte RTCCON2 = 0xF57 
+.................... #bit    RTCSECSEL0 = RTCCON2.0 
+.................... #bit    RTCSECSEL1 = RTCCON2.1 
+.................... #bit    RTCCLKSEL0 = RTCCON2.2 
+.................... #bit    RTCCLKSEL1 = RTCCON2.3 
+.................... #bit    PWCSPRE = RTCCON2.4 
+.................... #bit    PWCCPRE = RTCCON2.5 
+.................... #bit    PWCPOL = RTCCON2.6 
+.................... #bit    PWCEN = RTCCON2.7 
+....................  
+....................  
+.................... #byte EECON2 = 0xF7E 
+....................  
+.................... #byte OSCCON = 0xFD3 
+....................  
+.................... #byte T1CON  = 0xFCD 
+....................  
+.................... #bit  T1CON7 = T1CON.7 
+.................... #bit  T1CON6 = T1CON.6 
+.................... //!#bit  T1CON5 = T1CON.5 
+.................... //!#bit  T1CON4 = T1CON.4 
+.................... //#bit  T1CON7 = T1CON.7 
+.................... //#bit  T1CON6 = T1CON.6 
+....................  
+.................... #bit  SOSCEN1 = T1CON.3 
+.................... #bit  TMR1ON = T1CON.0 
+....................  
+.................... #byte T3CON  = 0xFB1 
+.................... #bit  SOSCEN3 = T3CON.3 
+....................  
+....................  
+.................... #byte PIE3 = 0xFA3 
+.................... #bit  RC2IE = PIE3.5 
+....................  
+....................  
+.................... #include <ResetPIC_Functions.c> 
+....................  
+.................... /* This variable is used to monitor the main pic. It is increased in the 
+.................... timer-1 interrupt loop every one second. If the main pic communicates  
+.................... correctly with the reset pic within 90 seconds, this variable will become 0,  
+.................... and it will be increased again. If there is no communication with the main pic, 
+.................... this variable will go to a higher value. If it reaches 600  
+.................... (which equals 10 minutes), the reset pic will restart the main pic.*/ 
+.................... unsigned int16 MPIC_TIME_COUNTER = 0; 
+....................  
+.................... // this variable will count how many times main pic was reseted by reset pic 
+.................... unsigned int8  NUMOF_MPIC_RST = 0; 
+....................  
+.................... // similar to above two variable below two variables are used to monitor com pic 
+.................... unsigned int16 CPIC_TIME_COUNTER = 0; 
+.................... unsigned int8  NUMOF_CPIC_RST = 0; 
+....................  
+.................... // these the UART buffers used to comunicate with Main Pic_____________________ 
+.................... unsigned int8 MPIC_TO_RPIC_ARRAY[35] ;   // only 10 bytes will be used 
+.................... unsigned int8 RPIC_TO_MPIC_ARRAY[32] ; 
+....................  
+.................... // these the UART buffers used to comunicate with com Pic______________________ 
+.................... unsigned int8 CPIC_TO_RPIC_ARRAY[35] ;   // only 20 
+.................... unsigned int8 RPIC_TO_CPIC_ARRAY[20] ; 
+....................  
+.................... // these the UART buffers used to comunicate with com Pic______________________ 
+.................... //unsigned int8 SPIC_TO_RPIC_ARRAY[10] ;   // only  
+.................... //unsigned int8 RPIC_TO_SPIC_ARRAY[10] ; 
+....................  
+.................... // these are RTC related variables 
+.................... unsigned int8 year, month, day, hour, minute, second; 
+....................  
+.................... // this UART port is used as debug port of reset PIC___________________________ 
+.................... //#use rs232(baud=38400, parity=N, xmit=PIN_B7,  bits=8, stream = PC, errors, force_sw )               // Debuging software UART 
+.................... #use rs232(baud=38400, parity=N, xmit=PIN_B2,  bits=8, stream = PC, errors, force_sw )  // dummy port 
+*
+0088A:  BCF    F93.2
+0088C:  BCF    F8A.2
+0088E:  MOVLW  08
+00890:  MOVWF  01
+00892:  BRA    0894
+00894:  NOP   
+00896:  BSF    01.7
+00898:  BRA    08BA
+0089A:  BCF    01.7
+0089C:  MOVLB  1
+0089E:  RRCF   x14,F
+008A0:  MOVLB  0
+008A2:  BTFSC  FD8.0
+008A4:  BSF    F8A.2
+008A6:  BTFSS  FD8.0
+008A8:  BCF    F8A.2
+008AA:  BSF    01.6
+008AC:  BRA    08BA
+008AE:  BCF    01.6
+008B0:  DECFSZ 01,F
+008B2:  BRA    089C
+008B4:  BRA    08B6
+008B6:  NOP   
+008B8:  BSF    F8A.2
+008BA:  MOVLW  1C
+008BC:  MOVWF  FE9
+008BE:  DECFSZ FE9,F
+008C0:  BRA    08BE
+008C2:  BRA    08C4
+008C4:  BTFSC  01.7
+008C6:  BRA    089A
+008C8:  BTFSC  01.6
+008CA:  BRA    08AE
+008CC:  RETURN 0
+.................... //B2 
+....................  
+.................... void RST_EXT_WDT() 
+.................... { 
+....................    Output_Toggle(PIN_F2); 
+*
+00632:  BCF    F97.2
+00634:  BTG    F8E.2
+00636:  RETURN 0
+.................... } 
+....................  
+.................... //============================================================================= 
+.................... //This section handle the UART port connected to main pic______________________ 
+.................... #define MP_BFR_SIZE 30 
+.................... #pin_select TX3=PIN_E1   
+.................... #pin_select RX3=PIN_E0   
+.................... #use rs232(UART3, baud=38400, parity=N, bits=8, stream=MPic, errors)  
+*
+000E2:  BTFSS  FA6.5
+000E4:  BRA    00E2
+000E6:  MOVFF  F2F,A1
+000EA:  MOVFF  F2A,01
+000EE:  MOVLB  0
+000F0:  BTFSS  xA1.1
+000F2:  BRA    00FC
+000F4:  MOVLB  F
+000F6:  BCF    x2F.4
+000F8:  BSF    x2F.4
+000FA:  MOVLB  0
+000FC:  RETURN 0
+*
+0160C:  BTFSS  FA6.4
+0160E:  BRA    160C
+01610:  MOVLB  F
+01612:  MOVWF  x29
+01614:  MOVLB  0
+01616:  RETURN 0
+....................  
+.................... unsigned int8  MP_Buffer[MP_BFR_SIZE]; 
+.................... unsigned int16 MP_Byte_Counter = 0; 
+.................... unsigned int8  MP_Overflow = 0; 
+.................... unsigned int16 MP_Read_Byte_counter = 0; 
+.................... unsigned int8  MP_Temp_byte = 0; 
+....................  
+.................... unsigned int16 LAST_RESET_HOUR = 0; 
+.................... #INT_RDA3 
+.................... Void SERIAL_ISR3()         // MAIN PIC uart interupt loop 
+.................... { 
+....................    if( kbhit(MPic) ) 
+*
+000FE:  BTFSS  FA6.5
+00100:  BRA    013C
+....................    { 
+....................       if( MP_Byte_Counter < MP_BFR_SIZE ) 
+00102:  MOVF   xC1,F
+00104:  BNZ   0136
+00106:  MOVF   xC0,W
+00108:  SUBLW  1D
+0010A:  BNC   0136
+....................       { 
+....................          MP_Buffer[MP_Byte_Counter] = fgetc(MPic); 
+0010C:  MOVLW  A2
+0010E:  ADDWF  xC0,W
+00110:  MOVWF  FE9
+00112:  MOVLW  00
+00114:  ADDWFC xC1,W
+00116:  MOVWF  FEA
+00118:  MOVFF  FEA,11A
+0011C:  MOVFF  FE9,119
+00120:  RCALL  00E2
+00122:  MOVFF  11A,FEA
+00126:  MOVFF  119,FE9
+0012A:  MOVFF  01,FEF
+....................          MP_Byte_Counter++; 
+0012E:  INCF   xC0,F
+00130:  BTFSC  FD8.2
+00132:  INCF   xC1,F
+....................       } 
+00134:  BRA    013C
+....................       else MP_Overflow = fgetc(MPic); 
+00136:  RCALL  00E2
+00138:  MOVFF  01,C2
+....................    } 
+0013C:  BCF    FA6.5
+0013E:  GOTO   008C
+.................... } 
+....................  
+.................... unsigned int8 MPic_Available() 
+.................... { 
+....................    return MP_Byte_Counter ; 
+*
+0082A:  MOVF   xC0,W
+0082C:  MOVWF  01
+0082E:  RETURN 0
+.................... } 
+....................  
+.................... unsigned int8 MPic_Read() 
+.................... { 
+....................    if (MP_Byte_Counter>0) 
+00830:  MOVF   xC0,F
+00832:  BNZ   0838
+00834:  MOVF   xC1,F
+00836:  BZ    0868
+....................    {     
+....................       MP_Temp_byte = MP_Buffer[MP_Read_Byte_counter]; 
+00838:  MOVLW  A2
+0083A:  ADDWF  xC3,W
+0083C:  MOVWF  FE9
+0083E:  MOVLW  00
+00840:  ADDWFC xC4,W
+00842:  MOVWF  FEA
+00844:  MOVFF  FEF,C5
+....................        
+....................       MP_Byte_Counter--; 
+00848:  MOVF   xC0,W
+0084A:  BTFSC  FD8.2
+0084C:  DECF   xC1,F
+0084E:  DECF   xC0,F
+....................       MP_Read_Byte_counter++; 
+00850:  INCF   xC3,F
+00852:  BTFSC  FD8.2
+00854:  INCF   xC4,F
+....................       if(MP_Byte_Counter == 0) MP_Read_Byte_counter = 0; 
+00856:  MOVF   xC0,F
+00858:  BNZ   0862
+0085A:  MOVF   xC1,F
+0085C:  BNZ   0862
+0085E:  CLRF   xC4
+00860:  CLRF   xC3
+....................       return MP_Temp_byte;  
+00862:  MOVFF  C5,01
+00866:  BRA    087A
+....................    } 
+....................     
+....................    if (MP_Byte_Counter == 0) 
+00868:  MOVF   xC0,F
+0086A:  BNZ   087A
+0086C:  MOVF   xC1,F
+0086E:  BNZ   087A
+....................    {  
+....................       MP_Read_Byte_counter = 0; 
+00870:  CLRF   xC4
+00872:  CLRF   xC3
+....................       MP_Temp_byte = 0x00; 
+00874:  CLRF   xC5
+....................       return MP_Temp_byte;  
+00876:  MOVFF  C5,01
+....................    } 
+0087A:  RETURN 0
+....................   
+.................... } 
+....................  
+.................... void MPic_flush() 
+.................... { 
+....................    while( MPic_Available() ) MPic_Read() ; 
+0087C:  RCALL  082A
+0087E:  MOVF   01,F
+00880:  BZ    0886
+00882:  RCALL  0830
+00884:  BRA    087C
+00886:  GOTO   0998 (RETURN)
+.................... } 
+.................... //============================================================================= 
+....................  
+....................  
+.................... //============================================================================= 
+.................... //This section handle the UART port connected to com pic______________________ 
+.................... #define CP_BFR_SIZE 30 
+.................... #pin_select TX2=PIN_G1   
+.................... #pin_select RX2=PIN_G0   
+.................... #use rs232(UART2, baud=38400, parity=N, bits=8, stream=CPic, errors)  
+*
+00142:  BTFSS  FA4.5
+00144:  BRA    0142
+00146:  MOVFF  F33,A1
+0014A:  MOVFF  F1E,01
+0014E:  MOVLB  0
+00150:  BTFSS  xA1.1
+00152:  BRA    015C
+00154:  MOVLB  F
+00156:  BCF    x33.4
+00158:  BSF    x33.4
+0015A:  MOVLB  0
+0015C:  RETURN 0
+*
+01D46:  BTFSS  FA4.4
+01D48:  BRA    1D46
+01D4A:  MOVLB  F
+01D4C:  MOVWF  x1D
+01D4E:  MOVLB  0
+01D50:  RETURN 0
+....................  
+.................... unsigned int8  CP_Buffer[CP_BFR_SIZE]; 
+.................... unsigned int16 CP_Byte_Counter = 0; 
+.................... unsigned int8  CP_Overflow = 0; 
+.................... unsigned int16 CP_Read_Byte_counter = 0; 
+.................... unsigned int8  CP_Temp_byte = 0; 
+....................  
+.................... #INT_RDA2 
+.................... Void SERIAL_ISR2()         // MAIN PIC uart interupt loop 
+.................... { 
+....................    if( kbhit(CPic) ) 
+*
+0015E:  BTFSS  FA4.5
+00160:  BRA    019C
+....................    { 
+....................       if( CP_Byte_Counter < CP_BFR_SIZE ) 
+00162:  MOVF   xE7,F
+00164:  BNZ   0196
+00166:  MOVF   xE6,W
+00168:  SUBLW  1D
+0016A:  BNC   0196
+....................       { 
+....................          CP_Buffer[CP_Byte_Counter] = fgetc(CPic); 
+0016C:  MOVLW  C8
+0016E:  ADDWF  xE6,W
+00170:  MOVWF  FE9
+00172:  MOVLW  00
+00174:  ADDWFC xE7,W
+00176:  MOVWF  FEA
+00178:  MOVFF  FEA,11A
+0017C:  MOVFF  FE9,119
+00180:  RCALL  0142
+00182:  MOVFF  11A,FEA
+00186:  MOVFF  119,FE9
+0018A:  MOVFF  01,FEF
+....................          CP_Byte_Counter++; 
+0018E:  INCF   xE6,F
+00190:  BTFSC  FD8.2
+00192:  INCF   xE7,F
+....................       } 
+00194:  BRA    019C
+....................       else CP_Overflow = fgetc(CPic); 
+00196:  RCALL  0142
+00198:  MOVFF  01,E8
+....................    } 
+0019C:  BCF    FA4.5
+0019E:  GOTO   008C
+.................... } 
+....................  
+.................... unsigned int8 CPic_Available() 
+.................... { 
+....................    return CP_Byte_Counter ; 
+*
+01292:  MOVF   xE6,W
+01294:  MOVWF  01
+01296:  GOTO   12E8 (RETURN)
+.................... } 
+....................  
+.................... unsigned int8 CPic_Read() 
+.................... { 
+....................    if (CP_Byte_Counter>0) 
+0129A:  MOVF   xE6,F
+0129C:  BNZ   12A2
+0129E:  MOVF   xE7,F
+012A0:  BZ    12D2
+....................    {     
+....................       CP_Temp_byte = CP_Buffer[CP_Read_Byte_counter]; 
+012A2:  MOVLW  C8
+012A4:  ADDWF  xE9,W
+012A6:  MOVWF  FE9
+012A8:  MOVLW  00
+012AA:  ADDWFC xEA,W
+012AC:  MOVWF  FEA
+012AE:  MOVFF  FEF,EB
+....................        
+....................       CP_Byte_Counter--; 
+012B2:  MOVF   xE6,W
+012B4:  BTFSC  FD8.2
+012B6:  DECF   xE7,F
+012B8:  DECF   xE6,F
+....................       CP_Read_Byte_counter++; 
+012BA:  INCF   xE9,F
+012BC:  BTFSC  FD8.2
+012BE:  INCF   xEA,F
+....................       if(CP_Byte_Counter == 0) CP_Read_Byte_counter = 0; 
+012C0:  MOVF   xE6,F
+012C2:  BNZ   12CC
+012C4:  MOVF   xE7,F
+012C6:  BNZ   12CC
+012C8:  CLRF   xEA
+012CA:  CLRF   xE9
+....................       return CP_Temp_byte;  
+012CC:  MOVFF  EB,01
+012D0:  BRA    12E4
+....................    } 
+....................     
+....................    if (CP_Byte_Counter == 0) 
+012D2:  MOVF   xE6,F
+012D4:  BNZ   12E4
+012D6:  MOVF   xE7,F
+012D8:  BNZ   12E4
+....................    {  
+....................       CP_Read_Byte_counter = 0; 
+012DA:  CLRF   xEA
+012DC:  CLRF   xE9
+....................       CP_Temp_byte = 0x00; 
+012DE:  CLRF   xEB
+....................       return CP_Temp_byte;  
+012E0:  MOVFF  EB,01
+....................    } 
+012E4:  RETURN 0
+....................   
+.................... } 
+....................  
+.................... void CPic_flush() 
+.................... { 
+....................    while( CPic_Available() ) CPic_Read() ; 
+.................... } 
+.................... //============================================================================= 
+....................  
+....................  
+.................... //============================================================================= 
+.................... //#use rs232(baud=38400, xmit = PIN_C6,  parity=N, bits=8, stream=SPic, force_sw ,errors)  
+....................  
+.................... //!//This section handle the UART port connected to com pic______________________ 
+.................... #define SP_BFR_SIZE 5 
+.................... #pin_select TX1=PIN_C6   
+.................... #pin_select RX1=PIN_C7   
+.................... #use rs232(UART1, baud=38400, parity=N, bits=8, stream=SPic, errors)  
+*
+001A2:  BTFSS  F9E.5
+001A4:  BRA    01A2
+001A6:  MOVFF  FAB,A1
+001AA:  MOVFF  FAE,01
+001AE:  BTFSS  xA1.1
+001B0:  BRA    01B6
+001B2:  BCF    FAB.4
+001B4:  BSF    FAB.4
+001B6:  RETURN 0
+*
+01FF6:  BTFSS  F9E.4
+01FF8:  BRA    1FF6
+01FFA:  MOVWF  FAD
+01FFC:  RETURN 0
+....................  
+.................... unsigned int8  SP_Buffer[SP_BFR_SIZE]; 
+.................... unsigned int16 SP_Byte_Counter = 0; 
+.................... unsigned int8  SP_Overflow = 0; 
+.................... unsigned int16 SP_Read_Byte_counter = 0; 
+.................... unsigned int8  SP_Temp_byte = 0; 
+....................  
+.................... #INT_RDA 
+.................... Void SERIAL_ISR()         // MAIN PIC uart interupt loop 
+.................... { 
+....................    if( SP_Byte_Counter < SP_BFR_SIZE ) 
+*
+001B8:  MOVF   xF2,F
+001BA:  BNZ   01EC
+001BC:  MOVF   xF1,W
+001BE:  SUBLW  04
+001C0:  BNC   01EC
+....................    { 
+....................       SP_Buffer[SP_Byte_Counter] = fgetc(SPic); 
+001C2:  MOVLW  EC
+001C4:  ADDWF  xF1,W
+001C6:  MOVWF  FE9
+001C8:  MOVLW  00
+001CA:  ADDWFC xF2,W
+001CC:  MOVWF  FEA
+001CE:  MOVFF  FEA,11A
+001D2:  MOVFF  FE9,119
+001D6:  RCALL  01A2
+001D8:  MOVFF  11A,FEA
+001DC:  MOVFF  119,FE9
+001E0:  MOVFF  01,FEF
+....................       SP_Byte_Counter++; 
+001E4:  INCF   xF1,F
+001E6:  BTFSC  FD8.2
+001E8:  INCF   xF2,F
+....................    } 
+001EA:  BRA    01F2
+....................     
+....................    else SP_Overflow = fgetc(SPic); 
+001EC:  RCALL  01A2
+001EE:  MOVFF  01,F3
+001F2:  BCF    F9E.5
+001F4:  GOTO   008C
+.................... } 
+....................  
+.................... unsigned int8 SPic_Available() 
+.................... { 
+....................    return SP_Byte_Counter ; 
+.................... } 
+....................  
+.................... unsigned int8 SPic_Read() 
+.................... { 
+....................    if (SP_Byte_Counter>0) 
+....................    {     
+....................       SP_Temp_byte = SP_Buffer[SP_Read_Byte_counter]; 
+....................        
+....................       SP_Byte_Counter--; 
+....................       SP_Read_Byte_counter++; 
+....................       if(SP_Byte_Counter == 0) SP_Read_Byte_counter = 0; 
+....................       return SP_Temp_byte;  
+....................    } 
+....................     
+....................    if (SP_Byte_Counter == 0) 
+....................    {  
+....................       SP_Read_Byte_counter = 0; 
+....................       SP_Temp_byte = 0x00; 
+....................       return SP_Temp_byte;  
+....................    } 
+....................  } 
+....................  
+.................... void SPic_flush() 
+.................... { 
+....................    while( SPic_Available() ) SPic_Read() ; 
+.................... } 
+.................... //============================================================================= 
+....................  
+....................  
+.................... // this function will just print a line in debug port 
+.................... void printline() 
+.................... { 
+....................    fprintf( PC, "\n\r"); 
+*
+00C4A:  MOVLW  0A
+00C4C:  MOVLB  1
+00C4E:  MOVWF  x14
+00C50:  MOVLB  0
+00C52:  RCALL  088A
+00C54:  MOVLW  0D
+00C56:  MOVLB  1
+00C58:  MOVWF  x14
+00C5A:  MOVLB  0
+00C5C:  RCALL  088A
+00C5E:  RETURN 0
+.................... } 
+....................  
+.................... // using this function we can make any data array clear 
+.................... void CLEAR_DATA_ARRAY(unsigned int8 array[], int array_size) 
+.................... {    
+....................    for(int i = 0; i < array_size; i++) 
+*
+014E2:  MOVLB  1
+014E4:  CLRF   x10
+014E6:  MOVF   x0F,W
+014E8:  SUBWF  x10,W
+014EA:  BC    14FE
+....................    { 
+....................       array[i] = 0 ; 
+014EC:  MOVF   x10,W
+014EE:  ADDWF  x0D,W
+014F0:  MOVWF  FE9
+014F2:  MOVLW  00
+014F4:  ADDWFC x0E,W
+014F6:  MOVWF  FEA
+014F8:  CLRF   FEF
+014FA:  INCF   x10,F
+014FC:  BRA    14E6
+....................    } 
+014FE:  MOVLB  0
+01500:  RETURN 0
+.................... } 
+....................  
+....................  
+....................  
+.................... #include <ADC_Power_Lines_Control.c> 
+.................... #define ON  1 
+.................... #define OFF 0 
+....................  
+.................... #define BB_ON_OCP_ON   1 
+.................... #define BB_ON_OCP_OFF  2 
+.................... #define BB_OFF_OCP_OFF 3 
+.................... // this variable will have the power line status as an example 
+.................... // bit 7 of the variable will say whether main pic is on or off 1 = on, 0 = off 
+.................... unsigned int8 POWER_LINE_STATUS = 0; 
+.................... unsigned int8 RESET_TIME = 0; 
+....................  
+.................... // this will handle the Main pic compic buck boost converter___________________ 
+.................... void MP_CP_BuckBoost(int1 status) 
+.................... { 
+....................    if( status == ON )  
+*
+00638:  MOVLB  1
+0063A:  DECFSZ x0A,W
+0063C:  BRA    0642
+....................    {  
+....................       output_LOW(PIN_C4);  
+0063E:  BCF    F94.4
+00640:  BCF    F8B.4
+....................    } 
+....................     
+....................    if( status == OFF )  
+00642:  MOVF   x0A,F
+00644:  BNZ   064A
+....................    { 
+....................       output_HIGH(PIN_C4) ; 
+00646:  BCF    F94.4
+00648:  BSF    F8B.4
+....................    } 
+....................    RST_EXT_WDT();  
+0064A:  MOVLB  0
+0064C:  RCALL  0632
+0064E:  GOTO   0900 (RETURN)
+.................... } 
+....................  
+.................... // this will handle main pic power_____________________________________________ 
+.................... void MainPic_Power(int1 status) 
+.................... { 
+....................    if( status == 1 ) 
+*
+0067C:  MOVLB  1
+0067E:  DECFSZ x0D,W
+00680:  BRA    068C
+....................    { 
+....................       output_high(PIN_F5); 
+00682:  BCF    F97.5
+00684:  BSF    F8E.5
+....................       BIT_SET(POWER_LINE_STATUS,7);  
+00686:  MOVLB  0
+00688:  BSF    xF7.7
+0068A:  MOVLB  1
+....................    } 
+....................    if( status == 0 ) 
+0068C:  MOVF   x0D,F
+0068E:  BNZ   069A
+....................    { 
+....................       output_low(PIN_F5) ; 
+00690:  BCF    F97.5
+00692:  BCF    F8E.5
+....................       BIT_CLEAR(POWER_LINE_STATUS,7); 
+00694:  MOVLB  0
+00696:  BCF    xF7.7
+00698:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+0069A:  MOVLW  32
+0069C:  MOVWF  x0E
+0069E:  MOVLB  0
+006A0:  RCALL  0652
+....................    RST_EXT_WDT();  
+006A2:  RCALL  0632
+006A4:  RETURN 0
+.................... } 
+....................  
+.................... // this will handle com pic power______________________________________________ 
+.................... void ComPic_Power(int1 status) 
+.................... { 
+....................    if( status == 1 ) 
+006A6:  MOVLB  1
+006A8:  DECFSZ x0D,W
+006AA:  BRA    06B6
+....................    { 
+....................       output_high(PIN_F6); 
+006AC:  BCF    F97.6
+006AE:  BSF    F8E.6
+....................       BIT_SET(POWER_LINE_STATUS,6); 
+006B0:  MOVLB  0
+006B2:  BSF    xF7.6
+006B4:  MOVLB  1
+....................    } 
+....................    if( status == 0 ) 
+006B6:  MOVF   x0D,F
+006B8:  BNZ   06C4
+....................    { 
+....................       output_low(PIN_F6) ; 
+006BA:  BCF    F97.6
+006BC:  BCF    F8E.6
+....................       BIT_CLEAR(POWER_LINE_STATUS,6); 
+006BE:  MOVLB  0
+006C0:  BCF    xF7.6
+006C2:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+006C4:  MOVLW  32
+006C6:  MOVWF  x0E
+006C8:  MOVLB  0
+006CA:  RCALL  0652
+....................    RST_EXT_WDT();  
+006CC:  RCALL  0632
+006CE:  RETURN 0
+.................... } 
+....................  
+.................... // controlling 3v3 1 power line________________________________________________ 
+.................... void _3V3Power_Line1(int1 status ) 
+.................... { 
+....................    if( status == BB_ON_OCP_ON ) 
+006D0:  MOVLB  1
+006D2:  DECFSZ x0D,W
+006D4:  BRA    06EA
+....................    { 
+....................       output_high(PIN_D1);  
+006D6:  BCF    F95.1
+006D8:  BSF    F8C.1
+....................       Delay_ms(50); 
+006DA:  MOVLW  32
+006DC:  MOVWF  x0E
+006DE:  MOVLB  0
+006E0:  RCALL  0652
+....................       output_high(PIN_D4);  
+006E2:  BCF    F95.4
+006E4:  BSF    F8C.4
+....................       BIT_SET(POWER_LINE_STATUS,5); 
+006E6:  BSF    xF7.5
+006E8:  MOVLB  1
+....................    } 
+....................     
+....................    if( status == BB_ON_OCP_OFF ) 
+006EA:  MOVF   x0D,W
+006EC:  SUBLW  02
+006EE:  BNZ   06FE
+....................    { 
+....................       output_high(PIN_D1);  
+006F0:  BCF    F95.1
+006F2:  BSF    F8C.1
+....................       output_low(PIN_D4);  
+006F4:  BCF    F95.4
+006F6:  BCF    F8C.4
+....................       BIT_CLEAR(POWER_LINE_STATUS,5); 
+006F8:  MOVLB  0
+006FA:  BCF    xF7.5
+006FC:  MOVLB  1
+....................    } 
+....................  
+....................    if( status == BB_OFF_OCP_OFF ) 
+006FE:  MOVF   x0D,W
+00700:  SUBLW  03
+00702:  BNZ   0712
+....................    { 
+....................       output_low(PIN_D1);  
+00704:  BCF    F95.1
+00706:  BCF    F8C.1
+....................       output_low(PIN_D4);  
+00708:  BCF    F95.4
+0070A:  BCF    F8C.4
+....................       BIT_CLEAR(POWER_LINE_STATUS,5); 
+0070C:  MOVLB  0
+0070E:  BCF    xF7.5
+00710:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+00712:  MOVLW  32
+00714:  MOVWF  x0E
+00716:  MOVLB  0
+00718:  RCALL  0652
+....................    RST_EXT_WDT();  
+0071A:  RCALL  0632
+0071C:  RETURN 0
+.................... } 
+....................  
+.................... // controlling 3v3 1 power line________________________________________________ 
+.................... void _3V3Power_Line2(int1 status ) 
+.................... { 
+....................    if( status == BB_ON_OCP_ON ) 
+0071E:  MOVLB  1
+00720:  DECFSZ x0D,W
+00722:  BRA    0738
+....................    { 
+....................       output_high(PIN_D2); 
+00724:  BCF    F95.2
+00726:  BSF    F8C.2
+....................       Delay_ms(50); 
+00728:  MOVLW  32
+0072A:  MOVWF  x0E
+0072C:  MOVLB  0
+0072E:  RCALL  0652
+....................       output_high(PIN_D5);  
+00730:  BCF    F95.5
+00732:  BSF    F8C.5
+....................       BIT_SET(POWER_LINE_STATUS,4); 
+00734:  BSF    xF7.4
+00736:  MOVLB  1
+....................    } 
+....................     
+....................    if( status == BB_ON_OCP_OFF ) 
+00738:  MOVF   x0D,W
+0073A:  SUBLW  02
+0073C:  BNZ   074C
+....................    { 
+....................       output_high(PIN_D2);  
+0073E:  BCF    F95.2
+00740:  BSF    F8C.2
+....................       output_low(PIN_D5);  
+00742:  BCF    F95.5
+00744:  BCF    F8C.5
+....................       BIT_CLEAR(POWER_LINE_STATUS,4); 
+00746:  MOVLB  0
+00748:  BCF    xF7.4
+0074A:  MOVLB  1
+....................    } 
+....................  
+....................    if( status == BB_OFF_OCP_OFF ) 
+0074C:  MOVF   x0D,W
+0074E:  SUBLW  03
+00750:  BNZ   0760
+....................    { 
+....................       output_low(PIN_D2);  
+00752:  BCF    F95.2
+00754:  BCF    F8C.2
+....................       output_low(PIN_D5);  
+00756:  BCF    F95.5
+00758:  BCF    F8C.5
+....................       BIT_CLEAR(POWER_LINE_STATUS,4); 
+0075A:  MOVLB  0
+0075C:  BCF    xF7.4
+0075E:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+00760:  MOVLW  32
+00762:  MOVWF  x0E
+00764:  MOVLB  0
+00766:  RCALL  0652
+....................    RST_EXT_WDT();  
+00768:  RCALL  0632
+0076A:  RETURN 0
+.................... } 
+....................  
+.................... // controlling 5V0 power line__________________________________________________ 
+.................... void _5V0Power_Line(int1 status ) 
+.................... { 
+....................    if( status == BB_ON_OCP_ON ) 
+0076C:  MOVLB  1
+0076E:  DECFSZ x0D,W
+00770:  BRA    0786
+....................    { 
+....................       output_high(PIN_D3);  
+00772:  BCF    F95.3
+00774:  BSF    F8C.3
+....................       Delay_ms(50); 
+00776:  MOVLW  32
+00778:  MOVWF  x0E
+0077A:  MOVLB  0
+0077C:  RCALL  0652
+....................       output_high(PIN_D6);  
+0077E:  BCF    F95.6
+00780:  BSF    F8C.6
+....................       BIT_SET(POWER_LINE_STATUS,3); 
+00782:  BSF    xF7.3
+00784:  MOVLB  1
+....................    } 
+....................     
+....................    if( status == BB_ON_OCP_OFF ) 
+00786:  MOVF   x0D,W
+00788:  SUBLW  02
+0078A:  BNZ   079A
+....................    { 
+....................       output_high(PIN_D3);  
+0078C:  BCF    F95.3
+0078E:  BSF    F8C.3
+....................       output_low(PIN_D6);  
+00790:  BCF    F95.6
+00792:  BCF    F8C.6
+....................       BIT_CLEAR(POWER_LINE_STATUS,3); 
+00794:  MOVLB  0
+00796:  BCF    xF7.3
+00798:  MOVLB  1
+....................    } 
+....................  
+....................    if( status == BB_OFF_OCP_OFF ) 
+0079A:  MOVF   x0D,W
+0079C:  SUBLW  03
+0079E:  BNZ   07AE
+....................    { 
+....................       output_low(PIN_D3);  
+007A0:  BCF    F95.3
+007A2:  BCF    F8C.3
+....................       output_low(PIN_D6);  
+007A4:  BCF    F95.6
+007A6:  BCF    F8C.6
+....................       BIT_CLEAR(POWER_LINE_STATUS,3); 
+007A8:  MOVLB  0
+007AA:  BCF    xF7.3
+007AC:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+007AE:  MOVLW  32
+007B0:  MOVWF  x0E
+007B2:  MOVLB  0
+007B4:  RCALL  0652
+....................    RST_EXT_WDT();  
+007B6:  RCALL  0632
+007B8:  RETURN 0
+.................... } 
+....................  
+....................  
+.................... void Unreg1_Line(int1 status) 
+.................... { 
+....................    if( status == 1 ) 
+007BA:  MOVLB  1
+007BC:  DECFSZ x0D,W
+007BE:  BRA    07CA
+....................    { 
+....................       output_high(PIN_D7) ; 
+007C0:  BCF    F95.7
+007C2:  BSF    F8C.7
+....................       BIT_SET(POWER_LINE_STATUS,2); 
+007C4:  MOVLB  0
+007C6:  BSF    xF7.2
+007C8:  MOVLB  1
+....................    } 
+....................    if( status == 0 )  
+007CA:  MOVF   x0D,F
+007CC:  BNZ   07D8
+....................    { 
+....................       output_low(PIN_D7)  ; 
+007CE:  BCF    F95.7
+007D0:  BCF    F8C.7
+....................       BIT_CLEAR(POWER_LINE_STATUS,2); 
+007D2:  MOVLB  0
+007D4:  BCF    xF7.2
+007D6:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+007D8:  MOVLW  32
+007DA:  MOVWF  x0E
+007DC:  MOVLB  0
+007DE:  RCALL  0652
+....................    RST_EXT_WDT();  
+007E0:  RCALL  0632
+007E2:  RETURN 0
+.................... } 
+....................  
+.................... void Unreg2_Line(int1 status) 
+.................... { 
+....................    if( status == 1 )  
+007E4:  MOVLB  1
+007E6:  DECFSZ x0D,W
+007E8:  BRA    07F4
+....................    { 
+....................       output_high(PIN_D0) ; 
+007EA:  BCF    F95.0
+007EC:  BSF    F8C.0
+....................       BIT_SET(POWER_LINE_STATUS,1); 
+007EE:  MOVLB  0
+007F0:  BSF    xF7.1
+007F2:  MOVLB  1
+....................    } 
+....................    if( status == 0 )  
+007F4:  MOVF   x0D,F
+007F6:  BNZ   0802
+....................    { 
+....................       output_low(PIN_D0)  ; 
+007F8:  BCF    F95.0
+007FA:  BCF    F8C.0
+....................       BIT_CLEAR(POWER_LINE_STATUS,1); 
+007FC:  MOVLB  0
+007FE:  BCF    xF7.1
+00800:  MOVLB  1
+....................    } 
+....................    delay_ms(50); 
+00802:  MOVLW  32
+00804:  MOVWF  x0E
+00806:  MOVLB  0
+00808:  RCALL  0652
+....................    RST_EXT_WDT();  
+0080A:  RCALL  0632
+0080C:  RETURN 0
+.................... } 
+....................  
+....................  
+....................  
+.................... // reset satellite by command from PC or GS 
+.................... void SYSTEM_RESET() 
+*
+019A8:  MOVLB  1
+019AA:  CLRF   x0B
+.................... {   
+....................    int sec_c = 0; 
+....................    Fprintf(PC,"system reset by command \n\r"); 
+019AC:  MOVLW  F8
+019AE:  MOVWF  FF6
+019B0:  MOVLW  01
+019B2:  MOVWF  FF7
+019B4:  MOVLW  00
+019B6:  MOVWF  FF8
+019B8:  MOVLB  0
+019BA:  CALL   08CE
+....................    // turn off system 
+....................    MainPic_Power(OFF)                 ;    Delay_ms(250);  
+019BE:  MOVLB  1
+019C0:  CLRF   x0D
+019C2:  MOVLB  0
+019C4:  CALL   067C
+019C8:  MOVLW  FA
+019CA:  MOVLB  1
+019CC:  MOVWF  x0E
+019CE:  MOVLB  0
+019D0:  CALL   0652
+....................    ComPic_Power(OFF)                  ;    Delay_ms(250);      
+019D4:  MOVLB  1
+019D6:  CLRF   x0D
+019D8:  MOVLB  0
+019DA:  CALL   06A6
+019DE:  MOVLW  FA
+019E0:  MOVLB  1
+019E2:  MOVWF  x0E
+019E4:  MOVLB  0
+019E6:  CALL   0652
+....................    _3V3Power_Line1(BB_OFF_OCP_OFF)    ;    Delay_ms(250);      
+019EA:  MOVLW  03
+019EC:  MOVLB  1
+019EE:  MOVWF  x0D
+019F0:  MOVLB  0
+019F2:  CALL   06D0
+019F6:  MOVLW  FA
+019F8:  MOVLB  1
+019FA:  MOVWF  x0E
+019FC:  MOVLB  0
+019FE:  CALL   0652
+....................    _3V3Power_Line2(BB_OFF_OCP_OFF)    ;    Delay_ms(250);       
+01A02:  MOVLW  03
+01A04:  MOVLB  1
+01A06:  MOVWF  x0D
+01A08:  MOVLB  0
+01A0A:  CALL   071E
+01A0E:  MOVLW  FA
+01A10:  MOVLB  1
+01A12:  MOVWF  x0E
+01A14:  MOVLB  0
+01A16:  CALL   0652
+....................    _5V0Power_Line(BB_OFF_OCP_OFF)     ;    Delay_ms(250);      
+01A1A:  MOVLW  03
+01A1C:  MOVLB  1
+01A1E:  MOVWF  x0D
+01A20:  MOVLB  0
+01A22:  CALL   076C
+01A26:  MOVLW  FA
+01A28:  MOVLB  1
+01A2A:  MOVWF  x0E
+01A2C:  MOVLB  0
+01A2E:  CALL   0652
+....................    Unreg1_Line(OFF)                   ;    Delay_ms(250);      
+01A32:  MOVLB  1
+01A34:  CLRF   x0D
+01A36:  MOVLB  0
+01A38:  CALL   07BA
+01A3C:  MOVLW  FA
+01A3E:  MOVLB  1
+01A40:  MOVWF  x0E
+01A42:  MOVLB  0
+01A44:  CALL   0652
+....................    Unreg2_Line(OFF)                   ;    Delay_ms(250);    
+01A48:  MOVLB  1
+01A4A:  CLRF   x0D
+01A4C:  MOVLB  0
+01A4E:  CALL   07E4
+01A52:  MOVLW  FA
+01A54:  MOVLB  1
+01A56:  MOVWF  x0E
+01A58:  MOVLB  0
+01A5A:  CALL   0652
+....................     
+....................    RESET_TIME = hour; 
+01A5E:  MOVFF  9E,F8
+....................     
+....................    for( int i = 0; i<10 ; i++) 
+01A62:  MOVLB  1
+01A64:  CLRF   x0C
+01A66:  MOVF   x0C,W
+01A68:  SUBLW  09
+01A6A:  BNC   1AEA
+....................    { 
+....................       Delay_ms(500); 
+01A6C:  MOVLW  02
+01A6E:  MOVWF  x0D
+01A70:  MOVLW  FA
+01A72:  MOVWF  x0E
+01A74:  MOVLB  0
+01A76:  CALL   0652
+01A7A:  MOVLB  1
+01A7C:  DECFSZ x0D,F
+01A7E:  BRA    1A70
+....................       RST_EXT_WDT(); 
+01A80:  MOVLB  0
+01A82:  CALL   0632
+....................       Delay_ms(500); 
+01A86:  MOVLW  02
+01A88:  MOVLB  1
+01A8A:  MOVWF  x0D
+01A8C:  MOVLW  FA
+01A8E:  MOVWF  x0E
+01A90:  MOVLB  0
+01A92:  CALL   0652
+01A96:  MOVLB  1
+01A98:  DECFSZ x0D,F
+01A9A:  BRA    1A8C
+....................       RST_EXT_WDT(); 
+01A9C:  MOVLB  0
+01A9E:  CALL   0632
+....................       sec_c++; 
+01AA2:  MOVLB  1
+01AA4:  INCF   x0B,F
+....................       Fprintf(PC,"Waiting to turn on system again %02d Sec\n\r",sec_c); 
+01AA6:  MOVLW  14
+01AA8:  MOVWF  FF6
+01AAA:  MOVLW  02
+01AAC:  MOVWF  FF7
+01AAE:  MOVLW  00
+01AB0:  MOVWF  FF8
+01AB2:  MOVLW  20
+01AB4:  MOVWF  x0E
+01AB6:  MOVLB  0
+01AB8:  CALL   0F0E
+01ABC:  MOVFF  10B,10E
+01AC0:  MOVLW  01
+01AC2:  MOVLB  1
+01AC4:  MOVWF  x0F
+01AC6:  MOVLB  0
+01AC8:  CALL   09D6
+01ACC:  MOVLW  38
+01ACE:  MOVWF  FF6
+01AD0:  MOVLW  02
+01AD2:  MOVWF  FF7
+01AD4:  MOVLW  00
+01AD6:  MOVWF  FF8
+01AD8:  MOVLW  06
+01ADA:  MOVLB  1
+01ADC:  MOVWF  x0E
+01ADE:  MOVLB  0
+01AE0:  CALL   0F0E
+01AE4:  MOVLB  1
+01AE6:  INCF   x0C,F
+01AE8:  BRA    1A66
+....................    } 
+....................     
+....................    // turn on system 
+....................    MainPic_Power(ON)                ;    Delay_ms(250);       
+01AEA:  MOVLW  01
+01AEC:  MOVWF  x0D
+01AEE:  MOVLB  0
+01AF0:  CALL   067C
+01AF4:  MOVLW  FA
+01AF6:  MOVLB  1
+01AF8:  MOVWF  x0E
+01AFA:  MOVLB  0
+01AFC:  CALL   0652
+....................    ComPic_Power(ON)                 ;    Delay_ms(250);       
+01B00:  MOVLW  01
+01B02:  MOVLB  1
+01B04:  MOVWF  x0D
+01B06:  MOVLB  0
+01B08:  CALL   06A6
+01B0C:  MOVLW  FA
+01B0E:  MOVLB  1
+01B10:  MOVWF  x0E
+01B12:  MOVLB  0
+01B14:  CALL   0652
+....................    _3V3Power_Line1(BB_ON_OCP_ON)    ;    Delay_ms(250);      
+01B18:  MOVLW  01
+01B1A:  MOVLB  1
+01B1C:  MOVWF  x0D
+01B1E:  MOVLB  0
+01B20:  CALL   06D0
+01B24:  MOVLW  FA
+01B26:  MOVLB  1
+01B28:  MOVWF  x0E
+01B2A:  MOVLB  0
+01B2C:  CALL   0652
+....................    _3V3Power_Line2(BB_ON_OCP_ON)  ;    Delay_ms(250);        
+01B30:  MOVLW  01
+01B32:  MOVLB  1
+01B34:  MOVWF  x0D
+01B36:  MOVLB  0
+01B38:  CALL   071E
+01B3C:  MOVLW  FA
+01B3E:  MOVLB  1
+01B40:  MOVWF  x0E
+01B42:  MOVLB  0
+01B44:  CALL   0652
+....................    _5V0Power_Line(BB_ON_OCP_ON)   ;    Delay_ms(250);       
+01B48:  MOVLW  01
+01B4A:  MOVLB  1
+01B4C:  MOVWF  x0D
+01B4E:  MOVLB  0
+01B50:  CALL   076C
+01B54:  MOVLW  FA
+01B56:  MOVLB  1
+01B58:  MOVWF  x0E
+01B5A:  MOVLB  0
+01B5C:  CALL   0652
+....................    Unreg1_Line(ON)                  ;    Delay_ms(250);      
+01B60:  MOVLW  01
+01B62:  MOVLB  1
+01B64:  MOVWF  x0D
+01B66:  MOVLB  0
+01B68:  CALL   07BA
+01B6C:  MOVLW  FA
+01B6E:  MOVLB  1
+01B70:  MOVWF  x0E
+01B72:  MOVLB  0
+01B74:  CALL   0652
+....................    Unreg2_Line(OFF)                 ;    Delay_ms(250);   
+01B78:  MOVLB  1
+01B7A:  CLRF   x0D
+01B7C:  MOVLB  0
+01B7E:  CALL   07E4
+01B82:  MOVLW  FA
+01B84:  MOVLB  1
+01B86:  MOVWF  x0E
+01B88:  MOVLB  0
+01B8A:  CALL   0652
+01B8E:  GOTO   1BAA (RETURN)
+.................... } 
+....................  
+....................  
+.................... // 24 hour system reset________________________________________________________ 
+.................... void SYSTEM_RESET_24H() 
+.................... {    
+....................    if( hour==0 ) 
+*
+00FBA:  MOVF   x9E,F
+00FBC:  BTFSS  FD8.2
+00FBE:  BRA    11A4
+....................    { 
+....................       if(minute==0) 
+00FC0:  MOVF   x9F,F
+00FC2:  BTFSS  FD8.2
+00FC4:  BRA    11A4
+....................       { 
+....................          if( ( 0 <= second ) && ( second <= 5 ) ) 
+00FC6:  MOVF   xA0,W
+00FC8:  SUBLW  05
+00FCA:  BTFSS  FD8.0
+00FCC:  BRA    11A4
+....................          { 
+....................             Fprintf(PC,"24 hour system reset\n\r"); 
+00FCE:  MOVLW  40
+00FD0:  MOVWF  FF6
+00FD2:  MOVLW  02
+00FD4:  MOVWF  FF7
+00FD6:  MOVLW  00
+00FD8:  MOVWF  FF8
+00FDA:  RCALL  08CE
+....................             // turn off system 
+....................             MainPic_Power(OFF)                 ;    Delay_ms(250);  
+00FDC:  MOVLB  1
+00FDE:  CLRF   x0D
+00FE0:  MOVLB  0
+00FE2:  CALL   067C
+00FE6:  MOVLW  FA
+00FE8:  MOVLB  1
+00FEA:  MOVWF  x0E
+00FEC:  MOVLB  0
+00FEE:  CALL   0652
+....................             ComPic_Power(OFF)                  ;    Delay_ms(250);      
+00FF2:  MOVLB  1
+00FF4:  CLRF   x0D
+00FF6:  MOVLB  0
+00FF8:  CALL   06A6
+00FFC:  MOVLW  FA
+00FFE:  MOVLB  1
+01000:  MOVWF  x0E
+01002:  MOVLB  0
+01004:  CALL   0652
+....................             _3V3Power_Line1(BB_OFF_OCP_OFF)    ;    Delay_ms(250);      
+01008:  MOVLW  03
+0100A:  MOVLB  1
+0100C:  MOVWF  x0D
+0100E:  MOVLB  0
+01010:  CALL   06D0
+01014:  MOVLW  FA
+01016:  MOVLB  1
+01018:  MOVWF  x0E
+0101A:  MOVLB  0
+0101C:  CALL   0652
+....................             _3V3Power_Line2(BB_OFF_OCP_OFF)    ;    Delay_ms(250);       
+01020:  MOVLW  03
+01022:  MOVLB  1
+01024:  MOVWF  x0D
+01026:  MOVLB  0
+01028:  CALL   071E
+0102C:  MOVLW  FA
+0102E:  MOVLB  1
+01030:  MOVWF  x0E
+01032:  MOVLB  0
+01034:  CALL   0652
+....................             _5V0Power_Line(BB_OFF_OCP_OFF)     ;    Delay_ms(250);      
+01038:  MOVLW  03
+0103A:  MOVLB  1
+0103C:  MOVWF  x0D
+0103E:  MOVLB  0
+01040:  CALL   076C
+01044:  MOVLW  FA
+01046:  MOVLB  1
+01048:  MOVWF  x0E
+0104A:  MOVLB  0
+0104C:  CALL   0652
+....................             Unreg1_Line(OFF)                   ;    Delay_ms(250);      
+01050:  MOVLB  1
+01052:  CLRF   x0D
+01054:  MOVLB  0
+01056:  CALL   07BA
+0105A:  MOVLW  FA
+0105C:  MOVLB  1
+0105E:  MOVWF  x0E
+01060:  MOVLB  0
+01062:  CALL   0652
+....................             Unreg2_Line(OFF)                   ;    Delay_ms(250);    
+01066:  MOVLB  1
+01068:  CLRF   x0D
+0106A:  MOVLB  0
+0106C:  CALL   07E4
+01070:  MOVLW  FA
+01072:  MOVLB  1
+01074:  MOVWF  x0E
+01076:  MOVLB  0
+01078:  CALL   0652
+....................              
+....................             RESET_TIME = hour; 
+0107C:  MOVFF  9E,F8
+....................              
+....................             for( int i = 0; i<10 ; i++) 
+01080:  MOVLB  1
+01082:  CLRF   x0A
+01084:  MOVF   x0A,W
+01086:  SUBLW  09
+01088:  BNC   1100
+....................             { 
+....................                Delay_ms(500); 
+0108A:  MOVLW  02
+0108C:  MOVWF  x0B
+0108E:  MOVLW  FA
+01090:  MOVWF  x0E
+01092:  MOVLB  0
+01094:  CALL   0652
+01098:  MOVLB  1
+0109A:  DECFSZ x0B,F
+0109C:  BRA    108E
+....................                RST_EXT_WDT(); 
+0109E:  MOVLB  0
+010A0:  CALL   0632
+....................                Delay_ms(500); 
+010A4:  MOVLW  02
+010A6:  MOVLB  1
+010A8:  MOVWF  x0B
+010AA:  MOVLW  FA
+010AC:  MOVWF  x0E
+010AE:  MOVLB  0
+010B0:  CALL   0652
+010B4:  MOVLB  1
+010B6:  DECFSZ x0B,F
+010B8:  BRA    10AA
+....................                RST_EXT_WDT(); 
+010BA:  MOVLB  0
+010BC:  CALL   0632
+....................                Fprintf(PC,"Waiting to turn on system again %u Sec\n\r",i); 
+010C0:  MOVLW  58
+010C2:  MOVWF  FF6
+010C4:  MOVLW  02
+010C6:  MOVWF  FF7
+010C8:  MOVLW  00
+010CA:  MOVWF  FF8
+010CC:  MOVLW  20
+010CE:  MOVLB  1
+010D0:  MOVWF  x0E
+010D2:  MOVLB  0
+010D4:  RCALL  0F0E
+010D6:  MOVFF  10A,10B
+010DA:  MOVLW  1B
+010DC:  MOVLB  1
+010DE:  MOVWF  x0C
+010E0:  MOVLB  0
+010E2:  RCALL  0F3E
+010E4:  MOVLW  7A
+010E6:  MOVWF  FF6
+010E8:  MOVLW  02
+010EA:  MOVWF  FF7
+010EC:  MOVLW  00
+010EE:  MOVWF  FF8
+010F0:  MOVLW  06
+010F2:  MOVLB  1
+010F4:  MOVWF  x0E
+010F6:  MOVLB  0
+010F8:  RCALL  0F0E
+010FA:  MOVLB  1
+010FC:  INCF   x0A,F
+010FE:  BRA    1084
+....................             } 
+....................              
+....................             // turn on system 
+....................             MainPic_Power(ON)                ;    Delay_ms(250);      
+01100:  MOVLW  01
+01102:  MOVWF  x0D
+01104:  MOVLB  0
+01106:  CALL   067C
+0110A:  MOVLW  FA
+0110C:  MOVLB  1
+0110E:  MOVWF  x0E
+01110:  MOVLB  0
+01112:  CALL   0652
+....................             ComPic_Power(ON)                 ;    Delay_ms(250);       
+01116:  MOVLW  01
+01118:  MOVLB  1
+0111A:  MOVWF  x0D
+0111C:  MOVLB  0
+0111E:  CALL   06A6
+01122:  MOVLW  FA
+01124:  MOVLB  1
+01126:  MOVWF  x0E
+01128:  MOVLB  0
+0112A:  CALL   0652
+....................             _3V3Power_Line1(BB_ON_OCP_ON)    ;    Delay_ms(250);       
+0112E:  MOVLW  01
+01130:  MOVLB  1
+01132:  MOVWF  x0D
+01134:  MOVLB  0
+01136:  CALL   06D0
+0113A:  MOVLW  FA
+0113C:  MOVLB  1
+0113E:  MOVWF  x0E
+01140:  MOVLB  0
+01142:  CALL   0652
+....................             _3V3Power_Line2(BB_ON_OCP_ON)    ;    Delay_ms(250);        
+01146:  MOVLW  01
+01148:  MOVLB  1
+0114A:  MOVWF  x0D
+0114C:  MOVLB  0
+0114E:  CALL   071E
+01152:  MOVLW  FA
+01154:  MOVLB  1
+01156:  MOVWF  x0E
+01158:  MOVLB  0
+0115A:  CALL   0652
+....................             _5V0Power_Line(BB_ON_OCP_ON)     ;    Delay_ms(250);       
+0115E:  MOVLW  01
+01160:  MOVLB  1
+01162:  MOVWF  x0D
+01164:  MOVLB  0
+01166:  CALL   076C
+0116A:  MOVLW  FA
+0116C:  MOVLB  1
+0116E:  MOVWF  x0E
+01170:  MOVLB  0
+01172:  CALL   0652
+....................             Unreg1_Line(ON)                  ;    Delay_ms(250);    
+01176:  MOVLW  01
+01178:  MOVLB  1
+0117A:  MOVWF  x0D
+0117C:  MOVLB  0
+0117E:  CALL   07BA
+01182:  MOVLW  FA
+01184:  MOVLB  1
+01186:  MOVWF  x0E
+01188:  MOVLB  0
+0118A:  CALL   0652
+....................             Unreg2_Line(OFF)                 ;    Delay_ms(250);  
+0118E:  MOVLB  1
+01190:  CLRF   x0D
+01192:  MOVLB  0
+01194:  CALL   07E4
+01198:  MOVLW  FA
+0119A:  MOVLB  1
+0119C:  MOVWF  x0E
+0119E:  MOVLB  0
+011A0:  CALL   0652
+....................          } 
+....................       } 
+....................    } 
+011A4:  GOTO   2134 (RETURN)
+.................... } 
+....................  
+....................  
+.................... /////////////////////////////////////////////////////////////////////////////// 
+.................... /////////////////////////// ADC Related Function ////////////////////////////// 
+.................... /////////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... // C3 = Raw power monitor enable 
+.................... // A2 (AN2) = Raw voltage measure 
+.................... // A1 (AN1) = 3V3-1 current measure 
+.................... // A0 (AN0) = 3V3-2 current measure 
+.................... // A5 (AN4) = 5V0 current measure 
+.................... // A4 (AN6) = UNREG-1 current measure 
+.................... // C2 (AN9) = UNREG-2 current measure 
+....................  
+.................... unsigned int16 _Raw_power_ADC_val       = 0 ;           
+.................... unsigned int16 _3V3_1_current_ADC_val   = 0 ;           
+.................... unsigned int16 _3V3_2_current_ADC_val   = 0 ;           
+.................... unsigned int16 _5V0_current_ADC_val     = 0 ;           
+.................... unsigned int16 _UNREG_1_current_ADC_val = 0 ;       
+.................... unsigned int16 _UNREG_2_current_ADC_val = 0 ;     
+....................  
+....................  
+.................... // below functions are current measuring functions_____________________________ 
+.................... unsigned int16 Measure_Raw_voltage() // A2 (AN2) = Raw voltage measure 
+.................... { 
+....................    Output_low(PIN_C3); 
+*
+01502:  BCF    F94.3
+01504:  BCF    F8B.3
+....................    Delay_us(100); 
+01506:  MOVLW  85
+01508:  MOVWF  00
+0150A:  DECFSZ 00,F
+0150C:  BRA    150A
+....................     
+....................    SET_ADC_CHANNEL(2);  
+0150E:  MOVLW  02
+01510:  MOVLB  E
+01512:  MOVWF  x86
+....................    delay_us(20); 
+01514:  MOVLW  1A
+01516:  MOVWF  00
+01518:  DECFSZ 00,F
+0151A:  BRA    1518
+0151C:  NOP   
+....................    Output_high(PIN_C3); 
+0151E:  BCF    F94.3
+01520:  BSF    F8B.3
+....................    return READ_ADC();  
+01522:  BCF    FC0.0
+01524:  BSF    FC0.1
+01526:  BTFSS  FC0.0
+01528:  BRA    1526
+0152A:  MOVFF  FC3,03
+0152E:  MOVFF  FC2,01
+01532:  MOVFF  FC3,02
+01536:  MOVLB  0
+01538:  GOTO   1646 (RETURN)
+.................... } 
+....................  
+.................... unsigned int16 Measure_3V3_1_current() // A1 (AN1) = 3V3-1 current measure 
+.................... { 
+....................    SET_ADC_CHANNEL(1);  
+0153C:  MOVLW  01
+0153E:  MOVLB  E
+01540:  MOVWF  x86
+....................    delay_us(20); 
+01542:  MOVLW  1A
+01544:  MOVWF  00
+01546:  DECFSZ 00,F
+01548:  BRA    1546
+0154A:  NOP   
+....................    return READ_ADC();  
+0154C:  BCF    FC0.0
+0154E:  BSF    FC0.1
+01550:  BTFSS  FC0.0
+01552:  BRA    1550
+01554:  MOVFF  FC3,03
+01558:  MOVFF  FC2,01
+0155C:  MOVFF  FC3,02
+01560:  MOVLB  0
+01562:  GOTO   1650 (RETURN)
+.................... } 
+....................  
+.................... unsigned int16 Measure_3V3_2_current() // A0 (AN0) = 3V3-2 current measure 
+.................... { 
+....................    SET_ADC_CHANNEL(0);  
+01566:  MOVLB  E
+01568:  CLRF   x86
+....................    delay_us(20); 
+0156A:  MOVLW  1A
+0156C:  MOVWF  00
+0156E:  DECFSZ 00,F
+01570:  BRA    156E
+01572:  NOP   
+....................    return READ_ADC();  
+01574:  BCF    FC0.0
+01576:  BSF    FC0.1
+01578:  BTFSS  FC0.0
+0157A:  BRA    1578
+0157C:  MOVFF  FC3,03
+01580:  MOVFF  FC2,01
+01584:  MOVFF  FC3,02
+01588:  MOVLB  0
+0158A:  GOTO   165A (RETURN)
+.................... } 
+....................  
+.................... unsigned int16 Measure_5V0_current()  // A5 (AN4) = 5V0 current measure 
+.................... { 
+....................    SET_ADC_CHANNEL(4);  
+0158E:  MOVLW  04
+01590:  MOVLB  E
+01592:  MOVWF  x86
+....................    delay_us(20); 
+01594:  MOVLW  1A
+01596:  MOVWF  00
+01598:  DECFSZ 00,F
+0159A:  BRA    1598
+0159C:  NOP   
+....................    return READ_ADC();  
+0159E:  BCF    FC0.0
+015A0:  BSF    FC0.1
+015A2:  BTFSS  FC0.0
+015A4:  BRA    15A2
+015A6:  MOVFF  FC3,03
+015AA:  MOVFF  FC2,01
+015AE:  MOVFF  FC3,02
+015B2:  MOVLB  0
+015B4:  GOTO   1664 (RETURN)
+.................... } 
+....................  
+.................... unsigned int16 Measure_UNREG_1_current() // A4 (AN6) = UNREG-1 current measure 
+.................... { 
+....................    SET_ADC_CHANNEL(6);  
+015B8:  MOVLW  06
+015BA:  MOVLB  E
+015BC:  MOVWF  x86
+....................    delay_us(20); 
+015BE:  MOVLW  1A
+015C0:  MOVWF  00
+015C2:  DECFSZ 00,F
+015C4:  BRA    15C2
+015C6:  NOP   
+....................    return READ_ADC();  
+015C8:  BCF    FC0.0
+015CA:  BSF    FC0.1
+015CC:  BTFSS  FC0.0
+015CE:  BRA    15CC
+015D0:  MOVFF  FC3,03
+015D4:  MOVFF  FC2,01
+015D8:  MOVFF  FC3,02
+015DC:  MOVLB  0
+015DE:  GOTO   166E (RETURN)
+.................... } 
+....................  
+.................... unsigned int16 Measure_UNREG_2_current() // C2 (AN9) = UNREG-2 current measure 
+.................... { 
+....................    SET_ADC_CHANNEL(9);  
+015E2:  MOVLW  09
+015E4:  MOVLB  E
+015E6:  MOVWF  x86
+....................    delay_us(20); 
+015E8:  MOVLW  1A
+015EA:  MOVWF  00
+015EC:  DECFSZ 00,F
+015EE:  BRA    15EC
+015F0:  NOP   
+....................    return READ_ADC();  
+015F2:  BCF    FC0.0
+015F4:  BSF    FC0.1
+015F6:  BTFSS  FC0.0
+015F8:  BRA    15F6
+015FA:  MOVFF  FC3,03
+015FE:  MOVFF  FC2,01
+01602:  MOVFF  FC3,02
+01606:  MOVLB  0
+01608:  GOTO   1678 (RETURN)
+.................... } 
+....................  
+....................  
+....................  
+.................... #include <RPIC_MPIC.c> 
+.................... // here we check main pic UART is available or not if available we save in MPIC_TO_RPIC array 
+.................... void CHECK_UART_INCOMING_FROM_MAIN_PIC() 
+.................... { 
+....................    if( MPic_Available() ) 
+*
+011F2:  CALL   082A
+011F6:  MOVF   01,F
+011F8:  BZ    128E
+....................    { 
+....................       Delay_ms(100); 
+011FA:  MOVLW  64
+011FC:  MOVLB  1
+011FE:  MOVWF  x0E
+01200:  MOVLB  0
+01202:  CALL   0652
+....................       for( int i = 0; i<10; i++ ) 
+01206:  MOVLB  1
+01208:  CLRF   x0A
+0120A:  MOVF   x0A,W
+0120C:  SUBLW  09
+0120E:  BNC   122C
+....................       { 
+....................          if( MPic_Read() == 0xA0 ) 
+01210:  MOVLB  0
+01212:  CALL   0830
+01216:  MOVF   01,W
+01218:  SUBLW  A0
+0121A:  BNZ   1226
+....................          { 
+....................             MPIC_TO_RPIC_ARRAY[0] = 0xA0 ; 
+0121C:  MOVLW  A0
+0121E:  MOVWF  21
+....................             break; 
+01220:  MOVLB  1
+01222:  BRA    122C
+01224:  MOVLB  0
+....................          } 
+01226:  MOVLB  1
+01228:  INCF   x0A,F
+0122A:  BRA    120A
+....................       } 
+....................  
+....................       for(int i = 1; i<=30; i++) 
+0122C:  MOVLW  01
+0122E:  MOVWF  x0B
+01230:  MOVF   x0B,W
+01232:  SUBLW  1E
+01234:  BNC   128A
+....................       { 
+....................          MPIC_TO_RPIC_ARRAY[i] = MPic_Read(); 
+01236:  CLRF   03
+01238:  MOVF   x0B,W
+0123A:  ADDLW  21
+0123C:  MOVWF  01
+0123E:  MOVLW  00
+01240:  ADDWFC 03,F
+01242:  MOVFF  01,10C
+01246:  MOVFF  03,10D
+0124A:  MOVLB  0
+0124C:  CALL   0830
+01250:  MOVFF  10D,FEA
+01254:  MOVFF  10C,FE9
+01258:  MOVFF  01,FEF
+....................          fprintf(PC, "%X ", MPIC_TO_RPIC_ARRAY[i]); 
+0125C:  CLRF   03
+0125E:  MOVLB  1
+01260:  MOVF   x0B,W
+01262:  ADDLW  21
+01264:  MOVWF  FE9
+01266:  MOVLW  00
+01268:  ADDWFC 03,W
+0126A:  MOVWF  FEA
+0126C:  MOVFF  FEF,10D
+01270:  MOVLW  37
+01272:  MOVWF  x0E
+01274:  MOVLB  0
+01276:  RCALL  11A8
+01278:  MOVLW  20
+0127A:  MOVLB  1
+0127C:  MOVWF  x14
+0127E:  MOVLB  0
+01280:  CALL   088A
+01284:  MOVLB  1
+01286:  INCF   x0B,F
+01288:  BRA    1230
+....................       } 
+....................       printline(); 
+0128A:  MOVLB  0
+0128C:  RCALL  0C4A
+....................    } 
+0128E:  GOTO   2138 (RETURN)
+.................... } 
+....................  
+....................  
+....................  
+....................  
+.................... // this function will print recived command from main pic______________________ 
+.................... void PRINT_RECIVED_COMMAND_FROM_MAIN_PIC() 
+.................... { 
+....................    printline(); 
+*
+0148E:  CALL   0C4A
+....................    Fprintf(PC,"RCVD CMD FROM MAIN PIC >> "); 
+01492:  MOVLW  82
+01494:  MOVWF  FF6
+01496:  MOVLW  02
+01498:  MOVWF  FF7
+0149A:  MOVLW  00
+0149C:  MOVWF  FF8
+0149E:  CALL   08CE
+....................    for(int i = 0; i<10; i++) 
+014A2:  MOVLB  1
+014A4:  CLRF   x0A
+014A6:  MOVF   x0A,W
+014A8:  SUBLW  09
+014AA:  BNC   14D8
+....................    { 
+....................       Fprintf(PC,"%X ",MPIC_TO_RPIC_ARRAY[i]); 
+014AC:  CLRF   03
+014AE:  MOVF   x0A,W
+014B0:  ADDLW  21
+014B2:  MOVWF  FE9
+014B4:  MOVLW  00
+014B6:  ADDWFC 03,W
+014B8:  MOVWF  FEA
+014BA:  MOVFF  FEF,10D
+014BE:  MOVLW  37
+014C0:  MOVWF  x0E
+014C2:  MOVLB  0
+014C4:  RCALL  11A8
+014C6:  MOVLW  20
+014C8:  MOVLB  1
+014CA:  MOVWF  x14
+014CC:  MOVLB  0
+014CE:  CALL   088A
+014D2:  MOVLB  1
+014D4:  INCF   x0A,F
+014D6:  BRA    14A6
+....................    } 
+....................    printline(); 
+014D8:  MOVLB  0
+014DA:  CALL   0C4A
+014DE:  GOTO   2164 (RETURN)
+.................... } 
+....................  
+....................  
+....................  
+....................  
+.................... /* this fucntons monitor the main pic, if no response within 10min reset pic 
+.................... will restart the main pic*/ 
+.................... void MONITOR_MAIN_PIC_90SEC_COMUNICATION(int time) 
+.................... { 
+....................    if( MPIC_TIME_COUNTER >= 600 ) 
+*
+01356:  MOVF   1C,W
+01358:  SUBLW  01
+0135A:  BC    13FE
+0135C:  XORLW  FF
+0135E:  BNZ   1366
+01360:  MOVF   1B,W
+01362:  SUBLW  57
+01364:  BC    13FE
+....................    { 
+....................       MPIC_TIME_COUNTER = 0; 
+01366:  CLRF   1C
+01368:  CLRF   1B
+....................       NUMOF_MPIC_RST++; 
+0136A:  INCF   1D,F
+....................        
+....................       Fprintf(PC,"Hang up reset, MainPIC is turned off\n\r"); 
+0136C:  MOVLW  9E
+0136E:  MOVWF  FF6
+01370:  MOVLW  02
+01372:  MOVWF  FF7
+01374:  MOVLW  00
+01376:  MOVWF  FF8
+01378:  CALL   08CE
+....................       MainPic_Power(0);   // turn off main pic 
+0137C:  MOVLB  1
+0137E:  CLRF   x0D
+01380:  MOVLB  0
+01382:  CALL   067C
+....................       for( int i = 0; i<time; i++) 
+01386:  MOVLB  1
+01388:  CLRF   x0B
+0138A:  MOVF   x0A,W
+0138C:  SUBWF  x0B,W
+0138E:  BC    13E4
+....................       { 
+....................          Delay_ms(1000); 
+01390:  MOVLW  04
+01392:  MOVWF  x0C
+01394:  MOVLW  FA
+01396:  MOVWF  x0E
+01398:  MOVLB  0
+0139A:  CALL   0652
+0139E:  MOVLB  1
+013A0:  DECFSZ x0C,F
+013A2:  BRA    1394
+....................          Fprintf(PC,"Waiting to turn on Main Pic %02d Sec\n\r",i); 
+013A4:  MOVLW  C6
+013A6:  MOVWF  FF6
+013A8:  MOVLW  02
+013AA:  MOVWF  FF7
+013AC:  MOVLW  00
+013AE:  MOVWF  FF8
+013B0:  MOVLW  1C
+013B2:  MOVWF  x0E
+013B4:  MOVLB  0
+013B6:  RCALL  0F0E
+013B8:  MOVFF  10B,10E
+013BC:  MOVLW  01
+013BE:  MOVLB  1
+013C0:  MOVWF  x0F
+013C2:  MOVLB  0
+013C4:  CALL   09D6
+013C8:  MOVLW  E6
+013CA:  MOVWF  FF6
+013CC:  MOVLW  02
+013CE:  MOVWF  FF7
+013D0:  MOVLW  00
+013D2:  MOVWF  FF8
+013D4:  MOVLW  06
+013D6:  MOVLB  1
+013D8:  MOVWF  x0E
+013DA:  MOVLB  0
+013DC:  RCALL  0F0E
+013DE:  MOVLB  1
+013E0:  INCF   x0B,F
+013E2:  BRA    138A
+....................       } 
+....................       MainPic_Power(1);   // turn on main pic 
+013E4:  MOVLW  01
+013E6:  MOVWF  x0D
+013E8:  MOVLB  0
+013EA:  CALL   067C
+....................       Fprintf(PC,"MainPIC is restarted\n\r"); 
+013EE:  MOVLW  EE
+013F0:  MOVWF  FF6
+013F2:  MOVLW  02
+013F4:  MOVWF  FF7
+013F6:  MOVLW  00
+013F8:  MOVWF  FF8
+013FA:  CALL   08CE
+....................    } 
+013FE:  GOTO   2148 (RETURN)
+.................... } 
+....................  
+....................    
+.................... /* this fuction will measure house keeping data and will send to main pic______ 
+.................... when 90 sec command arrive from main pic*/ 
+.................... void RESEPOND_TO_MPIC_90SEC_CMD() 
+.................... { 
+....................    if(MPIC_TO_RPIC_ARRAY[1] == 0x7A) 
+*
+01618:  MOVF   22,W
+0161A:  SUBLW  7A
+0161C:  BTFSS  FD8.2
+0161E:  BRA    1788
+....................    { 
+....................       Fprintf(PC,"90 seconds comunication command\n\r"); 
+01620:  MOVLW  06
+01622:  MOVWF  FF6
+01624:  MOVLW  03
+01626:  MOVWF  FF7
+01628:  MOVLW  00
+0162A:  MOVWF  FF8
+0162C:  CALL   08CE
+....................        
+....................       // we make main pic counter zero because succesful comunication 
+....................       MPIC_TIME_COUNTER = 0; 
+01630:  CLRF   1C
+01632:  CLRF   1B
+....................        
+....................       // clear RPIC_TO_MPIC array before putting new data______________________ 
+....................       CLEAR_DATA_ARRAY( RPIC_TO_MPIC_ARRAY, 32 ); 
+01634:  MOVLB  1
+01636:  CLRF   x0E
+01638:  MOVLW  44
+0163A:  MOVWF  x0D
+0163C:  MOVLW  20
+0163E:  MOVWF  x0F
+01640:  MOVLB  0
+01642:  RCALL  14E2
+....................        
+....................       // reading ADC values____________________________________________________ 
+....................       _Raw_power_ADC_val       = Measure_Raw_voltage() ;           
+01644:  BRA    1502
+01646:  MOVFF  02,FC
+0164A:  MOVFF  01,FB
+....................       _3V3_1_current_ADC_val   = Measure_3V3_1_current() ;           
+0164E:  BRA    153C
+01650:  MOVFF  02,FE
+01654:  MOVFF  01,FD
+....................       _3V3_2_current_ADC_val   = Measure_3V3_2_current() ; 
+01658:  BRA    1566
+0165A:  MOVFF  02,100
+0165E:  MOVFF  01,FF
+....................       _5V0_current_ADC_val     = Measure_5V0_current() ;           
+01662:  BRA    158E
+01664:  MOVFF  02,102
+01668:  MOVFF  01,101
+....................       _UNREG_1_current_ADC_val = Measure_UNREG_1_current() ;       
+0166C:  BRA    15B8
+0166E:  MOVFF  02,104
+01672:  MOVFF  01,103
+....................       _UNREG_2_current_ADC_val = Measure_UNREG_2_current() ;  
+01676:  BRA    15E2
+01678:  MOVFF  02,106
+0167C:  MOVFF  01,105
+....................        
+....................       RPIC_TO_MPIC_ARRAY[0]    = 0xA0   ;     // header 
+01680:  MOVLW  A0
+01682:  MOVWF  44
+....................       RPIC_TO_MPIC_ARRAY[1]    = 0x7A   ; 
+01684:  MOVLW  7A
+01686:  MOVWF  45
+....................       RPIC_TO_MPIC_ARRAY[2]    = year   ; 
+01688:  MOVFF  9B,46
+....................       RPIC_TO_MPIC_ARRAY[3]    = month  ; 
+0168C:  MOVFF  9C,47
+....................       RPIC_TO_MPIC_ARRAY[4]    = day    ; 
+01690:  MOVFF  9D,48
+....................       RPIC_TO_MPIC_ARRAY[5]    = hour   ; 
+01694:  MOVFF  9E,49
+....................       RPIC_TO_MPIC_ARRAY[6]    = minute ; 
+01698:  MOVFF  9F,4A
+....................       RPIC_TO_MPIC_ARRAY[7]    = second ;     // sending reset pic RTC time to main pic 
+0169C:  MOVFF  A0,4B
+....................        
+....................       RPIC_TO_MPIC_ARRAY[8]    = (unsigned int8)((_Raw_power_ADC_val>>8)     & 0xFF)     ;    
+016A0:  MOVFF  FC,4C
+016A4:  MOVLB  1
+016A6:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[9]    = (unsigned int8)((_Raw_power_ADC_val)        & 0xFF)     ;    
+016A8:  MOVLB  0
+016AA:  MOVFF  FB,4D
+....................       RPIC_TO_MPIC_ARRAY[10]   = (unsigned int8)((_3V3_1_current_ADC_val>>8) & 0xFF)     ;    
+016AE:  MOVFF  FE,4E
+016B2:  MOVLB  1
+016B4:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[11]   = (unsigned int8)((_3V3_1_current_ADC_val)    & 0xFF)     ;  
+016B6:  MOVLB  0
+016B8:  MOVFF  FD,4F
+....................       RPIC_TO_MPIC_ARRAY[12]   = (unsigned int8)((_3V3_2_current_ADC_val>>8) & 0xFF)     ;    
+016BC:  MOVLB  1
+016BE:  MOVFF  100,50
+016C2:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[13]   = (unsigned int8)((_3V3_2_current_ADC_val)    & 0xFF)     ;  
+016C4:  MOVLB  0
+016C6:  MOVFF  FF,51
+....................       RPIC_TO_MPIC_ARRAY[14]   = (unsigned int8)((_5V0_current_ADC_val>>8)   & 0xFF)     ;    
+016CA:  MOVLB  1
+016CC:  MOVFF  102,52
+016D0:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[15]   = (unsigned int8)((_5V0_current_ADC_val)      & 0xFF)     ; 
+016D2:  MOVFF  101,53
+016D6:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[16]   = (unsigned int8)((_UNREG_1_current_ADC_val>>8) & 0xFF)   ;    
+016D8:  MOVFF  104,54
+016DC:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[17]   = (unsigned int8)((_UNREG_1_current_ADC_val)    & 0xFF)   ; 
+016DE:  MOVFF  103,55
+016E2:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[18]   = (unsigned int8)((_UNREG_2_current_ADC_val>>8) & 0xFF)   ;    
+016E4:  MOVFF  106,56
+016E8:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[19]   = (unsigned int8)((_UNREG_2_current_ADC_val) )            ; 
+016EA:  MOVFF  105,57
+....................        
+....................       RPIC_TO_MPIC_ARRAY[20]   = NUMOF_MPIC_RST ;    // number of main pic reset 
+016EE:  MOVFF  1D,58
+....................       RPIC_TO_MPIC_ARRAY[21]   = NUMOF_CPIC_RST ;    // number of com pic reset 
+016F2:  MOVFF  20,59
+....................       RPIC_TO_MPIC_ARRAY[22]   = POWER_LINE_STATUS ; // power line status 
+016F6:  MOVFF  F7,5A
+....................       RPIC_TO_MPIC_ARRAY[23]   = (unsigned int8)((LAST_RESET_HOUR>>8) & 0xFF) ; 
+016FA:  MOVFF  C7,5B
+016FE:  CLRF   03
+....................       RPIC_TO_MPIC_ARRAY[24]   = (unsigned int8)((LAST_RESET_HOUR)    & 0xFF) ; 
+01700:  MOVLB  0
+01702:  MOVFF  C6,5C
+....................       RPIC_TO_MPIC_ARRAY[25]   = 0xAA   ;   
+01706:  MOVLW  AA
+01708:  MOVWF  5D
+....................        
+....................       RPIC_TO_MPIC_ARRAY[31]  = 0xA1   ;  // footer   
+0170A:  MOVLW  A1
+0170C:  MOVWF  x63
+....................       // sending data to main pic______________________________________________ 
+....................       for(int i = 0; i<32; i++) 
+0170E:  MOVLB  1
+01710:  CLRF   x0A
+01712:  MOVF   x0A,W
+01714:  SUBLW  1F
+01716:  BNC   1736
+....................       { 
+....................          fputc( RPIC_TO_MPIC_ARRAY[i] , MPic); 
+01718:  CLRF   03
+0171A:  MOVF   x0A,W
+0171C:  ADDLW  44
+0171E:  MOVWF  FE9
+01720:  MOVLW  00
+01722:  ADDWFC 03,W
+01724:  MOVWF  FEA
+01726:  MOVFF  FEF,10C
+0172A:  MOVF   x0C,W
+0172C:  MOVLB  0
+0172E:  RCALL  160C
+01730:  MOVLB  1
+01732:  INCF   x0A,F
+01734:  BRA    1712
+....................       } 
+....................        
+....................       // just printing sent reply to main pic__________________________________ 
+....................       Fprintf(PC,"Reply sent to main pic >> "); 
+01736:  MOVLW  28
+01738:  MOVWF  FF6
+0173A:  MOVLW  03
+0173C:  MOVWF  FF7
+0173E:  MOVLW  00
+01740:  MOVWF  FF8
+01742:  MOVLB  0
+01744:  CALL   08CE
+....................       for(int i = 0; i<32; i++) 
+01748:  MOVLB  1
+0174A:  CLRF   x0B
+0174C:  MOVF   x0B,W
+0174E:  SUBLW  1F
+01750:  BNC   177E
+....................       { 
+....................          Fprintf(PC,"%X ",RPIC_TO_MPIC_ARRAY[i]); 
+01752:  CLRF   03
+01754:  MOVF   x0B,W
+01756:  ADDLW  44
+01758:  MOVWF  FE9
+0175A:  MOVLW  00
+0175C:  ADDWFC 03,W
+0175E:  MOVWF  FEA
+01760:  MOVFF  FEF,10D
+01764:  MOVLW  37
+01766:  MOVWF  x0E
+01768:  MOVLB  0
+0176A:  RCALL  11A8
+0176C:  MOVLW  20
+0176E:  MOVLB  1
+01770:  MOVWF  x14
+01772:  MOVLB  0
+01774:  CALL   088A
+01778:  MOVLB  1
+0177A:  INCF   x0B,F
+0177C:  BRA    174C
+....................       } 
+....................       printline(); 
+0177E:  MOVLB  0
+01780:  CALL   0C4A
+....................       printline(); 
+01784:  CALL   0C4A
+....................    } 
+01788:  GOTO   2178 (RETURN)
+.................... } 
+....................  
+.................... // updating reset pic RTC time useing main pic command_____________________________________________MP_HF___0x70 
+.................... Void UPDATE_RTC_BY_MAIN_PIC_CMD() 
+.................... { 
+....................    if(MPIC_TO_RPIC_ARRAY[1] == 0x7B) //MP HF 
+0178C:  MOVF   22,W
+0178E:  SUBLW  7B
+01790:  BTFSS  FD8.2
+01792:  BRA    18D2
+....................    { 
+....................       Fprintf(PC,"Reset pic RTC update command Received\n\r"); 
+01794:  MOVLW  44
+01796:  MOVWF  FF6
+01798:  MOVLW  03
+0179A:  MOVWF  FF7
+0179C:  MOVLW  00
+0179E:  MOVWF  FF8
+017A0:  CALL   08CE
+....................        
+....................       // Acknowleging to the comand____________________________________________ 
+....................       CLEAR_DATA_ARRAY( RPIC_TO_MPIC_ARRAY, 32); 
+017A4:  MOVLB  1
+017A6:  CLRF   x0E
+017A8:  MOVLW  44
+017AA:  MOVWF  x0D
+017AC:  MOVLW  20
+017AE:  MOVWF  x0F
+017B0:  MOVLB  0
+017B2:  RCALL  14E2
+....................       RPIC_TO_MPIC_ARRAY[0]  = 0xA0   ; 
+017B4:  MOVLW  A0
+017B6:  MOVWF  44
+....................       RPIC_TO_MPIC_ARRAY[1]  = 0x7B   ; 
+017B8:  MOVLW  7B
+017BA:  MOVWF  45
+....................       RPIC_TO_MPIC_ARRAY[31] = 0xA1   ; 
+017BC:  MOVLW  A1
+017BE:  MOVWF  x63
+....................       for(int i = 0; i<32; i++) 
+017C0:  MOVLB  1
+017C2:  CLRF   x0A
+017C4:  MOVF   x0A,W
+017C6:  SUBLW  1F
+017C8:  BNC   17E8
+....................       { 
+....................          fputc(RPIC_TO_MPIC_ARRAY[i],MPic); 
+017CA:  CLRF   03
+017CC:  MOVF   x0A,W
+017CE:  ADDLW  44
+017D0:  MOVWF  FE9
+017D2:  MOVLW  00
+017D4:  ADDWFC 03,W
+017D6:  MOVWF  FEA
+017D8:  MOVFF  FEF,10B
+017DC:  MOVF   x0B,W
+017DE:  MOVLB  0
+017E0:  RCALL  160C
+017E2:  MOVLB  1
+017E4:  INCF   x0A,F
+017E6:  BRA    17C4
+....................       } 
+....................       //_______________________________________________________________________ 
+....................        
+....................       //Updating the RTC 
+....................       year   = MPIC_TO_RPIC_ARRAY[2]  ; 
+017E8:  MOVFF  23,9B
+....................       month  = MPIC_TO_RPIC_ARRAY[3]  ; 
+017EC:  MOVFF  24,9C
+....................       day    = MPIC_TO_RPIC_ARRAY[4]  ; 
+017F0:  MOVFF  25,9D
+....................       hour   = MPIC_TO_RPIC_ARRAY[5]  ; 
+017F4:  MOVFF  26,9E
+....................       minute = MPIC_TO_RPIC_ARRAY[6]  ; 
+017F8:  MOVFF  27,9F
+....................       second = MPIC_TO_RPIC_ARRAY[7]  ; 
+017FC:  MOVFF  28,A0
+....................       
+....................  
+....................       //Printing New RTC value 
+....................       Fprintf(PC,"Updated New Time >> ") ; 
+01800:  MOVLW  6C
+01802:  MOVWF  FF6
+01804:  MOVLW  03
+01806:  MOVWF  FF7
+01808:  MOVLW  00
+0180A:  MOVWF  FF8
+0180C:  MOVLB  0
+0180E:  CALL   08CE
+....................       Fprintf(PC,"%u-", year)        ; 
+01812:  MOVFF  9B,10B
+01816:  MOVLW  1B
+01818:  MOVLB  1
+0181A:  MOVWF  x0C
+0181C:  MOVLB  0
+0181E:  CALL   0F3E
+01822:  MOVLW  2D
+01824:  MOVLB  1
+01826:  MOVWF  x14
+01828:  MOVLB  0
+0182A:  CALL   088A
+....................       Fprintf(PC,"%u-", month)       ; 
+0182E:  MOVFF  9C,10B
+01832:  MOVLW  1B
+01834:  MOVLB  1
+01836:  MOVWF  x0C
+01838:  MOVLB  0
+0183A:  CALL   0F3E
+0183E:  MOVLW  2D
+01840:  MOVLB  1
+01842:  MOVWF  x14
+01844:  MOVLB  0
+01846:  CALL   088A
+....................       Fprintf(PC,"%u__", day)        ; 
+0184A:  MOVFF  9D,10B
+0184E:  MOVLW  1B
+01850:  MOVLB  1
+01852:  MOVWF  x0C
+01854:  MOVLB  0
+01856:  CALL   0F3E
+0185A:  MOVLW  5F
+0185C:  MOVLB  1
+0185E:  MOVWF  x14
+01860:  MOVLB  0
+01862:  CALL   088A
+01866:  MOVLW  5F
+01868:  MOVLB  1
+0186A:  MOVWF  x14
+0186C:  MOVLB  0
+0186E:  CALL   088A
+....................       Fprintf(PC,"%u:", hour)        ; 
+01872:  MOVFF  9E,10B
+01876:  MOVLW  1B
+01878:  MOVLB  1
+0187A:  MOVWF  x0C
+0187C:  MOVLB  0
+0187E:  CALL   0F3E
+01882:  MOVLW  3A
+01884:  MOVLB  1
+01886:  MOVWF  x14
+01888:  MOVLB  0
+0188A:  CALL   088A
+....................       Fprintf(PC,"%u:", minute)      ; 
+0188E:  MOVFF  9F,10B
+01892:  MOVLW  1B
+01894:  MOVLB  1
+01896:  MOVWF  x0C
+01898:  MOVLB  0
+0189A:  CALL   0F3E
+0189E:  MOVLW  3A
+018A0:  MOVLB  1
+018A2:  MOVWF  x14
+018A4:  MOVLB  0
+018A6:  CALL   088A
+....................       Fprintf(PC,"%u\n\r", second)   ; 
+018AA:  MOVFF  A0,10B
+018AE:  MOVLW  1B
+018B0:  MOVLB  1
+018B2:  MOVWF  x0C
+018B4:  MOVLB  0
+018B6:  CALL   0F3E
+018BA:  MOVLW  0A
+018BC:  MOVLB  1
+018BE:  MOVWF  x14
+018C0:  MOVLB  0
+018C2:  CALL   088A
+018C6:  MOVLW  0D
+018C8:  MOVLB  1
+018CA:  MOVWF  x14
+018CC:  MOVLB  0
+018CE:  CALL   088A
+....................         
+....................    } 
+018D2:  GOTO   217C (RETURN)
+.................... } 
+....................     
+.................... // controling power line using main pic command________________________________ 
+.................... Void POWER_LINE_CONTROL_USING_MAIN_PIC_CMD() 
+.................... { 
+....................    if(MPIC_TO_RPIC_ARRAY[1] == 0x7C)  
+018D6:  MOVF   22,W
+018D8:  SUBLW  7C
+018DA:  BNZ   19A4
+....................    { 
+....................       Fprintf(PC,"Power line control command Received from main pic\n\r"); 
+018DC:  MOVLW  82
+018DE:  MOVWF  FF6
+018E0:  MOVLW  03
+018E2:  MOVWF  FF7
+018E4:  MOVLW  00
+018E6:  MOVWF  FF8
+018E8:  CALL   08CE
+....................       // Acknowleging to the comand____________________________________________ 
+....................       CLEAR_DATA_ARRAY( RPIC_TO_MPIC_ARRAY, 32); 
+018EC:  MOVLB  1
+018EE:  CLRF   x0E
+018F0:  MOVLW  44
+018F2:  MOVWF  x0D
+018F4:  MOVLW  20
+018F6:  MOVWF  x0F
+018F8:  MOVLB  0
+018FA:  RCALL  14E2
+....................       RPIC_TO_MPIC_ARRAY[0]  = 0xA0   ; 
+018FC:  MOVLW  A0
+018FE:  MOVWF  44
+....................       RPIC_TO_MPIC_ARRAY[1]  = 0x7C   ; 
+01900:  MOVLW  7C
+01902:  MOVWF  45
+....................       RPIC_TO_MPIC_ARRAY[31] = 0xA1   ; 
+01904:  MOVLW  A1
+01906:  MOVWF  x63
+....................       for(int i = 0; i<32; i++) 
+01908:  MOVLB  1
+0190A:  CLRF   x0A
+0190C:  MOVF   x0A,W
+0190E:  SUBLW  1F
+01910:  BNC   1930
+....................       { 
+....................          fputc(RPIC_TO_MPIC_ARRAY[i],MPic); 
+01912:  CLRF   03
+01914:  MOVF   x0A,W
+01916:  ADDLW  44
+01918:  MOVWF  FE9
+0191A:  MOVLW  00
+0191C:  ADDWFC 03,W
+0191E:  MOVWF  FEA
+01920:  MOVFF  FEF,10B
+01924:  MOVF   x0B,W
+01926:  MOVLB  0
+01928:  RCALL  160C
+0192A:  MOVLB  1
+0192C:  INCF   x0A,F
+0192E:  BRA    190C
+....................       } 
+....................       //_______________________________________________________________________ 
+....................        
+....................       if(MPIC_TO_RPIC_ARRAY[2] == 0x01) _3V3Power_Line1(BB_ON_OCP_ON)  ; 
+01930:  DECFSZ 23,W
+01932:  BRA    1942
+01934:  MOVLW  01
+01936:  MOVWF  x0D
+01938:  MOVLB  0
+0193A:  CALL   06D0
+0193E:  BRA    194C
+01940:  MOVLB  1
+....................       else _3V3Power_Line1(BB_OFF_OCP_OFF)  ; 
+01942:  MOVLW  03
+01944:  MOVWF  x0D
+01946:  MOVLB  0
+01948:  CALL   06D0
+....................        
+....................       if(MPIC_TO_RPIC_ARRAY[3] == 0x01) _3V3Power_Line2(BB_ON_OCP_ON)  ; 
+0194C:  DECFSZ 24,W
+0194E:  BRA    195E
+01950:  MOVLW  01
+01952:  MOVLB  1
+01954:  MOVWF  x0D
+01956:  MOVLB  0
+01958:  CALL   071E
+0195C:  BRA    196A
+....................       else _3V3Power_Line2(BB_OFF_OCP_OFF)   ; 
+0195E:  MOVLW  03
+01960:  MOVLB  1
+01962:  MOVWF  x0D
+01964:  MOVLB  0
+01966:  CALL   071E
+....................        
+....................       if(MPIC_TO_RPIC_ARRAY[4] == 0x01) _5V0Power_Line(BB_ON_OCP_ON)   ; 
+0196A:  DECFSZ 25,W
+0196C:  BRA    197C
+0196E:  MOVLW  01
+01970:  MOVLB  1
+01972:  MOVWF  x0D
+01974:  MOVLB  0
+01976:  CALL   076C
+0197A:  BRA    1988
+....................       else _5V0Power_Line(BB_OFF_OCP_OFF)  ; 
+0197C:  MOVLW  03
+0197E:  MOVLB  1
+01980:  MOVWF  x0D
+01982:  MOVLB  0
+01984:  CALL   076C
+....................        
+....................       if(MPIC_TO_RPIC_ARRAY[5] == 0x01) Unreg2_Line(ON)         ; 
+01988:  DECFSZ 26,W
+0198A:  BRA    199A
+0198C:  MOVLW  01
+0198E:  MOVLB  1
+01990:  MOVWF  x0D
+01992:  MOVLB  0
+01994:  CALL   07E4
+01998:  BRA    19A4
+....................       else Unreg2_Line(OFF)  ; 
+0199A:  MOVLB  1
+0199C:  CLRF   x0D
+0199E:  MOVLB  0
+019A0:  CALL   07E4
+....................        
+....................    } 
+019A4:  GOTO   2180 (RETURN)
+.................... } 
+.................... Void RESET_SATELLITE_CMD() 
+.................... { 
+....................    if(MPIC_TO_RPIC_ARRAY[1] == 0x7D) 
+*
+01B92:  MOVF   22,W
+01B94:  SUBLW  7D
+01B96:  BNZ   1BAA
+....................    {   
+....................       Fprintf(PC, "Reset satellite command Received from main PIC"); 
+01B98:  MOVLW  B6
+01B9A:  MOVWF  FF6
+01B9C:  MOVLW  03
+01B9E:  MOVWF  FF7
+01BA0:  MOVLW  00
+01BA2:  MOVWF  FF8
+01BA4:  CALL   08CE
+....................       SYSTEM_RESET(); 
+01BA8:  BRA    19A8
+....................    }  
+....................    // Acknowleging to the comand____________________________________________ 
+....................    CLEAR_DATA_ARRAY( RPIC_TO_MPIC_ARRAY, 32); 
+01BAA:  MOVLB  1
+01BAC:  CLRF   x0E
+01BAE:  MOVLW  44
+01BB0:  MOVWF  x0D
+01BB2:  MOVLW  20
+01BB4:  MOVWF  x0F
+01BB6:  MOVLB  0
+01BB8:  RCALL  14E2
+....................    RPIC_TO_MPIC_ARRAY[0]  = 0xA0   ; 
+01BBA:  MOVLW  A0
+01BBC:  MOVWF  44
+....................    RPIC_TO_MPIC_ARRAY[1]  = 0x7C   ; 
+01BBE:  MOVLW  7C
+01BC0:  MOVWF  45
+....................    RPIC_TO_MPIC_ARRAY[31] = 0xA1   ; 
+01BC2:  MOVLW  A1
+01BC4:  MOVWF  x63
+....................    for(int i = 0; i<32; i++) 
+01BC6:  MOVLB  1
+01BC8:  CLRF   x0A
+01BCA:  MOVF   x0A,W
+01BCC:  SUBLW  1F
+01BCE:  BNC   1BEE
+....................    { 
+....................       fputc(RPIC_TO_MPIC_ARRAY[i],MPic); 
+01BD0:  CLRF   03
+01BD2:  MOVF   x0A,W
+01BD4:  ADDLW  44
+01BD6:  MOVWF  FE9
+01BD8:  MOVLW  00
+01BDA:  ADDWFC 03,W
+01BDC:  MOVWF  FEA
+01BDE:  MOVFF  FEF,10B
+01BE2:  MOVF   x0B,W
+01BE4:  MOVLB  0
+01BE6:  RCALL  160C
+01BE8:  MOVLB  1
+01BEA:  INCF   x0A,F
+01BEC:  BRA    1BCA
+....................    } 
+01BEE:  MOVLB  0
+01BF0:  GOTO   2182 (RETURN)
+.................... } 
+....................  
+.................... // antenna deployment command________________________________ 
+.................... Void TURN_ON_UNREG_2_LINE_FOR_ANT_DEPLOYMENT() 
+.................... { 
+....................    if(MPIC_TO_RPIC_ARRAY[1] == 0xDA)  
+01BF4:  MOVF   22,W
+01BF6:  SUBLW  DA
+01BF8:  BTFSS  FD8.2
+01BFA:  BRA    1CEC
+....................    { 
+....................       Fprintf(PC,"Antenna deployment command received\n\r");  
+01BFC:  MOVLW  E6
+01BFE:  MOVWF  FF6
+01C00:  MOVLW  03
+01C02:  MOVWF  FF7
+01C04:  MOVLW  00
+01C06:  MOVWF  FF8
+01C08:  CALL   08CE
+....................       // Acknowleging to the comand____________________________________________ 
+....................        
+....................       CLEAR_DATA_ARRAY( RPIC_TO_MPIC_ARRAY, 32); 
+01C0C:  MOVLB  1
+01C0E:  CLRF   x0E
+01C10:  MOVLW  44
+01C12:  MOVWF  x0D
+01C14:  MOVLW  20
+01C16:  MOVWF  x0F
+01C18:  MOVLB  0
+01C1A:  RCALL  14E2
+....................       RPIC_TO_MPIC_ARRAY[0]  = 0xA0   ; 
+01C1C:  MOVLW  A0
+01C1E:  MOVWF  44
+....................       RPIC_TO_MPIC_ARRAY[1]  = 0xDA   ; 
+01C20:  MOVLW  DA
+01C22:  MOVWF  45
+....................       RPIC_TO_MPIC_ARRAY[31] = 0xA1   ; 
+01C24:  MOVLW  A1
+01C26:  MOVWF  x63
+....................       for(int i = 0; i<32; i++) 
+01C28:  MOVLB  1
+01C2A:  CLRF   x0A
+01C2C:  MOVF   x0A,W
+01C2E:  SUBLW  1F
+01C30:  BNC   1C50
+....................       { 
+....................          fputc(RPIC_TO_MPIC_ARRAY[i],MPic); 
+01C32:  CLRF   03
+01C34:  MOVF   x0A,W
+01C36:  ADDLW  44
+01C38:  MOVWF  FE9
+01C3A:  MOVLW  00
+01C3C:  ADDWFC 03,W
+01C3E:  MOVWF  FEA
+01C40:  MOVFF  FEF,10D
+01C44:  MOVF   x0D,W
+01C46:  MOVLB  0
+01C48:  RCALL  160C
+01C4A:  MOVLB  1
+01C4C:  INCF   x0A,F
+01C4E:  BRA    1C2C
+....................       } 
+....................       //_______________________________________________________________________ 
+....................        
+....................       int sec_count = 0 ; 
+01C50:  CLRF   x0B
+....................       Unreg2_Line(1); 
+01C52:  MOVLW  01
+01C54:  MOVWF  x0D
+01C56:  MOVLB  0
+01C58:  CALL   07E4
+....................       Fprintf(PC,"UNREG-2 line is turned ON \n\r") ; 
+01C5C:  MOVLW  0C
+01C5E:  MOVWF  FF6
+01C60:  MOVLW  04
+01C62:  MOVWF  FF7
+01C64:  MOVLW  00
+01C66:  MOVWF  FF8
+01C68:  CALL   08CE
+....................              
+....................       for(int i = 0; i<120 ;i++)  // waiting 30 seconds, we can change this 
+01C6C:  MOVLB  1
+01C6E:  CLRF   x0C
+01C70:  MOVF   x0C,W
+01C72:  SUBLW  77
+01C74:  BNC   1CD4
+....................       {  
+....................          RST_EXT_WDT(); 
+01C76:  MOVLB  0
+01C78:  CALL   0632
+....................          Delay_ms(250);  
+01C7C:  MOVLW  FA
+01C7E:  MOVLB  1
+01C80:  MOVWF  x0E
+01C82:  MOVLB  0
+01C84:  CALL   0652
+....................          Fprintf(PC,"Counting deployment time %02d Sec \n\r",sec_count++) ; 
+01C88:  MOVLB  1
+01C8A:  MOVF   x0B,W
+01C8C:  INCF   x0B,F
+01C8E:  MOVWF  x0D
+01C90:  MOVLW  2A
+01C92:  MOVWF  FF6
+01C94:  MOVLW  04
+01C96:  MOVWF  FF7
+01C98:  MOVLW  00
+01C9A:  MOVWF  FF8
+01C9C:  MOVLW  19
+01C9E:  MOVWF  x0E
+01CA0:  MOVLB  0
+01CA2:  CALL   0F0E
+01CA6:  MOVFF  10D,10E
+01CAA:  MOVLW  01
+01CAC:  MOVLB  1
+01CAE:  MOVWF  x0F
+01CB0:  MOVLB  0
+01CB2:  CALL   09D6
+01CB6:  MOVLW  47
+01CB8:  MOVWF  FF6
+01CBA:  MOVLW  04
+01CBC:  MOVWF  FF7
+01CBE:  MOVLW  00
+01CC0:  MOVWF  FF8
+01CC2:  MOVLW  07
+01CC4:  MOVLB  1
+01CC6:  MOVWF  x0E
+01CC8:  MOVLB  0
+01CCA:  CALL   0F0E
+01CCE:  MOVLB  1
+01CD0:  INCF   x0C,F
+01CD2:  BRA    1C70
+....................       } 
+....................        
+....................       Unreg2_Line(0); 
+01CD4:  CLRF   x0D
+01CD6:  MOVLB  0
+01CD8:  CALL   07E4
+....................       Fprintf(PC,"UNREG-2 line is turned OFF \n\r") ;    
+01CDC:  MOVLW  50
+01CDE:  MOVWF  FF6
+01CE0:  MOVLW  04
+01CE2:  MOVWF  FF7
+01CE4:  MOVLW  00
+01CE6:  MOVWF  FF8
+01CE8:  CALL   08CE
+....................    }  
+01CEC:  GOTO   2184 (RETURN)
+.................... } 
+....................  
+....................  
+....................  
+.................... #include <RPIC_CPIC.c> 
+.................... // here we check main pic UART is available or not if available we save in MPIC_TO_RPIC array 
+.................... void CHECK_UART_INCOMING_FROM_COM_PIC() 
+.................... { 
+....................    if( CPic_Available() ) 
+*
+012E6:  BRA    1292
+012E8:  MOVF   01,F
+012EA:  BZ    1350
+....................    { 
+....................       Delay_ms(100); 
+012EC:  MOVLW  64
+012EE:  MOVLB  1
+012F0:  MOVWF  x0E
+012F2:  MOVLB  0
+012F4:  CALL   0652
+....................       for( int i = 0; i<10; i++ ) 
+012F8:  MOVLB  1
+012FA:  CLRF   x0A
+012FC:  MOVF   x0A,W
+012FE:  SUBLW  09
+01300:  BNC   131C
+....................       { 
+....................          if( CPic_Read() == 0xC0 ) 
+01302:  MOVLB  0
+01304:  RCALL  129A
+01306:  MOVF   01,W
+01308:  SUBLW  C0
+0130A:  BNZ   1316
+....................          { 
+....................             CPIC_TO_RPIC_ARRAY[0] = 0xC0 ; 
+0130C:  MOVLW  C0
+0130E:  MOVWF  x64
+....................             break; 
+01310:  MOVLB  1
+01312:  BRA    131C
+01314:  MOVLB  0
+....................          } 
+01316:  MOVLB  1
+01318:  INCF   x0A,F
+0131A:  BRA    12FC
+....................       } 
+....................  
+....................       for(int i = 1; i<=30; i++) 
+0131C:  MOVLW  01
+0131E:  MOVWF  x0B
+01320:  MOVF   x0B,W
+01322:  SUBLW  1E
+01324:  BNC   1350
+....................       { 
+....................          CPIC_TO_RPIC_ARRAY[i] = CPic_Read(); 
+01326:  CLRF   03
+01328:  MOVF   x0B,W
+0132A:  ADDLW  64
+0132C:  MOVWF  01
+0132E:  MOVLW  00
+01330:  ADDWFC 03,F
+01332:  MOVFF  01,10C
+01336:  MOVFF  03,10D
+0133A:  MOVLB  0
+0133C:  RCALL  129A
+0133E:  MOVFF  10D,FEA
+01342:  MOVFF  10C,FE9
+01346:  MOVFF  01,FEF
+0134A:  MOVLB  1
+0134C:  INCF   x0B,F
+0134E:  BRA    1320
+01350:  MOVLB  0
+....................       } 
+....................    } 
+01352:  GOTO   213C (RETURN)
+.................... } 
+....................  
+....................  
+.................... // this function will print recived command from com pic_______________________ 
+.................... void PRINT_RECIVED_COMMAND_FROM_COM_PIC() 
+.................... { 
+....................    printline(); 
+*
+01CF0:  CALL   0C4A
+....................    Fprintf(PC,"RCVD CMD FROM COM PIC >> "); 
+01CF4:  MOVLW  6E
+01CF6:  MOVWF  FF6
+01CF8:  MOVLW  04
+01CFA:  MOVWF  FF7
+01CFC:  MOVLW  00
+01CFE:  MOVWF  FF8
+01D00:  CALL   08CE
+....................    for(int i = 0; i<20; i++) 
+01D04:  MOVLB  1
+01D06:  CLRF   x0A
+01D08:  MOVF   x0A,W
+01D0A:  SUBLW  13
+01D0C:  BNC   1D3C
+....................    { 
+....................       Fprintf(PC,"%X ",CPIC_TO_RPIC_ARRAY[i]); 
+01D0E:  CLRF   03
+01D10:  MOVF   x0A,W
+01D12:  ADDLW  64
+01D14:  MOVWF  FE9
+01D16:  MOVLW  00
+01D18:  ADDWFC 03,W
+01D1A:  MOVWF  FEA
+01D1C:  MOVFF  FEF,10D
+01D20:  MOVLW  37
+01D22:  MOVWF  x0E
+01D24:  MOVLB  0
+01D26:  CALL   11A8
+01D2A:  MOVLW  20
+01D2C:  MOVLB  1
+01D2E:  MOVWF  x14
+01D30:  MOVLB  0
+01D32:  CALL   088A
+01D36:  MOVLB  1
+01D38:  INCF   x0A,F
+01D3A:  BRA    1D08
+....................    } 
+....................    printline(); 
+01D3C:  MOVLB  0
+01D3E:  CALL   0C4A
+01D42:  GOTO   21A4 (RETURN)
+.................... } 
+....................  
+.................... /* this fucntons monitor the com pic. if no response within 10min reset pic 
+.................... will restart the com pic*/ 
+.................... void MONITOR_COM_PIC_90SEC_COMUNICATION(int time) 
+.................... { 
+....................    if( CPIC_TIME_COUNTER >= 600 ) 
+*
+01402:  MOVF   1F,W
+01404:  SUBLW  01
+01406:  BC    148A
+01408:  XORLW  FF
+0140A:  BNZ   1412
+0140C:  MOVF   1E,W
+0140E:  SUBLW  57
+01410:  BC    148A
+....................    { 
+....................       CPIC_TIME_COUNTER = 0; 
+01412:  CLRF   1F
+01414:  CLRF   1E
+....................       NUMOF_CPIC_RST++; 
+01416:  INCF   20,F
+....................        
+....................       ComPic_Power(0);   // turn off main pic 
+01418:  MOVLB  1
+0141A:  CLRF   x0D
+0141C:  MOVLB  0
+0141E:  CALL   06A6
+....................       for( int i = 0; i<time ; i++) 
+01422:  MOVLB  1
+01424:  CLRF   x0B
+01426:  MOVF   x0A,W
+01428:  SUBWF  x0B,W
+0142A:  BC    1480
+....................       { 
+....................          Delay_ms(1000); 
+0142C:  MOVLW  04
+0142E:  MOVWF  x0C
+01430:  MOVLW  FA
+01432:  MOVWF  x0E
+01434:  MOVLB  0
+01436:  CALL   0652
+0143A:  MOVLB  1
+0143C:  DECFSZ x0C,F
+0143E:  BRA    1430
+....................         Fprintf(PC,"Waiting to turn on com Pic %02d Sec\n\r",i); 
+01440:  MOVLW  88
+01442:  MOVWF  FF6
+01444:  MOVLW  04
+01446:  MOVWF  FF7
+01448:  MOVLW  00
+0144A:  MOVWF  FF8
+0144C:  MOVLW  1B
+0144E:  MOVWF  x0E
+01450:  MOVLB  0
+01452:  RCALL  0F0E
+01454:  MOVFF  10B,10E
+01458:  MOVLW  01
+0145A:  MOVLB  1
+0145C:  MOVWF  x0F
+0145E:  MOVLB  0
+01460:  CALL   09D6
+01464:  MOVLW  A7
+01466:  MOVWF  FF6
+01468:  MOVLW  04
+0146A:  MOVWF  FF7
+0146C:  MOVLW  00
+0146E:  MOVWF  FF8
+01470:  MOVLW  06
+01472:  MOVLB  1
+01474:  MOVWF  x0E
+01476:  MOVLB  0
+01478:  RCALL  0F0E
+0147A:  MOVLB  1
+0147C:  INCF   x0B,F
+0147E:  BRA    1426
+....................       } 
+....................       ComPic_Power(1);   // turn on main pic 
+01480:  MOVLW  01
+01482:  MOVWF  x0D
+01484:  MOVLB  0
+01486:  CALL   06A6
+....................    } 
+0148A:  GOTO   2154 (RETURN)
+.................... } 
+....................  
+....................  
+.................... void RESEPOND_TO_CPIC_90SEC_CMD() 
+.................... { 
+....................    if(CPIC_TO_RPIC_ARRAY[1] == 0xE0) 
+*
+01D52:  MOVF   x65,W
+01D54:  SUBLW  E0
+01D56:  BNZ   1DD0
+....................    { 
+....................       Fprintf(PC,"90 seconds comunication command\n\r"); 
+01D58:  MOVLW  AE
+01D5A:  MOVWF  FF6
+01D5C:  MOVLW  04
+01D5E:  MOVWF  FF7
+01D60:  MOVLW  00
+01D62:  MOVWF  FF8
+01D64:  CALL   08CE
+....................        
+....................       CPIC_TIME_COUNTER = 0;             // because comunication happaned corretly 
+01D68:  CLRF   1F
+01D6A:  CLRF   1E
+....................       CLEAR_DATA_ARRAY( RPIC_TO_CPIC_ARRAY, 20); 
+01D6C:  MOVLB  1
+01D6E:  CLRF   x0E
+01D70:  MOVLW  87
+01D72:  MOVWF  x0D
+01D74:  MOVLW  14
+01D76:  MOVWF  x0F
+01D78:  MOVLB  0
+01D7A:  CALL   14E2
+....................       RPIC_TO_CPIC_ARRAY[0]  = 0xC0   ; 
+01D7E:  MOVLW  C0
+01D80:  MOVWF  x87
+....................       RPIC_TO_CPIC_ARRAY[1]  = 0xE0   ;  
+01D82:  MOVLW  E0
+01D84:  MOVWF  x88
+....................        
+....................       RPIC_TO_CPIC_ARRAY[2]  = year   ; 
+01D86:  MOVFF  9B,89
+....................       RPIC_TO_CPIC_ARRAY[3]  = month  ; 
+01D8A:  MOVFF  9C,8A
+....................       RPIC_TO_CPIC_ARRAY[4]  = day    ; 
+01D8E:  MOVFF  9D,8B
+....................       RPIC_TO_CPIC_ARRAY[5]  = hour   ; 
+01D92:  MOVFF  9E,8C
+....................       RPIC_TO_CPIC_ARRAY[6]  = minute ; 
+01D96:  MOVFF  9F,8D
+....................       RPIC_TO_CPIC_ARRAY[7]  = second ; 
+01D9A:  MOVFF  A0,8E
+....................        
+....................       RPIC_TO_CPIC_ARRAY[19] = 0xC1   ; 
+01D9E:  MOVLW  C1
+01DA0:  MOVWF  x9A
+....................       for(int i = 0; i<20; i++) 
+01DA2:  MOVLB  1
+01DA4:  CLRF   x0A
+01DA6:  MOVF   x0A,W
+01DA8:  SUBLW  13
+01DAA:  BNC   1DCA
+....................       { 
+....................          fputc(RPIC_TO_CPIC_ARRAY[i],CPic); 
+01DAC:  CLRF   03
+01DAE:  MOVF   x0A,W
+01DB0:  ADDLW  87
+01DB2:  MOVWF  FE9
+01DB4:  MOVLW  00
+01DB6:  ADDWFC 03,W
+01DB8:  MOVWF  FEA
+01DBA:  MOVFF  FEF,10B
+01DBE:  MOVF   x0B,W
+01DC0:  MOVLB  0
+01DC2:  RCALL  1D46
+01DC4:  MOVLB  1
+01DC6:  INCF   x0A,F
+01DC8:  BRA    1DA6
+....................       } 
+....................       printline(); 
+01DCA:  MOVLB  0
+01DCC:  CALL   0C4A
+....................       //_______________________________________________________________________ 
+....................        
+....................    }  
+01DD0:  GOTO   21B6 (RETURN)
+.................... } 
+....................  
+....................  
+.................... Void UPDATE_RTC_BY_COM_PIC_CMD() 
+.................... { 
+....................    if(CPIC_TO_RPIC_ARRAY[1] == 0xEA) //MP HF 
+01DD4:  MOVF   x65,W
+01DD6:  SUBLW  EA
+01DD8:  BTFSS  FD8.2
+01DDA:  BRA    1F28
+....................    { 
+....................       Fprintf(PC,"Reset pic RTC update command Received from COM PIC\n\r"); 
+01DDC:  MOVLW  D0
+01DDE:  MOVWF  FF6
+01DE0:  MOVLW  04
+01DE2:  MOVWF  FF7
+01DE4:  MOVLW  00
+01DE6:  MOVWF  FF8
+01DE8:  CALL   08CE
+....................        
+....................       // Acknowleging to the comand____________________________________________ 
+....................       Delay_ms(10); 
+01DEC:  MOVLW  0A
+01DEE:  MOVLB  1
+01DF0:  MOVWF  x0E
+01DF2:  MOVLB  0
+01DF4:  CALL   0652
+....................       CLEAR_DATA_ARRAY( RPIC_TO_CPIC_ARRAY, 20); 
+01DF8:  MOVLB  1
+01DFA:  CLRF   x0E
+01DFC:  MOVLW  87
+01DFE:  MOVWF  x0D
+01E00:  MOVLW  14
+01E02:  MOVWF  x0F
+01E04:  MOVLB  0
+01E06:  CALL   14E2
+....................       RPIC_TO_CPIC_ARRAY[0]  = 0xC0   ; 
+01E0A:  MOVLW  C0
+01E0C:  MOVWF  x87
+....................       RPIC_TO_CPIC_ARRAY[1]  = 0xEA   ; 
+01E0E:  MOVLW  EA
+01E10:  MOVWF  x88
+....................       RPIC_TO_CPIC_ARRAY[19] = 0xC1   ; 
+01E12:  MOVLW  C1
+01E14:  MOVWF  x9A
+....................       for(int i = 0; i<20; i++) 
+01E16:  MOVLB  1
+01E18:  CLRF   x0A
+01E1A:  MOVF   x0A,W
+01E1C:  SUBLW  13
+01E1E:  BNC   1E3E
+....................       { 
+....................          fputc(RPIC_TO_CPIC_ARRAY[i],CPic); 
+01E20:  CLRF   03
+01E22:  MOVF   x0A,W
+01E24:  ADDLW  87
+01E26:  MOVWF  FE9
+01E28:  MOVLW  00
+01E2A:  ADDWFC 03,W
+01E2C:  MOVWF  FEA
+01E2E:  MOVFF  FEF,10B
+01E32:  MOVF   x0B,W
+01E34:  MOVLB  0
+01E36:  RCALL  1D46
+01E38:  MOVLB  1
+01E3A:  INCF   x0A,F
+01E3C:  BRA    1E1A
+....................       } 
+....................       //_______________________________________________________________________ 
+....................        
+....................       //Updating the RTC 
+....................       year   = CPIC_TO_RPIC_ARRAY[2]  ; 
+01E3E:  MOVFF  66,9B
+....................       month  = CPIC_TO_RPIC_ARRAY[3]  ; 
+01E42:  MOVFF  67,9C
+....................       day    = CPIC_TO_RPIC_ARRAY[4]  ; 
+01E46:  MOVFF  68,9D
+....................       hour   = CPIC_TO_RPIC_ARRAY[5]  ; 
+01E4A:  MOVFF  69,9E
+....................       minute = CPIC_TO_RPIC_ARRAY[6]  ; 
+01E4E:  MOVFF  6A,9F
+....................       second = CPIC_TO_RPIC_ARRAY[7]  ; 
+01E52:  MOVFF  6B,A0
+....................       
+....................  
+....................       //Printing New RTC value 
+....................       Fprintf(PC,"Updated New Time >> ") ; 
+01E56:  MOVLW  06
+01E58:  MOVWF  FF6
+01E5A:  MOVLW  05
+01E5C:  MOVWF  FF7
+01E5E:  MOVLW  00
+01E60:  MOVWF  FF8
+01E62:  MOVLB  0
+01E64:  CALL   08CE
+....................       Fprintf(PC,"%u-", year)        ; 
+01E68:  MOVFF  9B,10B
+01E6C:  MOVLW  1B
+01E6E:  MOVLB  1
+01E70:  MOVWF  x0C
+01E72:  MOVLB  0
+01E74:  CALL   0F3E
+01E78:  MOVLW  2D
+01E7A:  MOVLB  1
+01E7C:  MOVWF  x14
+01E7E:  MOVLB  0
+01E80:  CALL   088A
+....................       Fprintf(PC,"%u-", month)       ; 
+01E84:  MOVFF  9C,10B
+01E88:  MOVLW  1B
+01E8A:  MOVLB  1
+01E8C:  MOVWF  x0C
+01E8E:  MOVLB  0
+01E90:  CALL   0F3E
+01E94:  MOVLW  2D
+01E96:  MOVLB  1
+01E98:  MOVWF  x14
+01E9A:  MOVLB  0
+01E9C:  CALL   088A
+....................       Fprintf(PC,"%u__", day)        ; 
+01EA0:  MOVFF  9D,10B
+01EA4:  MOVLW  1B
+01EA6:  MOVLB  1
+01EA8:  MOVWF  x0C
+01EAA:  MOVLB  0
+01EAC:  CALL   0F3E
+01EB0:  MOVLW  5F
+01EB2:  MOVLB  1
+01EB4:  MOVWF  x14
+01EB6:  MOVLB  0
+01EB8:  CALL   088A
+01EBC:  MOVLW  5F
+01EBE:  MOVLB  1
+01EC0:  MOVWF  x14
+01EC2:  MOVLB  0
+01EC4:  CALL   088A
+....................       Fprintf(PC,"%u:", hour)        ; 
+01EC8:  MOVFF  9E,10B
+01ECC:  MOVLW  1B
+01ECE:  MOVLB  1
+01ED0:  MOVWF  x0C
+01ED2:  MOVLB  0
+01ED4:  CALL   0F3E
+01ED8:  MOVLW  3A
+01EDA:  MOVLB  1
+01EDC:  MOVWF  x14
+01EDE:  MOVLB  0
+01EE0:  CALL   088A
+....................       Fprintf(PC,"%u:", minute)      ; 
+01EE4:  MOVFF  9F,10B
+01EE8:  MOVLW  1B
+01EEA:  MOVLB  1
+01EEC:  MOVWF  x0C
+01EEE:  MOVLB  0
+01EF0:  CALL   0F3E
+01EF4:  MOVLW  3A
+01EF6:  MOVLB  1
+01EF8:  MOVWF  x14
+01EFA:  MOVLB  0
+01EFC:  CALL   088A
+....................       Fprintf(PC,"%u\n\r", second)   ; 
+01F00:  MOVFF  A0,10B
+01F04:  MOVLW  1B
+01F06:  MOVLB  1
+01F08:  MOVWF  x0C
+01F0A:  MOVLB  0
+01F0C:  CALL   0F3E
+01F10:  MOVLW  0A
+01F12:  MOVLB  1
+01F14:  MOVWF  x14
+01F16:  MOVLB  0
+01F18:  CALL   088A
+01F1C:  MOVLW  0D
+01F1E:  MOVLB  1
+01F20:  MOVWF  x14
+01F22:  MOVLB  0
+01F24:  CALL   088A
+....................         
+....................    } 
+01F28:  GOTO   21B8 (RETURN)
+.................... } 
+....................  
+.................... void SENDING_TIME_TO_COMPIC() 
+.................... { 
+....................    if(CPIC_TO_RPIC_ARRAY[1] == 0xEB) 
+01F2C:  MOVF   x65,W
+01F2E:  SUBLW  EB
+01F30:  BNZ   1FAA
+....................    { 
+....................       Fprintf(PC,"SENDING_TIME_TO_COMPIC\n\r"); 
+01F32:  MOVLW  1C
+01F34:  MOVWF  FF6
+01F36:  MOVLW  05
+01F38:  MOVWF  FF7
+01F3A:  MOVLW  00
+01F3C:  MOVWF  FF8
+01F3E:  CALL   08CE
+....................        
+....................       CPIC_TIME_COUNTER = 0;             // because comunication happaned corretly 
+01F42:  CLRF   1F
+01F44:  CLRF   1E
+....................       CLEAR_DATA_ARRAY( RPIC_TO_CPIC_ARRAY, 20); 
+01F46:  MOVLB  1
+01F48:  CLRF   x0E
+01F4A:  MOVLW  87
+01F4C:  MOVWF  x0D
+01F4E:  MOVLW  14
+01F50:  MOVWF  x0F
+01F52:  MOVLB  0
+01F54:  CALL   14E2
+....................       RPIC_TO_CPIC_ARRAY[0]  = 0xC0   ; 
+01F58:  MOVLW  C0
+01F5A:  MOVWF  x87
+....................       RPIC_TO_CPIC_ARRAY[1]  = 0xEB   ;  
+01F5C:  MOVLW  EB
+01F5E:  MOVWF  x88
+....................        
+....................       RPIC_TO_CPIC_ARRAY[2]  = year   ; 
+01F60:  MOVFF  9B,89
+....................       RPIC_TO_CPIC_ARRAY[3]  = month  ; 
+01F64:  MOVFF  9C,8A
+....................       RPIC_TO_CPIC_ARRAY[4]  = day    ; 
+01F68:  MOVFF  9D,8B
+....................       RPIC_TO_CPIC_ARRAY[5]  = hour   ; 
+01F6C:  MOVFF  9E,8C
+....................       RPIC_TO_CPIC_ARRAY[6]  = minute ; 
+01F70:  MOVFF  9F,8D
+....................       RPIC_TO_CPIC_ARRAY[7]  = second ; 
+01F74:  MOVFF  A0,8E
+....................        
+....................       RPIC_TO_CPIC_ARRAY[19] = 0xC1   ; 
+01F78:  MOVLW  C1
+01F7A:  MOVWF  x9A
+....................       for(int i = 0; i<20; i++) 
+01F7C:  MOVLB  1
+01F7E:  CLRF   x0A
+01F80:  MOVF   x0A,W
+01F82:  SUBLW  13
+01F84:  BNC   1FA4
+....................       { 
+....................          fputc(RPIC_TO_CPIC_ARRAY[i],CPic); 
+01F86:  CLRF   03
+01F88:  MOVF   x0A,W
+01F8A:  ADDLW  87
+01F8C:  MOVWF  FE9
+01F8E:  MOVLW  00
+01F90:  ADDWFC 03,W
+01F92:  MOVWF  FEA
+01F94:  MOVFF  FEF,10B
+01F98:  MOVF   x0B,W
+01F9A:  MOVLB  0
+01F9C:  RCALL  1D46
+01F9E:  MOVLB  1
+01FA0:  INCF   x0A,F
+01FA2:  BRA    1F80
+....................       } 
+....................       printline(); 
+01FA4:  MOVLB  0
+01FA6:  CALL   0C4A
+....................       //_______________________________________________________________________ 
+....................        
+....................    }  
+01FAA:  GOTO   21BA (RETURN)
+.................... } 
+....................  
+....................  
+.................... #include <RPIC_STARTPIC.c> 
+.................... //!// here we check START pic UART is available or not if available we save in MPIC_TO_RPIC array 
+.................... //!void CHECK_UART_INCOMING_FROM_START_PIC() 
+.................... //!{ 
+.................... //!   if( SPic_available() ) 
+.................... //!   { 
+.................... //!      Delay_ms(30); 
+.................... //!      for(int i = 0; i<=5; i++) 
+.................... //!      { 
+.................... //!         SPIC_TO_RPIC_ARRAY[i] = SPic_Read(); 
+.................... //!      } 
+.................... //!   } 
+.................... //!} 
+.................... //! 
+.................... //! 
+.................... //!// this function will print recived command from START pic_______________________ 
+.................... //!void PRINT_RECIVED_COMMAND_FROM_START_PIC() 
+.................... //!{ 
+.................... //!   printline(); 
+.................... //!   Fprintf(PC,"RCVD CMD FROM START PIC >> "); 
+.................... //!   for(int i = 0; i<=5; i++) 
+.................... //!   { 
+.................... //!      Fprintf(PC,"%X ",SPIC_TO_RPIC_ARRAY[i]); 
+.................... //!   } 
+.................... //!   printline(); 
+.................... //!} 
+....................  
+.................... void INFORM_WORKING_TO_START_PIC() 
+.................... { 
+....................    fputc(0xAA, SPic); 
+*
+01FFE:  MOVLW  AA
+02000:  RCALL  1FF6
+....................    delay_ms(1); 
+02002:  MOVLW  01
+02004:  MOVLB  1
+02006:  MOVWF  x0E
+02008:  MOVLB  0
+0200A:  CALL   0652
+....................    fputc(0xBB, SPic); 
+0200E:  MOVLW  BB
+02010:  RCALL  1FF6
+....................    delay_ms(1); 
+02012:  MOVLW  01
+02014:  MOVLB  1
+02016:  MOVWF  x0E
+02018:  MOVLB  0
+0201A:  CALL   0652
+....................    fputc(0xCC, SPic); 
+0201E:  MOVLW  CC
+02020:  RCALL  1FF6
+....................    delay_ms(1); 
+02022:  MOVLW  01
+02024:  MOVLB  1
+02026:  MOVWF  x0E
+02028:  MOVLB  0
+0202A:  CALL   0652
+....................    output_low(PIN_C6); 
+0202E:  BCF    F94.6
+02030:  BCF    F8B.6
+02032:  GOTO   220A (RETURN)
+.................... } 
+....................  
+.................... #include <RTC_fun.c> 
+.................... // this section handle the RTC related functions_______________________________ 
+....................  
+.................... // this function set the RTC time______________________________________________ 
+.................... void Set_RTC( char y, char mo, char d, char h, char mi, char s ) 
+.................... { 
+....................    year   = y  ; 
+*
+0080E:  MOVFF  10A,9B
+....................    month  = mo ; 
+00812:  MOVFF  10B,9C
+....................    day    = d  ; 
+00816:  MOVFF  10C,9D
+....................    hour   = h  ; 
+0081A:  MOVFF  10D,9E
+....................    minute = mi ; 
+0081E:  MOVFF  10E,9F
+....................    second = s  ; 
+00822:  MOVFF  10F,A0
+00826:  GOTO   0996 (RETURN)
+.................... } 
+....................  
+.................... int previous_second ; 
+....................  
+.................... // this function will update the time when timer 1 interupt happens every 1 second 
+.................... Void RTC_Function() 
+.................... { 
+....................    if (second < 59)                                                            // updating seconds 
+*
+0053A:  MOVF   xA0,W
+0053C:  SUBLW  3A
+0053E:  BNC   0544
+....................    { 
+....................       second++; 
+00540:  INCF   xA0,F
+....................    } 
+00542:  BRA    0548
+....................        
+....................    else 
+....................    { 
+....................       second = 0; 
+00544:  CLRF   xA0
+....................       minute++; 
+00546:  INCF   x9F,F
+....................    } 
+....................        
+....................    if (minute >= 60)                                                           // updating minutes 
+00548:  MOVF   x9F,W
+0054A:  SUBLW  3B
+0054C:  BC    0558
+....................    { 
+....................       minute = 0; 
+0054E:  CLRF   x9F
+....................       hour++; 
+00550:  INCF   x9E,F
+....................       LAST_RESET_HOUR ++ ; 
+00552:  INCF   xC6,F
+00554:  BTFSC  FD8.2
+00556:  INCF   xC7,F
+....................    } 
+....................        
+....................    if (hour >= 24)                                                             // updating day 
+00558:  MOVF   x9E,W
+0055A:  SUBLW  17
+0055C:  BC    0562
+....................    { 
+....................       hour = 0; 
+0055E:  CLRF   x9E
+....................       day++; 
+00560:  INCF   x9D,F
+....................    } 
+....................     
+....................    if( (day >= 31) && (month == 4 || month == 6 || month == 9 || month == 11) )     // 30 days months 
+00562:  MOVF   x9D,W
+00564:  SUBLW  1E
+00566:  BC    0586
+00568:  MOVF   x9C,W
+0056A:  SUBLW  04
+0056C:  BZ    0580
+0056E:  MOVF   x9C,W
+00570:  SUBLW  06
+00572:  BZ    0580
+00574:  MOVF   x9C,W
+00576:  SUBLW  09
+00578:  BZ    0580
+0057A:  MOVF   x9C,W
+0057C:  SUBLW  0B
+0057E:  BNZ   0586
+....................    { 
+....................       day = 1; 
+00580:  MOVLW  01
+00582:  MOVWF  x9D
+....................       month++; 
+00584:  INCF   x9C,F
+....................    } 
+....................     
+....................    if( (day >= 32) && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10) )  // 31 days months 
+00586:  MOVF   x9D,W
+00588:  SUBLW  1F
+0058A:  BC    05B6
+0058C:  DECFSZ x9C,W
+0058E:  BRA    0592
+00590:  BRA    05B0
+00592:  MOVF   x9C,W
+00594:  SUBLW  03
+00596:  BZ    05B0
+00598:  MOVF   x9C,W
+0059A:  SUBLW  05
+0059C:  BZ    05B0
+0059E:  MOVF   x9C,W
+005A0:  SUBLW  07
+005A2:  BZ    05B0
+005A4:  MOVF   x9C,W
+005A6:  SUBLW  08
+005A8:  BZ    05B0
+005AA:  MOVF   x9C,W
+005AC:  SUBLW  0A
+005AE:  BNZ   05B6
+....................    { 
+....................       day = 1; 
+005B0:  MOVLW  01
+005B2:  MOVWF  x9D
+....................       month++; 
+005B4:  INCF   x9C,F
+....................    } 
+....................     
+....................    if(year%4 == 0) 
+005B6:  MOVF   x9B,W
+005B8:  ANDLW  03
+005BA:  BNZ   05D0
+....................    { 
+....................       if( (day >= 30) && (month == 2) )                                           // february 
+005BC:  MOVF   x9D,W
+005BE:  SUBLW  1D
+005C0:  BC    05CE
+005C2:  MOVF   x9C,W
+005C4:  SUBLW  02
+005C6:  BNZ   05CE
+....................       { 
+....................          day = 1; 
+005C8:  MOVLW  01
+005CA:  MOVWF  x9D
+....................          month++; 
+005CC:  INCF   x9C,F
+....................       }  
+....................    } 
+005CE:  BRA    05E2
+....................     
+....................    else 
+....................    { 
+....................       if( (day >= 29) && (month == 2) )                                           // february 
+005D0:  MOVF   x9D,W
+005D2:  SUBLW  1C
+005D4:  BC    05E2
+005D6:  MOVF   x9C,W
+005D8:  SUBLW  02
+005DA:  BNZ   05E2
+....................       { 
+....................          day = 1; 
+005DC:  MOVLW  01
+005DE:  MOVWF  x9D
+....................          month++; 
+005E0:  INCF   x9C,F
+....................       }  
+....................    } 
+....................     
+....................     
+....................    if( (day >= 32) && (month == 12) )                                          //december 
+005E2:  MOVF   x9D,W
+005E4:  SUBLW  1F
+005E6:  BC    05F6
+005E8:  MOVF   x9C,W
+005EA:  SUBLW  0C
+005EC:  BNZ   05F6
+....................    { 
+....................       day = 1; 
+005EE:  MOVLW  01
+005F0:  MOVWF  x9D
+....................       month = 1; 
+005F2:  MOVWF  x9C
+....................       year++; 
+005F4:  INCF   x9B,F
+....................    } 
+005F6:  GOTO   0602 (RETURN)
+....................        
+.................... } 
+....................  
+.................... void PRINT_POWER_LINE_STATUS() 
+.................... { 
+....................    fprintf(PC,"M=%d,", (POWER_LINE_STATUS>>7) & 0x01 );  
+*
+00C60:  CLRF   00
+00C62:  BTFSC  xF7.7
+00C64:  BSF    00.0
+00C66:  MOVF   00,W
+00C68:  ANDLW  01
+00C6A:  MOVLB  1
+00C6C:  MOVWF  x0A
+00C6E:  MOVLW  4D
+00C70:  MOVWF  x14
+00C72:  MOVLB  0
+00C74:  RCALL  088A
+00C76:  MOVLW  3D
+00C78:  MOVLB  1
+00C7A:  MOVWF  x14
+00C7C:  MOVLB  0
+00C7E:  RCALL  088A
+00C80:  MOVFF  10A,10B
+00C84:  MOVLW  18
+00C86:  MOVLB  1
+00C88:  MOVWF  x0C
+00C8A:  MOVLB  0
+00C8C:  RCALL  0A92
+00C8E:  MOVLW  2C
+00C90:  MOVLB  1
+00C92:  MOVWF  x14
+00C94:  MOVLB  0
+00C96:  RCALL  088A
+....................    fprintf(PC,"C=%d,", (POWER_LINE_STATUS>>6) & 0x01 ); 
+00C98:  SWAPF  xF7,W
+00C9A:  MOVWF  00
+00C9C:  RRCF   00,F
+00C9E:  RRCF   00,F
+00CA0:  MOVLW  03
+00CA2:  ANDWF  00,F
+00CA4:  MOVF   00,W
+00CA6:  ANDLW  01
+00CA8:  MOVLB  1
+00CAA:  MOVWF  x0A
+00CAC:  MOVLW  43
+00CAE:  MOVWF  x14
+00CB0:  MOVLB  0
+00CB2:  RCALL  088A
+00CB4:  MOVLW  3D
+00CB6:  MOVLB  1
+00CB8:  MOVWF  x14
+00CBA:  MOVLB  0
+00CBC:  RCALL  088A
+00CBE:  MOVFF  10A,10B
+00CC2:  MOVLW  18
+00CC4:  MOVLB  1
+00CC6:  MOVWF  x0C
+00CC8:  MOVLB  0
+00CCA:  RCALL  0A92
+00CCC:  MOVLW  2C
+00CCE:  MOVLB  1
+00CD0:  MOVWF  x14
+00CD2:  MOVLB  0
+00CD4:  RCALL  088A
+....................    fprintf(PC,"3=%d,", (POWER_LINE_STATUS>>5) & 0x01 ); 
+00CD6:  SWAPF  xF7,W
+00CD8:  MOVWF  00
+00CDA:  RRCF   00,F
+00CDC:  MOVLW  07
+00CDE:  ANDWF  00,F
+00CE0:  MOVF   00,W
+00CE2:  ANDLW  01
+00CE4:  MOVLB  1
+00CE6:  MOVWF  x0A
+00CE8:  MOVLW  33
+00CEA:  MOVWF  x14
+00CEC:  MOVLB  0
+00CEE:  RCALL  088A
+00CF0:  MOVLW  3D
+00CF2:  MOVLB  1
+00CF4:  MOVWF  x14
+00CF6:  MOVLB  0
+00CF8:  RCALL  088A
+00CFA:  MOVFF  10A,10B
+00CFE:  MOVLW  18
+00D00:  MOVLB  1
+00D02:  MOVWF  x0C
+00D04:  MOVLB  0
+00D06:  RCALL  0A92
+00D08:  MOVLW  2C
+00D0A:  MOVLB  1
+00D0C:  MOVWF  x14
+00D0E:  MOVLB  0
+00D10:  RCALL  088A
+....................    fprintf(PC,"3=%d,", (POWER_LINE_STATUS>>4) & 0x01 ); 
+00D12:  SWAPF  xF7,W
+00D14:  MOVWF  00
+00D16:  MOVLW  0F
+00D18:  ANDWF  00,F
+00D1A:  MOVF   00,W
+00D1C:  ANDLW  01
+00D1E:  MOVLB  1
+00D20:  MOVWF  x0A
+00D22:  MOVLW  33
+00D24:  MOVWF  x14
+00D26:  MOVLB  0
+00D28:  RCALL  088A
+00D2A:  MOVLW  3D
+00D2C:  MOVLB  1
+00D2E:  MOVWF  x14
+00D30:  MOVLB  0
+00D32:  RCALL  088A
+00D34:  MOVFF  10A,10B
+00D38:  MOVLW  18
+00D3A:  MOVLB  1
+00D3C:  MOVWF  x0C
+00D3E:  MOVLB  0
+00D40:  RCALL  0A92
+00D42:  MOVLW  2C
+00D44:  MOVLB  1
+00D46:  MOVWF  x14
+00D48:  MOVLB  0
+00D4A:  RCALL  088A
+....................    fprintf(PC,"5=%d,", (POWER_LINE_STATUS>>3) & 0x01 ); 
+00D4C:  RRCF   xF7,W
+00D4E:  MOVWF  00
+00D50:  RRCF   00,F
+00D52:  RRCF   00,F
+00D54:  MOVLW  1F
+00D56:  ANDWF  00,F
+00D58:  MOVF   00,W
+00D5A:  ANDLW  01
+00D5C:  MOVLB  1
+00D5E:  MOVWF  x0A
+00D60:  MOVLW  35
+00D62:  MOVWF  x14
+00D64:  MOVLB  0
+00D66:  RCALL  088A
+00D68:  MOVLW  3D
+00D6A:  MOVLB  1
+00D6C:  MOVWF  x14
+00D6E:  MOVLB  0
+00D70:  RCALL  088A
+00D72:  MOVFF  10A,10B
+00D76:  MOVLW  18
+00D78:  MOVLB  1
+00D7A:  MOVWF  x0C
+00D7C:  MOVLB  0
+00D7E:  RCALL  0A92
+00D80:  MOVLW  2C
+00D82:  MOVLB  1
+00D84:  MOVWF  x14
+00D86:  MOVLB  0
+00D88:  RCALL  088A
+....................    fprintf(PC,"U=%d,", (POWER_LINE_STATUS>>2) & 0x01 ); 
+00D8A:  RRCF   xF7,W
+00D8C:  MOVWF  00
+00D8E:  RRCF   00,F
+00D90:  MOVLW  3F
+00D92:  ANDWF  00,F
+00D94:  MOVF   00,W
+00D96:  ANDLW  01
+00D98:  MOVLB  1
+00D9A:  MOVWF  x0A
+00D9C:  MOVLW  55
+00D9E:  MOVWF  x14
+00DA0:  MOVLB  0
+00DA2:  RCALL  088A
+00DA4:  MOVLW  3D
+00DA6:  MOVLB  1
+00DA8:  MOVWF  x14
+00DAA:  MOVLB  0
+00DAC:  RCALL  088A
+00DAE:  MOVFF  10A,10B
+00DB2:  MOVLW  18
+00DB4:  MOVLB  1
+00DB6:  MOVWF  x0C
+00DB8:  MOVLB  0
+00DBA:  RCALL  0A92
+00DBC:  MOVLW  2C
+00DBE:  MOVLB  1
+00DC0:  MOVWF  x14
+00DC2:  MOVLB  0
+00DC4:  RCALL  088A
+....................    fprintf(PC,"U=%d" , (POWER_LINE_STATUS>>1) & 0x01 ); 
+00DC6:  BCF    FD8.0
+00DC8:  RRCF   xF7,W
+00DCA:  ANDLW  01
+00DCC:  MOVLB  1
+00DCE:  MOVWF  x0A
+00DD0:  MOVLW  55
+00DD2:  MOVWF  x14
+00DD4:  MOVLB  0
+00DD6:  RCALL  088A
+00DD8:  MOVLW  3D
+00DDA:  MOVLB  1
+00DDC:  MOVWF  x14
+00DDE:  MOVLB  0
+00DE0:  RCALL  088A
+00DE2:  MOVFF  10A,10B
+00DE6:  MOVLW  18
+00DE8:  MOVLB  1
+00DEA:  MOVWF  x0C
+00DEC:  MOVLB  0
+00DEE:  RCALL  0A92
+....................    printline(); 
+00DF0:  RCALL  0C4A
+00DF2:  GOTO   0F02 (RETURN)
+.................... } 
+....................  
+.................... // this function will print the Reset pic time in every 1 second 
+.................... void Print_RTC() 
+.................... { 
+....................    if(previous_second != second ) 
+00DF6:  MOVF   xA0,W
+00DF8:  MOVLB  1
+00DFA:  SUBWF  x07,W
+00DFC:  BTFSC  FD8.2
+00DFE:  BRA    0F04
+....................    { 
+....................       fprintf(PC,"RP "); 
+00E00:  MOVLW  36
+00E02:  MOVWF  FF6
+00E04:  MOVLW  05
+00E06:  MOVWF  FF7
+00E08:  MOVLW  00
+00E0A:  MOVWF  FF8
+00E0C:  MOVLB  0
+00E0E:  RCALL  08CE
+....................       fprintf(PC,"%02d", year); 
+00E10:  MOVFF  9B,10E
+00E14:  MOVLW  01
+00E16:  MOVLB  1
+00E18:  MOVWF  x0F
+00E1A:  MOVLB  0
+00E1C:  RCALL  09D6
+....................       fprintf(PC,"/%02d", month); 
+00E1E:  MOVLW  2F
+00E20:  MOVLB  1
+00E22:  MOVWF  x14
+00E24:  MOVLB  0
+00E26:  RCALL  088A
+00E28:  MOVFF  9C,10E
+00E2C:  MOVLW  01
+00E2E:  MOVLB  1
+00E30:  MOVWF  x0F
+00E32:  MOVLB  0
+00E34:  RCALL  09D6
+....................       fprintf(PC,"/%02d", day); 
+00E36:  MOVLW  2F
+00E38:  MOVLB  1
+00E3A:  MOVWF  x14
+00E3C:  MOVLB  0
+00E3E:  RCALL  088A
+00E40:  MOVFF  9D,10E
+00E44:  MOVLW  01
+00E46:  MOVLB  1
+00E48:  MOVWF  x0F
+00E4A:  MOVLB  0
+00E4C:  RCALL  09D6
+....................       fprintf(PC," %02d", hour); 
+00E4E:  MOVLW  20
+00E50:  MOVLB  1
+00E52:  MOVWF  x14
+00E54:  MOVLB  0
+00E56:  RCALL  088A
+00E58:  MOVFF  9E,10E
+00E5C:  MOVLW  01
+00E5E:  MOVLB  1
+00E60:  MOVWF  x0F
+00E62:  MOVLB  0
+00E64:  RCALL  09D6
+....................       fprintf(PC,":%02d", minute); 
+00E66:  MOVLW  3A
+00E68:  MOVLB  1
+00E6A:  MOVWF  x14
+00E6C:  MOVLB  0
+00E6E:  RCALL  088A
+00E70:  MOVFF  9F,10E
+00E74:  MOVLW  01
+00E76:  MOVLB  1
+00E78:  MOVWF  x0F
+00E7A:  MOVLB  0
+00E7C:  RCALL  09D6
+....................       fprintf(PC,":%02d ", second);                                         // 20-01-01__05:20:22 
+00E7E:  MOVLW  3A
+00E80:  MOVLB  1
+00E82:  MOVWF  x14
+00E84:  MOVLB  0
+00E86:  RCALL  088A
+00E88:  MOVFF  A0,10E
+00E8C:  MOVLW  01
+00E8E:  MOVLB  1
+00E90:  MOVWF  x0F
+00E92:  MOVLB  0
+00E94:  RCALL  09D6
+00E96:  MOVLW  20
+00E98:  MOVLB  1
+00E9A:  MOVWF  x14
+00E9C:  MOVLB  0
+00E9E:  RCALL  088A
+....................        
+....................       fprintf(PC,"%d>",NUMOF_MPIC_RST); 
+00EA0:  MOVFF  1D,10B
+00EA4:  MOVLW  18
+00EA6:  MOVLB  1
+00EA8:  MOVWF  x0C
+00EAA:  MOVLB  0
+00EAC:  RCALL  0A92
+00EAE:  MOVLW  3E
+00EB0:  MOVLB  1
+00EB2:  MOVWF  x14
+00EB4:  MOVLB  0
+00EB6:  RCALL  088A
+....................       fprintf(PC,"%03Ld", MPIC_TIME_COUNTER); 
+00EB8:  MOVLW  0B
+00EBA:  MOVWF  FE9
+00EBC:  MOVFF  1C,10B
+00EC0:  MOVFF  1B,10A
+00EC4:  RCALL  0B4E
+....................       fprintf(PC," %d>",NUMOF_CPIC_RST); 
+00EC6:  MOVLW  20
+00EC8:  MOVLB  1
+00ECA:  MOVWF  x14
+00ECC:  MOVLB  0
+00ECE:  RCALL  088A
+00ED0:  MOVFF  20,10B
+00ED4:  MOVLW  18
+00ED6:  MOVLB  1
+00ED8:  MOVWF  x0C
+00EDA:  MOVLB  0
+00EDC:  RCALL  0A92
+00EDE:  MOVLW  3E
+00EE0:  MOVLB  1
+00EE2:  MOVWF  x14
+00EE4:  MOVLB  0
+00EE6:  RCALL  088A
+....................       fprintf(PC,"%03Ld ", CPIC_TIME_COUNTER); 
+00EE8:  MOVLW  0B
+00EEA:  MOVWF  FE9
+00EEC:  MOVFF  1F,10B
+00EF0:  MOVFF  1E,10A
+00EF4:  RCALL  0B4E
+00EF6:  MOVLW  20
+00EF8:  MOVLB  1
+00EFA:  MOVWF  x14
+00EFC:  MOVLB  0
+00EFE:  RCALL  088A
+....................        
+....................       PRINT_POWER_LINE_STATUS(); 
+00F00:  BRA    0C60
+00F02:  MOVLB  1
+....................    }  
+....................    previous_second = second ; 
+00F04:  MOVFF  A0,107
+00F08:  MOVLB  0
+00F0A:  GOTO   2130 (RETURN)
+.................... } 
+....................  
+....................  
+.................... unsigned int16 MLC = 0; 
+....................  
+.................... // we set interupt priority here , timer 1 is the highest priority_____________ 
+.................... #PRIORITY INT_TIMER1,INT_RDA,INT_RDA3            
+....................  
+.................... // this is the timer 1 interupt loop___________________________________________ 
+.................... #INT_TIMER1 
+.................... Void TIMER1_ISR()                                                               
+.................... {  
+....................   set_timer1(0x8000);                                // Timer-1 preload 
+*
+005FA:  MOVLW  80
+005FC:  MOVWF  FCF
+005FE:  CLRF   FCE
+....................   RTC_Function();                                    // updating RTC 
+00600:  BRA    053A
+....................    
+....................   MPIC_TIME_COUNTER++;                               // this is main pic comunication time counter 
+00602:  INCF   1B,F
+00604:  BTFSC  FD8.2
+00606:  INCF   1C,F
+....................   CPIC_TIME_COUNTER++;                               // this is com  pic comunication time counter 
+00608:  INCF   1E,F
+0060A:  BTFSC  FD8.2
+0060C:  INCF   1F,F
+0060E:  BCF    F9E.0
+00610:  GOTO   008C
+.................... } 
+....................  
+.................... // here we set the reset pic initial setups____________________________________ 
+.................... void settings() 
+.................... { 
+....................    //output_low(PIN_C6); 
+....................    MP_CP_BuckBoost(ON)              ;      // enable MP CP buck boost conveter 
+*
+008F6:  MOVLW  01
+008F8:  MOVLB  1
+008FA:  MOVWF  x0A
+008FC:  MOVLB  0
+008FE:  BRA    0638
+....................    MainPic_Power(ON)                ;      // turn on main pic power 
+00900:  MOVLW  01
+00902:  MOVLB  1
+00904:  MOVWF  x0D
+00906:  MOVLB  0
+00908:  RCALL  067C
+....................    ComPic_Power(ON)                 ;      // turn on com pic power 
+0090A:  MOVLW  01
+0090C:  MOVLB  1
+0090E:  MOVWF  x0D
+00910:  MOVLB  0
+00912:  RCALL  06A6
+....................    _3V3Power_Line1(BB_ON_OCP_ON)    ;      // both obc and buck boost converters are ON 
+00914:  MOVLW  01
+00916:  MOVLB  1
+00918:  MOVWF  x0D
+0091A:  MOVLB  0
+0091C:  RCALL  06D0
+....................    _3V3Power_Line2(BB_ON_OCP_ON)    ;      // both obc and buck boost converter are OFF 
+0091E:  MOVLW  01
+00920:  MOVLB  1
+00922:  MOVWF  x0D
+00924:  MOVLB  0
+00926:  RCALL  071E
+....................    _5V0Power_Line(BB_ON_OCP_ON)     ;      // both obc and buck boost converters are OFF BB_ON_OCP_ON 
+00928:  MOVLW  01
+0092A:  MOVLB  1
+0092C:  MOVWF  x0D
+0092E:  MOVLB  0
+00930:  RCALL  076C
+....................     
+....................    Unreg1_Line(ON)                  ;      // turn on unreg line 1 
+00932:  MOVLW  01
+00934:  MOVLB  1
+00936:  MOVWF  x0D
+00938:  MOVLB  0
+0093A:  RCALL  07BA
+....................    Unreg2_Line(ON)                  ;      // turn off unreg line 2 
+0093C:  MOVLW  01
+0093E:  MOVLB  1
+00940:  MOVWF  x0D
+00942:  MOVLB  0
+00944:  RCALL  07E4
+....................  
+....................    setup_timer_1(T1_EXTERNAL | T1_DIV_BY_1);         // timer-1 clock source ans prescaler value          
+00946:  MOVLW  87
+00948:  MOVWF  FCD
+0094A:  CLRF   FAA
+....................    SOSCEN1 = 1;                                      // enabling timer 1 
+0094C:  BSF    FCD.3
+....................    set_timer1(0x8000);                               // timer 1 preload 
+0094E:  MOVLW  80
+00950:  MOVWF  FCF
+00952:  CLRF   FCE
+....................     
+....................    enable_interrupts(INT_RDA2);                      // enabling com pic UART interupt 
+00954:  BSF    FA3.5
+....................    enable_interrupts(INT_RDA3);                      // enabling main pic UART interupt 
+00956:  BSF    F61.5
+....................    enable_interrupts(INT_TIMER1);                    // enabling timer - 1 interupt 
+00958:  BSF    F9D.0
+....................    enable_interrupts(GLOBAL);                        // start interupt procesing 
+0095A:  MOVLW  C0
+0095C:  IORWF  FF2,F
+....................     
+....................    SETUP_ADC(ADC_CLOCK_INTERNAL); 
+0095E:  MOVLW  9F
+00960:  MOVLB  E
+00962:  MOVWF  x8B
+00964:  CLRF   x8A
+00966:  MOVLW  70
+00968:  MOVWF  FC0
+0096A:  MOVLW  84
+0096C:  MOVWF  FC1
+....................    SETUP_ADC_PORTS(sAN2|sAN1|sAN0|sAN4|sAN6|sAN9);   // setting all analog ports 
+0096E:  CLRF   x45
+00970:  MOVLW  01
+00972:  MOVWF  x46
+00974:  MOVLW  37
+00976:  MOVWF  x47
+00978:  BCF    x8D.7
+0097A:  BCF    x8D.6
+0097C:  BCF    x8D.5
+....................     
+....................    Set_RTC(24,01,01, 00,00,06); 
+0097E:  MOVLW  18
+00980:  MOVLB  1
+00982:  MOVWF  x0A
+00984:  MOVLW  01
+00986:  MOVWF  x0B
+00988:  MOVWF  x0C
+0098A:  CLRF   x0D
+0098C:  CLRF   x0E
+0098E:  MOVLW  06
+00990:  MOVWF  x0F
+00992:  MOVLB  0
+00994:  BRA    080E
+....................    MPic_flush() ; 
+00996:  BRA    087C
+....................    fprintf( PC, "Reset pic is booting.......\n\r"); 
+00998:  MOVLW  14
+0099A:  MOVWF  FF6
+0099C:  MOVLW  06
+0099E:  MOVWF  FF7
+009A0:  MOVLW  00
+009A2:  MOVWF  FF8
+009A4:  RCALL  08CE
+009A6:  GOTO   212C (RETURN)
+.................... } 
+....................  
+.................... void main() 
+*
+02036:  CLRF   FF8
+02038:  BCF    FD0.7
+0203A:  BSF    07.7
+0203C:  MOVLB  E
+0203E:  MOVLW  55
+02040:  MOVWF  F7E
+02042:  MOVLW  AA
+02044:  MOVWF  F7E
+02046:  BCF    F66.6
+02048:  MOVLW  F4
+0204A:  MOVWF  x2A
+0204C:  MOVLW  FB
+0204E:  MOVWF  x2B
+02050:  MOVLW  F7
+02052:  MOVWF  x2C
+02054:  MOVLW  01
+02056:  MOVWF  x1B
+02058:  MOVLW  20
+0205A:  MOVWF  x20
+0205C:  MOVWF  x25
+0205E:  MOVLW  55
+02060:  MOVWF  F7E
+02062:  MOVLW  AA
+02064:  MOVWF  F7E
+02066:  BSF    F66.6
+02068:  CLRF   F9B
+0206A:  CLRF   F64
+0206C:  CLRF   F65
+0206E:  CLRF   F66
+02070:  MOVLW  02
+02072:  MOVWF  FD3
+02074:  CLRF   1C
+02076:  CLRF   1B
+02078:  CLRF   1D
+0207A:  CLRF   1F
+0207C:  CLRF   1E
+0207E:  CLRF   20
+02080:  BCF    F93.2
+02082:  BSF    F8A.2
+02084:  MOVLB  0
+02086:  CLRF   xA1
+02088:  MOVLB  F
+0208A:  BCF    x2D.3
+0208C:  MOVLW  19
+0208E:  MOVWF  x2B
+02090:  MOVLW  A6
+02092:  MOVWF  x2E
+02094:  MOVLW  90
+02096:  MOVWF  x2F
+02098:  MOVLB  0
+0209A:  CLRF   xC1
+0209C:  CLRF   xC0
+0209E:  CLRF   xC2
+020A0:  CLRF   xC4
+020A2:  CLRF   xC3
+020A4:  CLRF   xC5
+020A6:  CLRF   xC7
+020A8:  CLRF   xC6
+020AA:  MOVLB  F
+020AC:  BCF    x31.3
+020AE:  MOVLW  19
+020B0:  MOVWF  x1F
+020B2:  MOVLW  A6
+020B4:  MOVWF  x32
+020B6:  MOVLW  90
+020B8:  MOVWF  x33
+020BA:  MOVLB  0
+020BC:  CLRF   xE7
+020BE:  CLRF   xE6
+020C0:  CLRF   xE8
+020C2:  CLRF   xEA
+020C4:  CLRF   xE9
+020C6:  CLRF   xEB
+020C8:  BCF    F67.3
+020CA:  MOVLW  19
+020CC:  MOVWF  FAF
+020CE:  MOVLW  A6
+020D0:  MOVWF  FAC
+020D2:  MOVLW  90
+020D4:  MOVWF  FAB
+020D6:  CLRF   xF2
+020D8:  CLRF   xF1
+020DA:  CLRF   xF3
+020DC:  CLRF   xF5
+020DE:  CLRF   xF4
+020E0:  CLRF   xF6
+020E2:  CLRF   xF7
+020E4:  CLRF   xF8
+020E6:  CLRF   xFA
+020E8:  CLRF   xF9
+020EA:  CLRF   xFC
+020EC:  CLRF   xFB
+020EE:  CLRF   xFE
+020F0:  CLRF   xFD
+020F2:  MOVLB  1
+020F4:  CLRF   x00
+020F6:  MOVLB  0
+020F8:  CLRF   xFF
+020FA:  MOVLB  1
+020FC:  CLRF   x02
+020FE:  CLRF   x01
+02100:  CLRF   x04
+02102:  CLRF   x03
+02104:  CLRF   x06
+02106:  CLRF   x05
+02108:  CLRF   x09
+0210A:  CLRF   x08
+0210C:  MOVLB  E
+0210E:  CLRF   xD9
+02110:  CLRF   xDA
+02112:  CLRF   x45
+02114:  CLRF   x46
+02116:  CLRF   x47
+02118:  BCF    x8D.7
+0211A:  BCF    x8D.6
+0211C:  BCF    x8D.5
+0211E:  MOVLB  F
+02120:  CLRF   x53
+02122:  CLRF   x38
+02124:  CLRF   x37
+.................... { 
+....................    settings(); 
+02126:  MOVLB  0
+02128:  GOTO   08F6
+....................    while(true) 
+....................    {   
+....................       // printing rtc__________________________________________________________ 
+....................       Print_RTC();   
+0212C:  GOTO   0DF6
+....................        
+....................       // this funtion will reset the system if time is 00:00:00________________ 
+....................       SYSTEM_RESET_24H(); 
+02130:  GOTO   0FBA
+....................        
+....................       // check uart incoming from main pic and compic__________________________ 
+....................       CHECK_UART_INCOMING_FROM_MAIN_PIC()  ; 
+02134:  GOTO   11F2
+....................       CHECK_UART_INCOMING_FROM_COM_PIC()   ;  
+02138:  GOTO   12E6
+....................        
+....................       // monitoring 90 second comunication of compic and mainpic_______________ 
+....................       MONITOR_MAIN_PIC_90SEC_COMUNICATION(10)  ;   // 10 means how much turn off time before restart  
+0213C:  MOVLW  0A
+0213E:  MOVLB  1
+02140:  MOVWF  x0A
+02142:  MOVLB  0
+02144:  GOTO   1356
+....................       MONITOR_COM_PIC_90SEC_COMUNICATION(10)   ;   // 10 means how much turn off time before restart  
+02148:  MOVLW  0A
+0214A:  MOVLB  1
+0214C:  MOVWF  x0A
+0214E:  MOVLB  0
+02150:  GOTO   1402
+....................    
+....................        
+....................       // executing main pic comands____________________________________________ 
+....................       if( MPIC_TO_RPIC_ARRAY[0] == 0xA0 && MPIC_TO_RPIC_ARRAY[9] == 0xA1 ) 
+02154:  MOVF   21,W
+02156:  SUBLW  A0
+02158:  BNZ   2196
+0215A:  MOVF   2A,W
+0215C:  SUBLW  A1
+0215E:  BNZ   2196
+....................       { 
+....................          PRINT_RECIVED_COMMAND_FROM_MAIN_PIC(); 
+02160:  GOTO   148E
+....................          Delay_ms(5);   // just delay 5ms before execute 
+02164:  MOVLW  05
+02166:  MOVLB  1
+02168:  MOVWF  x0E
+0216A:  MOVLB  0
+0216C:  CALL   0652
+....................          RST_EXT_WDT(); 
+02170:  CALL   0632
+....................           
+....................          RESEPOND_TO_MPIC_90SEC_CMD();                // 0x7A 
+02174:  GOTO   1618
+....................          UPDATE_RTC_BY_MAIN_PIC_CMD();                // 0x7B 
+02178:  GOTO   178C
+....................          POWER_LINE_CONTROL_USING_MAIN_PIC_CMD();     // 0x7C 
+0217C:  GOTO   18D6
+....................          RESET_SATELLITE_CMD();                       // 0x7D 
+02180:  BRA    1B92
+....................          TURN_ON_UNREG_2_LINE_FOR_ANT_DEPLOYMENT();   // 0xDA 
+02182:  BRA    1BF4
+....................           
+....................          // finaly clear the data array received from main pic 
+....................          CLEAR_DATA_ARRAY( MPIC_TO_RPIC_ARRAY, 10 ); 
+02184:  MOVLB  1
+02186:  CLRF   x0E
+02188:  MOVLW  21
+0218A:  MOVWF  x0D
+0218C:  MOVLW  0A
+0218E:  MOVWF  x0F
+02190:  MOVLB  0
+02192:  CALL   14E2
+....................       } 
+....................        
+....................       // executing com pic comands____________________________________________ 
+....................       if( CPIC_TO_RPIC_ARRAY[0] == 0xC0 && CPIC_TO_RPIC_ARRAY[19] == 0xC1 ) 
+02196:  MOVF   x64,W
+02198:  SUBLW  C0
+0219A:  BNZ   21CC
+0219C:  MOVF   x77,W
+0219E:  SUBLW  C1
+021A0:  BNZ   21CC
+....................       { 
+....................          PRINT_RECIVED_COMMAND_FROM_COM_PIC(); 
+021A2:  BRA    1CF0
+....................          Delay_ms(5);   // just delay 5ms before execute 
+021A4:  MOVLW  05
+021A6:  MOVLB  1
+021A8:  MOVWF  x0E
+021AA:  MOVLB  0
+021AC:  CALL   0652
+....................          RST_EXT_WDT(); 
+021B0:  CALL   0632
+....................           
+....................          RESEPOND_TO_CPIC_90SEC_CMD()     ;           // 0xE0 
+021B4:  BRA    1D52
+....................          UPDATE_RTC_BY_COM_PIC_CMD()      ;           // 0xEA 
+021B6:  BRA    1DD4
+....................          SENDING_TIME_TO_COMPIC()         ;           // 0xEB 
+021B8:  BRA    1F2C
+....................           
+....................          // finaly clear the data array received from main pic 
+....................          CLEAR_DATA_ARRAY( CPIC_TO_RPIC_ARRAY, 20 ); 
+021BA:  MOVLB  1
+021BC:  CLRF   x0E
+021BE:  MOVLW  64
+021C0:  MOVWF  x0D
+021C2:  MOVLW  14
+021C4:  MOVWF  x0F
+021C6:  MOVLB  0
+021C8:  CALL   14E2
+....................       } 
+....................        
+....................            
+....................       if( (MLC%25) == 0 )  // every half sec 
+021CC:  MOVFF  109,10B
+021D0:  MOVFF  108,10A
+021D4:  MOVLB  1
+021D6:  CLRF   x0D
+021D8:  MOVLW  19
+021DA:  MOVWF  x0C
+021DC:  MOVLB  0
+021DE:  BRA    1FAE
+021E0:  MOVFF  00,10A
+021E4:  MOVLB  1
+021E6:  MOVFF  03,10B
+021EA:  MOVF   x0A,F
+021EC:  BNZ   2210
+021EE:  MOVF   x0B,F
+021F0:  BNZ   2210
+....................       {         
+....................          Output_Toggle(PIN_F2);  
+021F2:  BCF    F97.2
+021F4:  BTG    F8E.2
+....................          if(MLC>=500) 
+021F6:  MOVF   x09,W
+021F8:  SUBLW  00
+021FA:  BC    2210
+021FC:  XORLW  FF
+021FE:  BNZ   2206
+02200:  MOVF   x08,W
+02202:  SUBLW  F3
+02204:  BC    2210
+....................          { 
+....................             INFORM_WORKING_TO_START_PIC(); 
+02206:  MOVLB  0
+02208:  BRA    1FFE
+....................             MLC = 0; 
+0220A:  MOVLB  1
+0220C:  CLRF   x09
+0220E:  CLRF   x08
+....................          } 
+....................       } 
+....................  
+....................       Delay_ms(10); 
+02210:  MOVLW  0A
+02212:  MOVWF  x0E
+02214:  MOVLB  0
+02216:  CALL   0652
+....................       MLC++; 
+0221A:  MOVLB  1
+0221C:  INCF   x08,F
+0221E:  BTFSC  FD8.2
+02220:  INCF   x09,F
+02222:  MOVLB  0
+02224:  BRA    212C
+....................    } 
+.................... } 
+02226:  SLEEP 
+
+Configuration Fuses:
+   Word  1: F6A0   STVREN NOXINST NODEBUG NOBROWNOUT BORV18 NOPROTECT
+   Word  2: FF82   PR SOSC_DIG NOCLOCKOUT IESO NOPLL
+   Word  3: F032   HS
+   Word  4: F7FF   WPFP WPDIS WPEND NOWPCFG
+   Word  5: FF03   T5G_IS_T5G CINA_DEFAULT IOL1WAY LS48MHZ MSSP2MSK7 MSSPMSK7
+   Word  6: FCFF   WDTWIN_25% WDTCLK_FRC WDT32768 NOWDT WINDIS WPRES128
+   Word  7: F01D   NOVREGSLEEP VBATBOR DSBOR DS_SW
+   Word  8: F3F8   DSWDT_25DAYS DSWDT DSWDTOSC_SOSC

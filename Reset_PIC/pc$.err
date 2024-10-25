@@ -1,0 +1,4 @@
+Compiling G:\マイドライブ\OBC\OBC&MissionBoss Codes\RESET_PIC\V2.1\ResetMain on 28-10-23 at 22:03
+*** Error 24 "C:\Program Files (x86)\PICC\Devices\18F67J94.h" Line 11(9,20): Unknown device type    -- Try PCH
+      1 Errors,  0 Warnings.
+Build Failed.

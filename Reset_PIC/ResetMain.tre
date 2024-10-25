@@ -1,0 +1,457 @@
+ÀÄV4
+   ÃÄMAIN  0/498  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄsettings  0/180  Ram=0
+   ³  ³  ÃÄMP_CP_BuckBoost  0/26  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄComPic_Power  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄUnreg1_Line  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÀÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄSet_RTC  0/28  Ram=6
+   ³  ³  ÃÄMPic_flush  0/14  Ram=0
+   ³  ³  ³  ÃÄMPic_Available  0/6  Ram=0
+   ³  ³  ³  ÀÄMPic_Read  0/76  Ram=0
+   ³  ³  ÀÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³     ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ÃÄPrint_RTC  0/280  Ram=0
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÃÄ@DIV88  0/44  Ram=3
+   ³  ³  ³  ÃÄ@DIV88  0/44  Ram=3
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³  ³  ÃÄ@DIV88  0/44  Ram=3
+   ³  ³  ³  ÃÄ@DIV88  0/44  Ram=3
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_LD_1080  0/252  Ram=9
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_LD_1080  0/252  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÀÄPRINT_POWER_LINE_STATUS  0/406  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³     ÃÄ@PRINTF_D_1080  0/188  Ram=6
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄprintline  0/22  Ram=0
+   ³  ³        ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³        ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ÃÄSYSTEM_RESET_24H  0/494  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄComPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄUnreg1_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÃÄ@DIV88  0/44  Ram=3
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÃÄ@DIV88  0/44  Ram=3
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄComPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄUnreg1_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄCHECK_UART_INCOMING_FROM_MAIN_PIC  0/160  Ram=4
+   ³  ³  ÃÄMPic_Available  0/6  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄMPic_Read  0/76  Ram=0
+   ³  ³  ÃÄMPic_Read  0/76  Ram=0
+   ³  ³  ÃÄ@PRINTF_X_1080  0/74  Ram=2
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÀÄprintline  0/22  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄCHECK_UART_INCOMING_FROM_COM_PIC  0/112  Ram=4
+   ³  ³  ÃÄCPic_Available  0/8  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄCPic_Read  0/76  Ram=0
+   ³  ³  ÀÄCPic_Read  0/76  Ram=0
+   ³  ÃÄMONITOR_MAIN_PIC_90SEC_COMUNICATION  0/172  Ram=3
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄMONITOR_COM_PIC_90SEC_COMUNICATION  0/140  Ram=3
+   ³  ³  ÃÄComPic_Power  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄComPic_Power  0/42  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄPRINT_RECIVED_COMMAND_FROM_MAIN_PIC  0/84  Ram=2
+   ³  ³  ÃÄprintline  0/22  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_X_1080  0/74  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÀÄprintline  0/22  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ÃÄRESEPOND_TO_MPIC_90SEC_CMD  0/372  Ram=4
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄMeasure_Raw_voltage  0/58  Ram=0
+   ³  ³  ÃÄMeasure_3V3_1_current  0/42  Ram=0
+   ³  ³  ÃÄMeasure_3V3_2_current  0/40  Ram=0
+   ³  ³  ÃÄMeasure_5V0_current  0/42  Ram=0
+   ³  ³  ÃÄMeasure_UNREG_1_current  0/42  Ram=0
+   ³  ³  ÃÄMeasure_UNREG_2_current  0/42  Ram=0
+   ³  ³  ÃÄ@PUTCHARI_BIU_2  0/12  Ram=0
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_X_1080  0/74  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄprintline  0/22  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄprintline  0/22  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄUPDATE_RTC_BY_MAIN_PIC_CMD  0/330  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄ@PUTCHARI_BIU_2  0/12  Ram=0
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ÃÄPOWER_LINE_CONTROL_USING_MAIN_PIC_CMD  0/210  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄ@PUTCHARI_BIU_2  0/12  Ram=0
+   ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄUnreg2_Line  0/42  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄRESET_SATELLITE_CMD  0/98  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄSYSTEM_RESET  0/490  Ram=3
+   ³  ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄComPic_Power  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄUnreg1_Line  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄMainPic_Power  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄComPic_Power  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ_3V3Power_Line1  0/78  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ_3V3Power_Line2  0/78  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ_5V0Power_Line  0/78  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄUnreg1_Line  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÀÄ@PUTCHARI_BIU_2  0/12  Ram=0
+   ³  ÃÄTURN_ON_UNREG_2_LINE_FOR_ANT_DEPLOYMENT  0/252  Ram=4
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄ@PUTCHARI_BIU_2  0/12  Ram=0
+   ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D0_1080  0/188  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGCN_1080  0/48  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄUnreg2_Line  0/42  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ÃÄPRINT_RECIVED_COMMAND_FROM_COM_PIC  0/86  Ram=2
+   ³  ³  ÃÄprintline  0/22  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_X_1080  0/74  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÀÄprintline  0/22  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ÃÄRST_EXT_WDT  0/6  Ram=0
+   ³  ÃÄRESEPOND_TO_CPIC_90SEC_CMD  0/130  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄ@PUTCHARI_BIU_3  0/12  Ram=0
+   ³  ³  ÀÄprintline  0/22  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄUPDATE_RTC_BY_COM_PIC_CMD  0/344  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄ@PUTCHARI_BIU_3  0/12  Ram=0
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÃÄ@PRINTF_U_1080  0/124  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ³  ÀÄ@PUTCHAR_1_  0/68  Ram=1
+   ³  ÃÄSENDING_TIME_TO_COMPIC  0/130  Ram=2
+   ³  ³  ÃÄ@PSTRINGC_1080  0/40  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ³  ÃÄ@PUTCHARI_BIU_3  0/12  Ram=0
+   ³  ³  ÀÄprintline  0/22  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄCLEAR_DATA_ARRAY  0/32  Ram=6
+   ³  ÃÄ@DIV1616  0/72  Ram=5
+   ³  ÃÄINFORM_WORKING_TO_START_PIC  0/56  Ram=0
+   ³  ³  ÃÄ@PUTCHARI_BIU_4  0/8  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@PUTCHARI_BIU_4  0/8  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ÃÄ@PUTCHARI_BIU_4  0/8  Ram=0
+   ³  ³  ÀÄ@delay_ms1  0/42  Ram=1
+   ³  ÀÄ@delay_ms1  0/42  Ram=1
+   ÃÄSERIAL_ISR3  0/68  Ram=4
+   ³  ÃÄ@GETCH_BIU_2  0/28  Ram=0
+   ³  ÀÄ@GETCH_BIU_2  0/28  Ram=0
+   ÃÄSERIAL_ISR2  0/68  Ram=4
+   ³  ÃÄ@GETCH_BIU_3  0/28  Ram=0
+   ³  ÀÄ@GETCH_BIU_3  0/28  Ram=0
+   ÃÄSERIAL_ISR  0/64  Ram=4
+   ³  ÃÄ@GETCH_BIU_4  0/22  Ram=0
+   ³  ÀÄ@GETCH_BIU_4  0/22  Ram=0
+   ÀÄTIMER1_ISR  0/26  Ram=0
+      ÀÄRTC_Function  0/192  Ram=1
