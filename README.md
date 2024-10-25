@@ -10,7 +10,7 @@
 </div>
 
 # BIRDSX-Souce_Codes
- Documentation for the Solar Panel files of the BIRDSX Satellite.
+ Documentation for the Source Codes files of the BIRDSX Satellite.
 
 
 ## About the BIRDSX Program:
