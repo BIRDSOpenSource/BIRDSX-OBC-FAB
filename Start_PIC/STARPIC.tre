@@ -1,0 +1,37 @@
+ÀÄSTART_PIC_V1
+   ÃÄMAIN  0/160  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms1  0/22  Ram=1
+   ³  ÃÄ@PSTRINGC7_837  0/74  Ram=3
+   ³  ³  ÃÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ³  ÀÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ÃÄTURN_ON_ALL_POWER_LINES  0/42  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/22  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/22  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/22  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/22  Ram=1
+   ³  ³  ÀÄ@PSTRINGC7_837  0/74  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄCHECK_UART_INCOMING_FROM_RESET_PIC  0/112  Ram=5
+   ³  ³  ÃÄRPic_Available  (Inline)  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/22  Ram=1
+   ³  ³  ÃÄRPic_Read  0/44  Ram=0
+   ³  ³  ÃÄRPic_Read  0/44  Ram=0
+   ³  ³  ÃÄ@PRINTF_X_837  (Inline)  Ram=2
+   ³  ³  ³  ÃÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ³  ³  ÀÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ³  ÃÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ³  ÀÄ@PUTCHAR_1_  0/38  Ram=1
+   ³  ÃÄTURN_OFF_ALL_POWER_LINES  0/28  Ram=0
+   ³  ³  ÀÄ@PSTRINGC7_837  0/74  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄCLEAR_RPIC_TO_SPIC_ARRAY  0/17  Ram=3
+   ³  ÃÄ@PSTRINGC7_837  0/74  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄTURN_ON_ALL_POWER_LINES  0/42  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÀÄ@delay_ms1  0/22  Ram=1
+   ÀÄSERIAL_ISR1  0/33  Ram=6
+      ÃÄ@GETCH_BIU_2  0/17  Ram=0
+      ÀÄ@GETCH_BIU_2  0/17  Ram=0

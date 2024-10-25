@@ -1,0 +1,76 @@
+#include <16F1789.h>
+#fuses NOWDT,NOBROWNOUT,MCLR
+#use delay(Crystal = 16MHz, clock = 16MHz)
+#use rs232(baud=57600, parity=N, xmit=PIN_B7, bits=8, stream=Debug, force_sw)  // definition of debug UART port
+//#use rs232(baud=57600, parity=N, xmit=PIN_A0, bits=8, stream=Debug, force_sw)  // dummy port
+#use rs232(uart1,baud=9600, parity=N, bits=8, stream=RPIC, errors)                     
+
+#include <StartPIc_Funtions.c>
+
+unsigned int8 PR_Response = 0;
+unsigned int8 FF_MSG_Count = 0;
+
+#INT_TIMER1
+Void TIMER1_ISR()                                                              // This timer manages StartPIC RTC and WDT
+{
+  Output_high(PIN_B2);                                                         // WDT toggling high 
+  
+  set_timer1(32768);
+  RTC_Function();                                                              // updating RTC
+   
+  Output_low(PIN_B2);                                                          // WDT togging low
+}
+
+void main()
+{
+
+   Delay_ms(10);
+   fprintf(Debug, "Start PIC booting...........\n\r");
+   
+   setup_timer_1(T1_EXTERNAL | T1_DIV_BY_1);                                   // we use external clock and PS = 1                             
+   set_timer1(32768);                                                          // timer 1 preload
+   T1OSCEN = 1;                                                                // enable timer 1
+   
+   enable_interrupts(INT_TIMER1);                                              // enabling timer 1 interupt 
+   enable_interrupts(GLOBAL);                                                  // start interupt procesing
+   
+   output_high(PIN_D6);                                                                     // Switch enable for COM PIC
+   output_high(PIN_D7);                                                                     // Switch enable for Main PIC
+   
+   output_high(PIN_C2);                                                                     //OCP switch disable for Unreg #1
+   output_high(PIN_C5);                                                                     //OCP switch disable for Unreg #2
+   
+   while(true)
+   {
+      // printing RTC__________________________________________________________
+      Print_RTC();
+      
+      // this check Reset pic uart response____________________________________
+      if( kbhit(RPic) )
+      {
+         PR_Response = fgetc( RPic );
+         fprintf(Debug, "received %x from Rpic\n\r",PR_Response );
+      }   
+      
+      if( PR_Response == 0x66 )                                                // 1010 1010
+      {
+         fprintf(Debug, "received 0x66 from Rpic\n\r");
+         FF_MSG_Count++;
+         if(FF_MSG_Count>=3) 
+         {
+            fprintf(Debug, "We can stop SP\n\r");
+            FF_MSG_Count = 0;
+            
+            fprintf(Debug, "Good night!\n\r");
+            while(true)
+            {
+               sleep_mode();
+            }
+            
+         }
+         PR_Response = 0;
+      }
+      
+   }
+}
+
