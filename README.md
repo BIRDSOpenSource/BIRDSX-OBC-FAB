@@ -9,7 +9,7 @@
   <img width="125" alt="birds x" src="https://github.com/user-attachments/assets/8aa7c5b7-313c-48e7-952b-81ce0ce1a703">
 </div>
 
-# BIRDSX-Souce_Codes
+# BIRDSX-OBC
  Documentation for the Source Codes files of the BIRDSX Satellite.
 
 
@@ -39,10 +39,13 @@ BIRDS-X project is a 2U CubeSat dedicated to amateur radio communication.
 
 ```bash
 
-├── Main_PIC
-├── Reset_PIC
-├── COM_PIC
-├── Start_PIc
+└──Source_Codes
+    └──  Main_PIC
+     ├── Reset_PIC
+     ├── COM_PIC
+     ├── Start_PIC
+├── BIRDS-X_DATA_FORMAT
+├── COMMAND SHEET
 ├── LICENSE
 └── README.md
 
